@@ -1,6 +1,7 @@
 package com.example.test_log;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,6 +33,8 @@ public class LessonsActivity extends AppCompatActivity {
     ArrayList<String> titleArray = new ArrayList<>();
     ArrayList<String> summaryArray = new ArrayList<>();
 
+    AssetManager assetManager = getAssets();
+
     FirebaseAuth auth;
     Button button;
 //    TextView textView;
@@ -53,16 +56,7 @@ public class LessonsActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
-//        textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
-
-//        if(user == null){
-//            Intent intent = new Intent(getApplicationContext(), logpage.class);
-//            startActivity(intent);
-//            finish();
-//        } else {
-//            textView.setText(user.getEmail());
-//        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override

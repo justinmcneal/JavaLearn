@@ -1,6 +1,8 @@
 package com.example.test_log;
 
 import android.content.Intent;
+import android.graphics.text.LineBreaker;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,11 +45,13 @@ public class TitleSummary extends AppCompatActivity {
         tvSummary = findViewById(R.id.tv_summary);
         tvTitle.setText(title);
         tvSummary.setText(summary);
-
-
-
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            tvSummary.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
+        }
+
 //        textView = findViewById(R.id.user_details);
 //        user = auth.getCurrentUser();
 //
