@@ -1,0 +1,77 @@
+{
+    "difficulty": {
+
+      "easy": [
+        {
+          "title": "Introduction to Java Programming",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Concepts of Java Programming",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Values, Data Types, and Concatenations",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Conditional Statements",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "For Loop, While Loop, Do While Loop",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Basic Arrays",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Array Methods",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Character, String, and Number Methods",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        }
+      ],
+
+      "medium": [
+        {
+          "title": "Java Structure",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Data, Time, and Regex Method",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Regex and Character Methods",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Exception Handling",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        }
+      ],
+
+      "hard" : [
+        {
+          "title": "Applets and Graphics",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Advance GUI",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Base Object-Oriented Programming",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        },
+        {
+          "title": "Java Classes",
+          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+        }
+      ]
+      }
+    }

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Test_log</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="log_out">Log out</string>
+    <string name="full_name">Full Name</string>
+
+    <!--lesson 1-8-->
+    <!--    lesson 9-14-->
+    <!--    lesson 15-18-->
+    <string-array name="module_txt">
+        <item>LESSON 1</item>
+        <item>LESSON 2</item>
+        <item>LESSON 3</item>
+        <item>LESSON 4</item>
+        <item>LESSON 5</item>
+        <item>LESSON 6</item>
+        <item>LESSON 7</item>
+        <item>LESSON 8</item>
+        <item>LESSON 9</item>
+        <item>LESSON 10</item>
+        <item>LESSON 11</item>
+        <item>LESSON 12</item>
+        <item>LESSON 13</item>
+        <item>LESSON 14</item>
+        <item>LESSON 15</item>
+        <item>LESSON 16</item>
+        <item>LESSON 17</item>
+        <item>LESSON 18</item>
+    </string-array>
+
+    <string-array name="module_title_txt">
+        <item>Introduction to Java Programming</item>
+        <item>Concepts of Java Programming</item>
+        <item>Values, Data Types, and Concatenations</item>
+        <item>Conditional Statements</item>
+        <item>For Loop, While Loop, Do While Loop</item>
+        <item>Basic Arrays</item>
+        <item>Array Methods</item>
+        <item>Character, String, and Number Methods</item>
+
+        <item>Java Structure</item>
+        <item>Data, Time, and Regex Method</item>
+        <item>Regex and Character Methods</item>
+        <item>Exception Handling</item>
+        <item>Introduction to GUI</item>
+        <item>GUI Design and Application</item>
+
+        <item>Applets and Graphics</item>
+        <item>Advance GUI</item>
+        <item>Base Object-Oriented Programming </item>
+        <item>Java Classes</item>
+    </string-array>
+</resources>
