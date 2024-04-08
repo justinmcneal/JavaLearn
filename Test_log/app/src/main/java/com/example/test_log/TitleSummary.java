@@ -5,6 +5,7 @@ import android.graphics.text.LineBreaker;
 import android.icu.text.CaseMap;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -19,7 +20,14 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.w3c.dom.Text;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Objects;
 
 public class TitleSummary extends AppCompatActivity {
 
@@ -52,21 +60,12 @@ public class TitleSummary extends AppCompatActivity {
         tvSummary.setText(summary);
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
+        startActivity = findViewById(R.id.startActivity);
+        downloadPDF = findViewById(R.id.downloadPDF);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             tvSummary.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD); //jinustify ang text
         }
-
-//        textView = findViewById(R.id.user_details);
-//        user = auth.getCurrentUser();
-//
-//        if(user == null){
-//            Intent intent = new Intent(getApplicationContext(), logpage.class);
-//            startActivity(intent);
-//            finish();
-//        } else {
-//            textView.setText(user.getEmail());
-//        }
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,10 +76,6 @@ public class TitleSummary extends AppCompatActivity {
                 finish();
             }
         });
-
-        startActivity = findViewById(R.id.startActivity);
-        downloadPDF = findViewById(R.id.downloadPDF);
-
 
         startActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,11 +88,73 @@ public class TitleSummary extends AppCompatActivity {
 //        downloadPDF.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
-//                startActivity(intent);
+//                String directoryName; //waaaa
+//                String difficulty = intent.getStringExtra("difficulty");
+//                String fileAssets;
+//
+//                if (Objects.equals(difficulty, "easy")) {
+//                    directoryName = "easypdf"; //waaaa
+//                    fileAssets = String.valueOf(getAssets());
+//                        if ( fileAssets!= null) {
+//                            try {
+//                                String[] fileList = getAssets().list(directoryName);
+//                                if (fileList != null && fileList.length > 0) {
+//                                    for (String filename: fileList) {
+//                                        String filePath = directoryName + "/" + filename;
+//
+//                                        File outputFile = new File(getExternalFilesDir(null), filename);
+//
+//
+//                                    }
+//
+//                                }
+//                            }
+
+
+
+
+
+//
 //            }
-//        }); idk pa eh
-
-
+//
+//
+//
+//
+//
+//
+//
+//                // Get a list of all files in the selected directory
+//                try {
+//                    String[] fileList = getAssets().list(directoryName);
+//                    if (fileList != null && fileList.length > 0) {
+//                        for (String fileName : fileList) {
+//                            // Construct the full path to each PDF file
+//                            String filePath = directoryName + "/" + fileName;
+//
+//                            // Copy the PDF file from assets to external storage
+//                            File outputFile = new File(getExternalFilesDir(null), fileName);
+//                            try (InputStream inputStream = getAssets().open(filePath);
+//                                 OutputStream outputStream = new FileOutputStream(outputFile)) {
+//
+//                                byte[] buffer = new byte[4 * 1024];
+//                                int read;
+//                                while ((read = inputStream.read(buffer)) != -1) {
+//                                    outputStream.write(buffer, 0, read);
+//                                }
+//
+//                            } catch (IOException e) {
+//                                e.printStackTrace();
+//                            }
+//                        }
+//                    }
+//
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//
+//        });
+//
+//
     }
 }
