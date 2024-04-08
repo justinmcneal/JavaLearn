@@ -30,7 +30,7 @@ import java.util.Objects;
 
 public class LessonsActivity extends AppCompatActivity {
 
-    ArrayList<String> titleArray = new ArrayList<>(); //since array na ung object sa json nag create tayo array object here para ma integrate sa function later on
+    ArrayList<String> titleArray = new ArrayList<>(); //since array na ung object sa json nag create tayo array for key-pair value under nung obj here para ma integrate sa function later on
     ArrayList<String> summaryArray = new ArrayList<>();
 
 //    AssetManager assetManager = getAssets();
@@ -75,36 +75,36 @@ public class LessonsActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         // Extract the data
-        String difficulty = intent.getStringExtra("difficulty");
+        String difficulty = intent.getStringExtra("difficulty"); //get extra dun sa putextra kanina sa main act
 
         if (Objects.equals(difficulty, "easy")) {
             JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json"); //to be putted
-            if (jsonObject != null) {
+            if (jsonObject != null) { //if may laman ung object mag try sya
                 try {
                     //access json data
-                    JSONObject easyObject = jsonObject.getJSONObject("difficulty");
-                    JSONArray lessonEasy = easyObject.getJSONArray("easy");
+                    JSONObject easyObject = jsonObject.getJSONObject("difficulty"); //create an json object then get the json object sa lessons.json
+                    JSONArray lessonEasy = easyObject.getJSONArray("easy"); //since naka ung ung json object natin may array kailangan icall din natin ung array para mag display ng keypair value
 
-                    for (int i = 0; i <= lessonEasy.length(); i++){
-                        JSONObject accessTitle = new JSONObject(String.valueOf(lessonEasy.get(i)));
-                        String title = accessTitle.getString("title");
-                        String summary = accessTitle.getString("summary");
-                        titleArray.add(title);
-                        summaryArray.add(summary);
+                    for (int i = 0; i <= lessonEasy.length(); i++){ //initialize i to o then check if the lessoneasy is less than or equal to o mag incremenet sya by 1
+                        JSONObject accessTitle = new JSONObject(String.valueOf(lessonEasy.get(i))); //get the value of lessonEasy un ung nasa json
+                        String title = accessTitle.getString("title"); //then kukunin nya ung title sa json array ung key
+                        String summary = accessTitle.getString("summary"); //tas kukunin nya ung summary sa json array which is ung pair
+                        titleArray.add(title); //tas iaadd nya
+                        summaryArray.add(summary); //tas iaadd nya
                     }
 
                 } catch (JSONException e) {
-                    Log.d("catch", "error on catch");
+                    Log.d("catch", "error on catch"); //ccatch nya tas didisplay sa logcat
                     e.printStackTrace();
                 }
             } else {
-                Log.d("elsejson", "error on json else");
+                Log.d("elsejson", "error on json else"); //same goes
             }
         } else {
-            Log.d("objectjson", "error on json object");
+            Log.d("objectjson", "error on json object"); //same goes
         }
 
-        if (Objects.equals(difficulty, "medium")) {
+        if (Objects.equals(difficulty, "medium")) { //same goes but medium
             JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json"); //to be putted
             if (jsonObject != null) {
                 try {
@@ -132,7 +132,7 @@ public class LessonsActivity extends AppCompatActivity {
         }
 
 
-        if (Objects.equals(difficulty, "hard")) {
+        if (Objects.equals(difficulty, "hard")) { //same goes but hard
             JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json"); //to be putted
             if (jsonObject != null) {
                 try {
@@ -174,10 +174,10 @@ public class LessonsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(LessonsActivity.this, TitleSummary.class);
 
-                String title = titleArray.get(position);
-                String summary = summaryArray.get(position);
-                intent.putExtra("title", title);
-                intent.putExtra("summary", summary);
+                String title = titleArray.get(position); //get the position of key title via their index
+                String summary = summaryArray.get(position); //get the position of pair (summary) via their index
+                intent.putExtra("title", title); //put extra then display
+                intent.putExtra("summary", summary); //
             startActivity(intent);
             }
         });

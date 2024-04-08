@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public class JSONReader {
-    public static String loadJSONFromAsset(Context context, String filename) {
+    public static String loadJSONFromAsset(Context context, String filename) { //kinuha ung docu sa json tas cinopy lng
         String json;
         try {
             InputStream is = context.getAssets().open(filename);

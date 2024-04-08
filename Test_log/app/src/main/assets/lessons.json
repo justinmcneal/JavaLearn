@@ -4,73 +4,81 @@
       "easy": [
         {
           "title": "Introduction to Java Programming",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Java is everywhere. It remains widely used in the development of web applications, e-commerce, social media, and enterprise-level systems. This lesson provides a brief introduction to Java as an object-oriented language. Learn about the various Java career chances you could get as programming abilities stay on top of today’s technology jobs."
         },
         {
           "title": "Concepts of Java Programming",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Let us start to take in and discover the concepts of Java as a program. We will also be learning its main features and functions necessary to grasp how the program works. In this lesson, we will gain an understanding of Java’s mostly used statements and effectively use them."
         },
         {
           "title": "Values, Data Types, and Concatenations",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Enhancing your understanding of the concepts and components is a great way to start! In this lesson, the different values, data types, and the concept of concatenation will be introduced. Here, you will learn which data type is appropriate for each function. Declaring variables, using boolean logic, and joining strings together for an end result will also be explored."
         },
         {
           "title": "Conditional Statements",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Now that we’ve stepped into knowing the different data types and values while working with Java, it’s time to address conditional structures components of a program. This lesson will show which controls the processes and outputs based on syntax and semantics."
         },
         {
           "title": "For Loop, While Loop, Do While Loop",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "This lesson is going to teach you how to deal with what controls a program with the help of iterative structures. These structures are called loops. In computer programming, a loop is a sequence of instructions that is continually repeated until a certain condition is reached. In using these, we do not need to write the same code again and again."
         },
         {
           "title": "Basic Arrays",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Here’s an easy  way to store multiple values in a single variable. Java has what we call ‘arrays’ to help us do just that. In this lesson, we’ll be learning how to use elements, create and initialize arrays, as well as create multidimensional arrays."
         },
         {
           "title": "Array Methods",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "As a continuation to the concepts of arrays, we’ll be learning about the different methods for this area. This is useful when we need to store large amounts of data and process them efficiently. Organizing data elements clearly and efficiently helps in creating better programs."
         },
         {
           "title": "Character, String, and Number Methods",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Java’s Number class represents numeric values convertible to primitive data types such as short, byte, int, long, float, and double. We’ll be comprehending the different methods in this class and how to use them in a program."
         }
       ],
 
       "medium": [
         {
           "title": "Java Structure",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Data structures refer to the specific ways in which data is organized in a specialized format on a computer for them to be handled effectively. Java Data Structure is very important, especially for Java developers. This includes bitset, vector, stack dictionary and more."
         },
         {
           "title": "Data, Time, and Regex Method",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Date and Time classes in Java are very important for deriving programs that make use of date, time, and year computations. The four classes in this package will be differentiated alongside the demonstration on how these classes are to be used accordingly."
         },
         {
           "title": "Regex and Character Methods",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "A Regular Expression, or RegEx, is a set of characters that creates a pattern for searching within text. By using this pattern, you can specify what you're looking for in the data. In Java, the Pattern and Matcher classes are utilized for this purpose. Patterns establish the criteria for the search, while Matchers perform the actual search based on the defined pattern."
         },
         {
           "title": "Exception Handling",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "An exception is an unexpected event during program execution that can cause abnormal program termination. It can be caught and handled by the program, creating an exception object. Java exception types include runtime and IO exceptions. Exceptions can be handled using try...catch blocks, finally blocks, or throws keyword blocks."
+        },
+        {
+          "title": "Introduction to GUI",
+          "summary": "Java’s Graphical User Interface(GUI)  is an easy-to-use user experience builder for Java applications. Under this is Java Swing, a toolkit in Java that includes components like widgets and packages suited for your GUI. These components include JButton, JList, JComboBox, JLabel, and JTextField."
+        },
+        {
+          "title": "GUI Design and Application",
+          "summary": "Event Handling is an essential aspect of GUI programs. The parent class for all event objects is EventObject, which is derived from the Object class. Menus are a common feature for this aspect, included in this feature are JCheckboxMenuItem that uses a checkbox and JRadioMenuItem that uses radio buttons."
         }
       ],
 
       "hard" : [
         {
           "title": "Applets and Graphics",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "In Java, an applet is a program within another application, usually a Web browser. This can be imported using import.java.swing.JApplet, and usually contains a number of components used for GUI making. There are two ways to run an applet, through a web browser or an applet viewer."
         },
         {
           "title": "Advance GUI",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "A layout manager is an object that controls the layout of the components in the container object. Border Layout Manager, Flow Layout Manager, and Grid Layout Manager have specific tasks such as and  are objects that are available to use in the Layout Manager."
         },
         {
           "title": "Base Object-Oriented Programming",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Inheritance, data binding, polymorphism, and other notions are all part of the paradigm known as object-oriented programming. The design of a program with classes and objects is a paradigm or technique. These are called “classes” which are basically blueprints for the object."
         },
         {
           "title": "Java Classes",
-          "summary": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+          "summary": "Inheritance, Extends, Polymorphism, render(), and Encapsulation are classes and keywords that serve as key features of object-oriented programming. A method, on the other hand, contains statements that carry out tasks and accepts a method parameter’s value. The two types of methods are User-defined methods that let the user make methods based on the requirements, and Standard Library Methods that are built-in Java methods that are ready to be used.\n"
         }
       ]
       }

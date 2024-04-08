@@ -33,13 +33,6 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/user_details"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Hello fucker" />-->
-
-
         <Button
             android:id="@+id/logout"
             android:layout_width="wrap_content"
@@ -56,6 +49,7 @@
         android:layout_height="wrap_content"
         android:divider="@color/black"
         android:dividerHeight="2dp"
+        android:textAlignment="center"
         android:listSelector="@color/orange"
         app:layout_constraintTop_toBottomOf="@id/linearLayout"/>
 

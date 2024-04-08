@@ -2,6 +2,7 @@ package com.example.test_log;
 
 import android.content.Intent;
 import android.graphics.text.LineBreaker;
+import android.icu.text.CaseMap;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -18,11 +19,15 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import org.w3c.dom.Text;
+
 public class TitleSummary extends AppCompatActivity {
 
     FirebaseAuth auth;
     Button button;
     TextView tvTitle;
+    TextView startActivity;
+    TextView downloadPDF;
     TextView tvSummary;
 //    FirebaseUser user;
 
@@ -37,9 +42,9 @@ public class TitleSummary extends AppCompatActivity {
             return insets;
         });
 
-        Intent intent = getIntent();
-        String title = intent.getStringExtra("title");
-        String summary = intent.getStringExtra("summary");
+        Intent intent = getIntent(); //get the intent earlier
+        String title = intent.getStringExtra("title"); //get the extra kanina
+        String summary = intent.getStringExtra("summary"); //ganun lng din
 
         tvTitle = findViewById(R.id.tv_title);
         tvSummary = findViewById(R.id.tv_summary);
@@ -49,7 +54,7 @@ public class TitleSummary extends AppCompatActivity {
         button = findViewById(R.id.logout);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            tvSummary.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
+            tvSummary.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD); //jinustify ang text
         }
 
 //        textView = findViewById(R.id.user_details);
@@ -72,6 +77,26 @@ public class TitleSummary extends AppCompatActivity {
                 finish();
             }
         });
+
+        startActivity = findViewById(R.id.startActivity);
+        downloadPDF = findViewById(R.id.downloadPDF);
+
+
+        startActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
+                startActivity(intent);
+            }
+        });
+
+//        downloadPDF.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
+//                startActivity(intent);
+//            }
+//        }); idk pa eh
 
 
     }
