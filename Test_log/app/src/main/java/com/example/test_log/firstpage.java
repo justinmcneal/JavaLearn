@@ -23,14 +23,18 @@ public class firstpage extends AppCompatActivity {
             return insets;
         });
 
+        // send and process Message and Runnable objects
         Handler handler = new Handler();
+
+        //delay by 2000 millisecond
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(firstpage.this,logsignpage.class);
+                // request an action from this activity to another activity
+                Intent intent = new Intent(firstpage.this,logsignpage.class); //purpose .class is para ma execute ng jvm
                 startActivity(intent);
-                finish();
+                finish(); //para di masyado malaking memory kainin
             }
-        }, 5000);
+        }, 2000);
     }
 }

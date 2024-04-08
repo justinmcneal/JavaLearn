@@ -29,16 +29,14 @@ public class signpage extends AppCompatActivity {
 
     TextView textView;
 
-    TextInputEditText editTextEmail, editTextPassword;
-    Button buttonSign;
+    TextInputEditText editTextEmail, editTextPassword, editTextName; //same goes
+    Button buttonSign; //same goes
 
-    FirebaseAuth mAuth;
+    FirebaseAuth mAuth; //same goes
 
-    ProgressBar progressBar;
+    ProgressBar progressBar; //same goes
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-
 
 //    @Override
 //    public void onStart() {
@@ -53,22 +51,22 @@ public class signpage extends AppCompatActivity {
 //    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //limited access, void is the return type, does not return anything.
         super.onCreate(savedInstanceState);
-
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signpage);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+            return insets; //built in
         });
 
 
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance(); //same same lng
         progressBar = findViewById(R.id.progressBar);
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
+//        editTextName = findViewById(R.id.fullname); //to lang nadagdag
         buttonSign = findViewById(R.id.btn_signup);
 
         textView = findViewById(R.id.othersignin);
@@ -81,32 +79,37 @@ public class signpage extends AppCompatActivity {
             }
         });
 
-        buttonSign.setOnClickListener(new View.OnClickListener() {
+        buttonSign.setOnClickListener(new View.OnClickListener() { //when click do something
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE);
-                String email, password;
-                email = String.valueOf(editTextEmail.getText());
-                password = String.valueOf(editTextPassword.getText());
+                progressBar.setVisibility(View.VISIBLE); //set the progress bar to visible
+                String email, password; //create string variable
+                email = String.valueOf(editTextEmail.getText()); //then call the created variable to get the value of edittextemail to be stored in firebase
+                password = String.valueOf(editTextPassword.getText()); //same goes
+//                fullname = String.valueOf(editTextName.getText());
 
-                if (TextUtils.isEmpty(email)){
+                if (TextUtils.isEmpty(email)){ //same goes
                     Toast.makeText(signpage.this,"Enter Email", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                if (TextUtils.isEmpty(password)){
+                if (TextUtils.isEmpty(password)){ //same goes
                     Toast.makeText(signpage.this,"Enter Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                if (TextUtils.isEmpty(fullname)) {
+//                    Toast.makeText(signpage.this, "Enter Full Name", Toast.LENGTH_SHORT).show();
+//                }
+
+                mAuth.createUserWithEmailAndPassword(email,password) //user authentication firebase get the email ans password
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() { //copied on firebase then added toasts
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                progressBar.setVisibility(View.GONE);
+                                progressBar.setVisibility(View.GONE); //remove the progress bar when done
 
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(signpage.this, "Account created.",
+                                    Toast.makeText(signpage.this, "Account created.", //same goes
                                             Toast.LENGTH_SHORT).show();
 
                                     Intent intent = new Intent(signpage.this,logpage.class);
@@ -115,7 +118,7 @@ public class signpage extends AppCompatActivity {
 
                                 } else {
                                     // If sign in fails, display a message to the user.
-                                    Toast.makeText(signpage.this, "Authentication failed.",
+                                    Toast.makeText(signpage.this, "Authentication failed.", //samegoes
                                             Toast.LENGTH_SHORT).show();
                                 }
                             }

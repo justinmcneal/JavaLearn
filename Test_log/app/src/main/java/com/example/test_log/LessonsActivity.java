@@ -30,10 +30,10 @@ import java.util.Objects;
 
 public class LessonsActivity extends AppCompatActivity {
 
-    ArrayList<String> titleArray = new ArrayList<>();
+    ArrayList<String> titleArray = new ArrayList<>(); //since array na ung object sa json nag create tayo array object here para ma integrate sa function later on
     ArrayList<String> summaryArray = new ArrayList<>();
 
-    AssetManager assetManager = getAssets();
+//    AssetManager assetManager = getAssets();
 
     FirebaseAuth auth;
     Button button;
@@ -64,21 +64,15 @@ public class LessonsActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), logpage.class);
                 startActivity(intent);
-                finish();
             }
         });
 
-        Intent intent = getIntent();
-        listView = (ListView) findViewById(R.id.listView);
+        Intent intent = getIntent(); //kinuha ung intent sa main activity
+        listView = (ListView) findViewById(R.id.listView); //kinuha id ng listview sa xml
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this,
-                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
-
-        ListView listView = (ListView) findViewById(R.id.listView);
+        ArrayAdapter adapter = new ArrayAdapter<String>(this, //made an adapter for the
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item /*built in kinuha ko lng*/, titleArray);
         listView.setAdapter(adapter);
-
-
-
 
         // Extract the data
         String difficulty = intent.getStringExtra("difficulty");

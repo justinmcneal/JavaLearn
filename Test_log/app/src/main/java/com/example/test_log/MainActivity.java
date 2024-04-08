@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        auth = FirebaseAuth.getInstance();
+//        auth = FirebaseAuth.getInstance(); // yes
         button = findViewById(R.id.logout);
 //        textView = findViewById(R.id.user_details);
 //        user = auth.getCurrentUser();
@@ -52,54 +52,51 @@ public class MainActivity extends AppCompatActivity {
 //            textView.setText(user.getEmail());
 //        }
 
-        button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() { //do something
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
+                FirebaseAuth.getInstance().signOut(); //kukunin ung data tas isisignout sa app
                 Intent intent = new Intent(getApplicationContext(), logpage.class);
                 startActivity(intent);
-                finish();
+
             }
         });
 
-        CardView btnEasy = findViewById(R.id.easy_cv);
+        CardView btnEasy = findViewById(R.id.easy_cv); //kinuha mga id for the 3 cardview recyclerview sana but 3 lang so this is easier
         CardView btnMedium = findViewById(R.id.medium_cv);
         CardView btnHard = findViewById(R.id.hard_cv);
 
-        btnEasy.setOnClickListener(new View.OnClickListener() {
+        btnEasy.setOnClickListener(new View.OnClickListener() { //function in easy
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
+                Intent intent = new Intent(MainActivity.this, LessonsActivity.class); //move to next activity
 
-                String difficulty = "easy";
-                intent.putExtra("difficulty", difficulty);
+                String difficulty = "easy"; //call
+                intent.putExtra("difficulty", difficulty); //call to get extra in next activity
                 startActivity(intent);
-                finish();
             }
 
         });
 
-        btnMedium.setOnClickListener(new View.OnClickListener() {
+        btnMedium.setOnClickListener(new View.OnClickListener() { //same goes
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //samegoes
                 Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
 
-                String difficulty = "medium";
-                intent.putExtra("difficulty", difficulty);
+                String difficulty = "medium"; //same goes
+                intent.putExtra("difficulty", difficulty); //same goes
                 startActivity(intent);
-                finish();
             }
         });
 
-        btnHard.setOnClickListener(new View.OnClickListener() {
+        btnHard.setOnClickListener(new View.OnClickListener() { //same goes
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //same goes
                 Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
 
-                String difficulty = "hard";
+                String difficulty = "hard"; //same goes
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
-                finish();
 
             }
         });
