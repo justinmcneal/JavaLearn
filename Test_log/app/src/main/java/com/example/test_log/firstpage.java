@@ -38,6 +38,14 @@ public class firstpage extends AppCompatActivity {
                 startActivity(intent);
                 finish(); //para di masyado malaking memory kainin
             }
-        }, 2000);
+        }, 4000);
+
+        mediaPlayer = MediaPlayer.create(firstpage.this, R.raw.welcometojavalearn);
+        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mediaPlayer.start();
+            }
+        });
     }
 }

@@ -1,7 +1,7 @@
 package com.example.test_log;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,23 +24,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Objects;
 
 public class LessonsActivity extends AppCompatActivity {
-
+    private  MediaPlayer mediaPlayer;
     ArrayList<String> titleArray = new ArrayList<>(); //since array na ung object sa json nag create tayo array for key-pair value under nung obj here para ma integrate sa function later on
     ArrayList<String> summaryArray = new ArrayList<>();
-
-//    AssetManager assetManager = getAssets();
-
     FirebaseAuth auth;
     Button button;
-//    TextView textView;
     FirebaseUser user;
     ListView listView;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +49,11 @@ public class LessonsActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
         user = auth.getCurrentUser();
+        Intent intent = getIntent();
+        listView = (ListView) findViewById(R.id.listView);
+        ArrayAdapter adapter = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
+        listView.setAdapter(adapter);
+        String difficulty = intent.getStringExtra("difficulty");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,44 +61,41 @@ public class LessonsActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), logpage.class);
                 startActivity(intent);
+                mediaPlayer = MediaPlayer.create(LessonsActivity.this, R.raw.logout);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+
+                        mediaPlayer.start();
+                    }
+                });
             }
         });
 
-        Intent intent = getIntent(); //kinuha ung intent sa main activity
-        listView = (ListView) findViewById(R.id.listView); //kinuha id ng listview sa xml
-
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, //made an adapter for the
-                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item /*built in kinuha ko lng*/, titleArray);
-        listView.setAdapter(adapter);
-
-        // Extract the data
-        String difficulty = intent.getStringExtra("difficulty"); //get extra dun sa putextra kanina sa main act
-
         if (Objects.equals(difficulty, "easy")) {
-            JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json"); //to be putted
-            if (jsonObject != null) { //if may laman ung object mag try sya
+            JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json");
+
+            if (jsonObject != null) {
                 try {
-                    //access json data
-                    JSONObject easyObject = jsonObject.getJSONObject("difficulty"); //create an json object then get the json object sa lessons.json
-                    JSONArray lessonEasy = easyObject.getJSONArray("easy"); //since naka ung ung json object natin may array kailangan icall din natin ung array para mag display ng keypair value
+                    JSONObject easyObject = jsonObject.getJSONObject("difficulty");
+                    JSONArray lessonEasy = easyObject.getJSONArray("easy");
 
-                    for (int i = 0; i <= lessonEasy.length(); i++){ //initialize i to o then check if the lessoneasy is less than or equal to o mag incremenet sya by 1
-                        JSONObject accessTitle = new JSONObject(String.valueOf(lessonEasy.get(i))); //get the value of lessonEasy un ung nasa json
-                        String title = accessTitle.getString("title"); //then kukunin nya ung title sa json array ung key
-                        String summary = accessTitle.getString("summary"); //tas kukunin nya ung summary sa json array which is ung pair
-                        titleArray.add(title); //tas iaadd nya
-                        summaryArray.add(summary); //tas iaadd nya
+                    for (int i = 0; i <= lessonEasy.length(); i++){
+                        JSONObject accessTitle = new JSONObject(String.valueOf(lessonEasy.get(i)));
+                        String title = accessTitle.getString("title");
+                        String summary = accessTitle.getString("summary");
+                        titleArray.add(title);
+                        summaryArray.add(summary);
                     }
-
                 } catch (JSONException e) {
-                    Log.d("catch", "error on catch"); //ccatch nya tas didisplay sa logcat
+                    Log.d("catch", "error on catch");
                     e.printStackTrace();
                 }
             } else {
-                Log.d("elsejson", "error on json else"); //same goes
+                Log.d("elsejson", "error on json else");
             }
         } else {
-            Log.d("objectjson", "error on json object"); //same goes
+            Log.d("objectjson", "error on json object");
         }
 
         if (Objects.equals(difficulty, "medium")) { //same goes but medium
@@ -119,7 +113,6 @@ public class LessonsActivity extends AppCompatActivity {
                         titleArray.add(title);
                         summaryArray.add(summary);
                     }
-
                 } catch (JSONException e) {
                     Log.d("catch", "error on catch");
                     e.printStackTrace();
@@ -130,7 +123,6 @@ public class LessonsActivity extends AppCompatActivity {
         } else {
             Log.d("objectjson", "error on json object");
         }
-
 
         if (Objects.equals(difficulty, "hard")) { //same goes but hard
             JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json"); //to be putted
@@ -147,7 +139,6 @@ public class LessonsActivity extends AppCompatActivity {
                         titleArray.add(title);
                         summaryArray.add(summary);
                     }
-
                 } catch (JSONException e) {
                     Log.d("catch", "error on catch");
                     e.printStackTrace();
@@ -159,25 +150,23 @@ public class LessonsActivity extends AppCompatActivity {
             Log.d("objectjson", "error on json object");
         }
 
-//        listView.getOnItemClickListener() {
-//            Intent intent = new Intent(LessonsActivity.this, TitleSummary.class);
-//
-//            String difficulty = "hard";
-//            intent.putExtra("difficulty", difficulty);
-//            startActivity(intent);
-//            finish();
-//
-//        }
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(LessonsActivity.this, TitleSummary.class);
 
-                String title = titleArray.get(position); //get the position of key title via their index
-                String summary = summaryArray.get(position); //get the position of pair (summary) via their index
-                intent.putExtra("title", title); //put extra then display
+                String title = titleArray.get(position);
+                String summary = summaryArray.get(position);
+                intent.putExtra("title", title);
                 intent.putExtra("summary", summary); //
+
+                mediaPlayer = MediaPlayer.create(LessonsActivity.this, R.raw.lessons);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
             startActivity(intent);
             }
         });

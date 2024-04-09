@@ -42,15 +42,25 @@
 
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="350dp"
         android:background="@color/lightblue"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2">
+
+
 
         <TextView
             android:layout_width="match_parent"
@@ -66,21 +76,20 @@
 
     <TextView
         android:id="@+id/choiceA"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="180dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Choice A"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/white"
         android:background="@drawable/round_corner"
+        android:gravity="center"
+        android:text="Choice A"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <TextView
         android:id="@+id/choiceB"
-        android:layout_width="180dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/round_corner"
@@ -89,36 +98,35 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/choiceA"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceA" />
 
     <TextView
         android:id="@+id/choiceC"
-        android:layout_width="180dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_corner"
         android:gravity="center"
         android:text="Choice C"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choiceA" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceB" />
 
     <TextView
         android:id="@+id/choiceD"
-        android:layout_width="180dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_corner"
         android:gravity="center"
         android:text="Choice D"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/choiceC"
-        app:layout_constraintTop_toBottomOf="@+id/choiceB" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choiceC" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.example.test_log;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,9 @@ public class logsignpage extends AppCompatActivity {
 
     private Button logpage; //access modifier sya
     private Button signpage; //same goes
+
+    private MediaPlayer mediaPlayer;
+
 
     @Override //declares that do inherited class must do something
     protected void onCreate(Bundle savedInstanceState) { //limited access, void is the return type, does not return anything.
@@ -34,6 +38,14 @@ public class logsignpage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(logsignpage.this,logpage.class); // request an action from this activity to another activity
                 startActivity(intent);
+
+                mediaPlayer = MediaPlayer.create(logsignpage.this, R.raw.signinout);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
             }
         });
 
@@ -43,6 +55,14 @@ public class logsignpage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(logsignpage.this,signpage.class);
                 startActivity(intent);
+
+                mediaPlayer = MediaPlayer.create(logsignpage.this, R.raw.signinout);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
             }
         });
 

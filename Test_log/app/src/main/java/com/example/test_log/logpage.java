@@ -1,6 +1,7 @@
 package com.example.test_log;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,6 +26,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class logpage extends AppCompatActivity {
+
+    private MediaPlayer mediaPlayer;
 
     TextView textView;
 
@@ -72,6 +75,7 @@ public class logpage extends AppCompatActivity {
                 Intent intent = new Intent(logpage.this,signpage.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 
@@ -85,11 +89,29 @@ public class logpage extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(email)){ //pag walang nilagay mag ttoast sya
                     Toast.makeText(logpage.this,"Enter Email", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE); //loading object will be visible once it loads
+                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mp) {
+
+                            mediaPlayer.start();
+                        }
+                    });
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)){ //same goes
                     Toast.makeText(logpage.this,"Enter Password", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE); //loading object will be visible once it loads
+                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mp) {
+
+                            mediaPlayer.start();
+                        }
+                    });
                     return;
                 }
 
@@ -102,12 +124,26 @@ public class logpage extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(), "Login Successful",
                                             Toast.LENGTH_SHORT).show(); //mag ppopup to
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.mismongsigninout);
+                                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                        @Override
+                                        public void onPrepared(MediaPlayer mp) {
+                                            mediaPlayer.start();
+                                        }
+                                    });
                                     startActivity(intent);
                                     finish();
 
                                 } else {
                                     Toast.makeText(logpage.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show(); //magppop up to
+                                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                        @Override
+                                        public void onPrepared(MediaPlayer mp) {
+                                            mediaPlayer.start();
+                                        }
+                                    });
                                 }
                             }
                         });

@@ -1,6 +1,7 @@
 package com.example.test_log;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -26,6 +27,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class signpage extends AppCompatActivity {
+
+    private MediaPlayer mediaPlayer;
 
     TextView textView;
 
@@ -86,21 +89,26 @@ public class signpage extends AppCompatActivity {
                 String email, password; //create string variable
                 email = String.valueOf(editTextEmail.getText()); //then call the created variable to get the value of edittextemail to be stored in firebase
                 password = String.valueOf(editTextPassword.getText()); //same goes
-//                fullname = String.valueOf(editTextName.getText());
+
+                mediaPlayer = MediaPlayer.create(signpage.this, R.raw.mismongsigninout);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
 
                 if (TextUtils.isEmpty(email)){ //same goes
                     Toast.makeText(signpage.this,"Enter Email", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)){ //same goes
                     Toast.makeText(signpage.this,"Enter Password", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
                     return;
                 }
-
-//                if (TextUtils.isEmpty(fullname)) {
-//                    Toast.makeText(signpage.this, "Enter Full Name", Toast.LENGTH_SHORT).show();
-//                }
 
                 mAuth.createUserWithEmailAndPassword(email,password) //user authentication firebase get the email ans password
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() { //copied on firebase then added toasts

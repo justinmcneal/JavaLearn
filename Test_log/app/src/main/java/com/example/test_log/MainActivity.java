@@ -1,6 +1,7 @@
 package com.example.test_log;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,8 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private MediaPlayer mediaPlayer;
 
     FirebaseAuth auth;
     Button button;
@@ -59,6 +62,15 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), logpage.class);
                 startActivity(intent);
 
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.logout);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+
+                        mediaPlayer.start();
+                    }
+                });
+
             }
         });
 
@@ -74,6 +86,15 @@ public class MainActivity extends AppCompatActivity {
                 String difficulty = "easy"; //call
                 intent.putExtra("difficulty", difficulty); //call to get extra in next activity
                 startActivity(intent);
+
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+
+                        mediaPlayer.start();
+                    }
+                });
             }
 
         });
@@ -86,6 +107,15 @@ public class MainActivity extends AppCompatActivity {
                 String difficulty = "medium"; //same goes
                 intent.putExtra("difficulty", difficulty); //same goes
                 startActivity(intent);
+
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+
+                        mediaPlayer.start();
+                    }
+                });
             }
         });
 
@@ -97,6 +127,15 @@ public class MainActivity extends AppCompatActivity {
                 String difficulty = "hard"; //same goes
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
+
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+
+                        mediaPlayer.start();
+                    }
+                });
 
             }
         });
