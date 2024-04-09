@@ -1,6 +1,7 @@
 package com.example.test_log;
 
 import android.content.Intent;
+import android.graphics.pdf.PdfDocument;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
@@ -80,7 +81,7 @@ public class LessonsActivity extends AppCompatActivity {
                     JSONObject easyObject = jsonObject.getJSONObject("difficulty");
                     JSONArray lessonEasy = easyObject.getJSONArray("easy");
 
-                    for (int i = 0; i <= lessonEasy.length(); i++){
+                    for (int i = 0; i <= lessonEasy.length(); i++) {
                         JSONObject accessTitle = new JSONObject(String.valueOf(lessonEasy.get(i)));
                         String title = accessTitle.getString("title");
                         String summary = accessTitle.getString("summary");
@@ -106,7 +107,7 @@ public class LessonsActivity extends AppCompatActivity {
                     JSONObject mediumObject = jsonObject.getJSONObject("difficulty");
                     JSONArray lessonMedium = mediumObject.getJSONArray("medium");
 
-                    for (int i = 0; i <= lessonMedium.length(); i++){
+                    for (int i = 0; i <= lessonMedium.length(); i++) {
                         JSONObject accessTitle = new JSONObject(String.valueOf(lessonMedium.get(i)));
                         String title = accessTitle.getString("title");
                         String summary = accessTitle.getString("summary");
@@ -132,7 +133,7 @@ public class LessonsActivity extends AppCompatActivity {
                     JSONObject hardObject = jsonObject.getJSONObject("difficulty");
                     JSONArray lessonHard = hardObject.getJSONArray("hard");
 
-                    for (int i = 0; i <= lessonHard.length(); i++){
+                    for (int i = 0; i <= lessonHard.length(); i++) {
                         JSONObject accessTitle = new JSONObject(String.valueOf(lessonHard.get(i)));
                         String title = accessTitle.getString("title");
                         String summary = accessTitle.getString("summary");
@@ -167,10 +168,11 @@ public class LessonsActivity extends AppCompatActivity {
                         mediaPlayer.start();
                     }
                 });
-            startActivity(intent);
+                startActivity(intent);
             }
         });
-
-
     }
+
+
 }
+

@@ -57,17 +57,17 @@ public class TitleSummary extends AppCompatActivity {
         tvSummary.setText(summary);
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
-        btnStartActivity = findViewById(R.id.startActivity); // Renamed from startActivity
+        btnStartActivity = findViewById(R.id.startActivity);
         downloadPDF = findViewById(R.id.downloadPDF);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             tvSummary.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
         }
 
-        button.setOnClickListener(new View.OnClickListener() { //do something
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut(); //kukunin ung data tas isisignout sa app
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), logpage.class);
                 startActivity(intent);
 
@@ -83,51 +83,20 @@ public class TitleSummary extends AppCompatActivity {
             }
         });
 
-        btnStartActivity.setOnClickListener(v -> {
-            Intent quizIntent = new Intent(TitleSummary.this, QuizAssessment.class);
-            startActivity(quizIntent);
-        });
-
-        downloadPDF.setOnClickListener(v -> {
-            String difficulty = intent.getStringExtra("difficulty");
-            String directoryName;
-
-            if (Objects.equals(difficulty, "easy")) {
-                directoryName = "easypdf";
-            } else if (Objects.equals(difficulty, "medium")) {
-                directoryName = "mediumpdf";
-            } else if (Objects.equals(difficulty, "hard")) {
-                directoryName = "hardpdf";
-            } else {
-                Toast.makeText(TitleSummary.this, "Invalid difficulty level", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            AssetManager assetManager = getAssets();
-            try {
-                String[] fileList = assetManager.list(directoryName);
-                if (fileList != null && fileList.length > 0) {
-                    for (String filename : fileList) {
-                        try (InputStream in = assetManager.open(directoryName + "/" + filename);
-                             OutputStream out = new FileOutputStream(new File(getExternalFilesDir(null), filename))) {
-
-                            byte[] buffer = new byte[1024];
-                            int read;
-                            while ((read = in.read(buffer)) != -1) {
-                                out.write(buffer, 0, read);
-                            }
-
-                            Toast.makeText(TitleSummary.this, "PDF files downloaded successfully", Toast.LENGTH_SHORT).show();
-                        } catch (IOException e) {
-                            Log.e("PDFDownload", "Error downloading PDF files", e);
-                        }
+        btnStartActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
+                startActivity(intent);
+                mediaPlayer = MediaPlayer.create(TitleSummary.this, R.raw.lessons);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
                     }
-                } else {
-                    Log.e("PDFDownload", "No files found in directory: " + directoryName);
-                }
-            } catch (IOException e) {
-                Log.e("PDFDownload", "Error listing files in directory", e);
+                });
             }
         });
+
     }
 }
