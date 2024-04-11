@@ -5,8 +5,129 @@
         {
           "title": "Introduction to Java Programming",
           "summary": "Java is everywhere. It remains widely used in the development of web applications, e-commerce, social media, and enterprise-level systems. This lesson provides a brief introduction to Java as an object-oriented language. Learn about the various Java career chances you could get as programming abilities stay on top of today’s technology jobs.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_1.pdf"
+          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_1.pdf",
+
+          "questions": [
+            {
+              "text": "The process of creating video games or other types of entertainment software is called?",
+                    "option": [
+                      "Web Development",
+                      "Game Development",
+                      "Mobile App Development",
+                      "Video Games Development"
+                    ],
+              "answer": 1,
+              "value:": 1
+            },
+            {
+              "text": "They are also involved in maintaining, debugging, and troubleshooting software and systems to keep things running smoothly.",
+              "option": [
+                "Debuggers",
+                "Software Engineer",
+                "Developer",
+                "Programmers"
+              ],
+              "answer": 3,
+              "value:": 1
+            },
+            {
+              "text": "It is an object-oriented programming language.",
+              "option": [
+                "Cobra",
+                "Scripted",
+                "How To Make Lumpia",
+                "Java"
+              ],
+              "answer": 3,
+              "value:": 1
+            },
+            {
+              "text": "A Java category that’s accustomed to handling communications protocol requests.",
+              "option": [
+                "Servlets",
+                "Jars",
+                "UI",
+                "Studio Emulator"
+              ],
+              "answer": 0,
+              "value:": 1
+            },
+
+
+            {
+              "text": "This is often used for aggregation of files and information into one file.",
+              "option": [
+                "Swing toolkit",
+                "Jars",
+                "Servlets",
+                "Java SE"
+              ],
+              "answer": 1,
+              "value:": 1
+            },
+
+            {
+              "text": "Meaning of “WORA”",
+              "option": [
+                "Write Once, Read Advance",
+                "Write Once, Run Anywhere",
+                "Write Oriented, Run Anywhere",
+                "Write Oriented , Read Advance"
+              ],
+              "answer": 1,
+              "value:": 1
+            },
+
+            {
+              "text": "What does JDK means?",
+              "option": [
+                "Java Department Kit",
+                "Javascript Development Kit",
+                "Java Developers Kit",
+                "Java Development Kit"
+              ],
+              "answer": 3,
+              "value:": 1
+            },
+
+            {
+              "text": "It translates the instructions into something the machine can understand.",
+              "option": [
+                "Jars",
+                "JDK",
+                "Compiler",
+                "Interpreter"
+              ],
+              "answer": 3,
+              "value:": 1
+            },
+
+            {
+              "text": "A set of instructions specifically designed for a particular type of machine and operating system.",
+              "option": [
+                "Jars",
+                "JDK",
+                "Compiler",
+                "Interpreter"
+              ],
+              "answer": 2,
+              "value:": 1
+            },
+
+            {
+              "text": "Java is both a compiled language as well as an interpreted language.",
+              "option": [
+                "True",
+                "False",
+                "Neither true nor False",
+                "Can’t say"
+              ],
+              "answer": 0,
+              "value:": 1
+            }
+          ]
         },
+
         {
           "title": "Concepts of Java Programming",
           "summary": "Let us start to take in and discover the concepts of Java as a program. We will also be learning its main features and functions necessary to grasp how the program works. In this lesson, we will gain an understanding of Java’s mostly used statements and effectively use them.",
