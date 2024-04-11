@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -26,129 +27,112 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class logpage extends AppCompatActivity {
-
     private MediaPlayer mediaPlayer;
-
     TextView textView;
-
     TextInputEditText editTextEmail, editTextPassword;
     Button buttonLogin;
-
-    FirebaseAuth mAuth; //authentication
-
-    ProgressBar progressBar; //design lng hihe
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    FirebaseAuth mAuth;
+    ProgressBar progressBar;
 
     @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){ //if may account na naka sign in si user mag aautomatic mag iistart ung next activity
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
-            finish();
-        } // lagyan ko paba toast to sa else pag di nag login??? T,T wag na
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) { //limited access, void is the return type, does not return anything.
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_logpage);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets; //built in
+            return insets;
         });
 
-        mAuth = FirebaseAuth.getInstance(); //firebase my authentication you can check the document on firebase
-        progressBar = findViewById(R.id.progressBar); //just the loading screen
-        editTextEmail = findViewById(R.id.email); //call the id email
-        editTextPassword = findViewById(R.id.password); //call the id password
-        buttonLogin = findViewById(R.id.btn_signin); //call the id that when click will go to the other activity
-        textView = findViewById(R.id.othersignup); //call the id that when click will go to the other activity on sign up
-        textView.setOnClickListener(new View.OnClickListener() { //gives function
+        mAuth = FirebaseAuth.getInstance();
+        progressBar = findViewById(R.id.progressBar);
+        editTextEmail = findViewById(R.id.email);
+        editTextPassword = findViewById(R.id.password);
+        buttonLogin = findViewById(R.id.btn_signin);
+        textView = findViewById(R.id.othersignup);
+
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(logpage.this,signpage.class);
                 startActivity(intent);
                 finish();
-
             }
         });
 
-        buttonLogin.setOnClickListener(new View.OnClickListener() { //gives function
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE); //loading object will be visible once it loads
-                String email, password; //new variable to convert the textview into string
-                email = String.valueOf(editTextEmail.getText()); //get the value and the text just to save in mauth
-                password = String.valueOf(editTextPassword.getText()); //same goes
+                Toast.makeText(logpage.this, "Signing In...", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.VISIBLE);
+                String email, password;
+                email = String.valueOf(editTextEmail.getText());
+                password = String.valueOf(editTextPassword.getText());
 
-                if (TextUtils.isEmpty(email)){ //pag walang nilagay mag ttoast sya
+                if (TextUtils.isEmpty(email)){
                     Toast.makeText(logpage.this,"Enter Email", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.GONE); //loading object will be visible once it loads
+                    progressBar.setVisibility(View.GONE);
                     mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mp) {
-
                             mediaPlayer.start();
                         }
                     });
                     return;
                 }
 
-                if (TextUtils.isEmpty(password)){ //same goes
+                if (TextUtils.isEmpty(password)){
                     Toast.makeText(logpage.this,"Enter Password", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.GONE); //loading object will be visible once it loads
+                   progressBar.setVisibility(View.GONE);
                     mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mp) {
-
                             mediaPlayer.start();
                         }
                     });
                     return;
                 }
 
-                mAuth.signInWithEmailAndPassword(email, password) //firebase docs reference
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() { //when complete, do something
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) { //copy lang sa firebase build
-                                progressBar.setVisibility(View.GONE); //if successful, remove progress bar
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), "Login Successful",
-                                            Toast.LENGTH_SHORT).show(); //mag ppopup to
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.mismongsigninout);
-                                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                                        @Override
-                                        public void onPrepared(MediaPlayer mp) {
-                                            mediaPlayer.start();
-                                        }
-                                    });
-                                    startActivity(intent);
-                                    finish();
+                try {
+                    mAuth.signInWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                progressBar.setVisibility(View.GONE);
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "Sign In Successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        mediaPlayer = MediaPlayer.create(logpage.this, R.raw.mismongsigninout);
+                                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                            @Override
+                                            public void onPrepared(MediaPlayer mp) {
+                                                mediaPlayer.start();
+                                            }
+                                        });
+                                        startActivity(intent);
+                                        finish();
 
-                                } else {
-                                    Toast.makeText(logpage.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show(); //magppop up to
-                                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
-                                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                                        @Override
-                                        public void onPrepared(MediaPlayer mp) {
-                                            mediaPlayer.start();
-                                        }
-                                    });
+                                    } else {
+                                        Toast.makeText(logpage.this, "Authentication failed.",
+                                                Toast.LENGTH_SHORT).show();
+                                        mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                            @Override
+                                            public void onPrepared(MediaPlayer mp) {
+                                                mediaPlayer.start();
+                                            }
+                                        });
+                                    }
                                 }
-                            }
-                        });
-
-
+                            });
+                } catch (Exception e){
+                    Toast.makeText(logpage.this, "error here",
+                            Toast.LENGTH_SHORT).show();
+                    Log.d("dddd", e.toString());
+                }
 
             }
         });

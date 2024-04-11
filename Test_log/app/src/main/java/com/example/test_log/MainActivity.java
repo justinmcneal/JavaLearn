@@ -42,25 +42,26 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-//        auth = FirebaseAuth.getInstance(); // yes
+        auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
-//        textView = findViewById(R.id.user_details);
-//        user = auth.getCurrentUser();
-//
-//        if(user == null){
-//            Intent intent = new Intent(getApplicationContext(), logpage.class);
-//            startActivity(intent);
-//            finish();
-//        } else {
-//            textView.setText(user.getEmail());
-//        }
+        textView = findViewById(R.id.user_details);
+        user = auth.getCurrentUser();
 
-        button.setOnClickListener(new View.OnClickListener() { //do something
+        if(user == null){
+            Intent intent = new Intent(getApplicationContext(), logpage.class);
+            startActivity(intent);
+            finish();
+        } else {
+            textView.setText(user.getEmail());
+        }
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut(); //kukunin ung data tas isisignout sa app
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(getApplicationContext(), logpage.class);
                 startActivity(intent);
+                finish();
 
                 mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.logout);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -74,24 +75,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        CardView btnEasy = findViewById(R.id.easy_cv); //kinuha mga id for the 3 cardview recyclerview sana but 3 lang so this is easier
+        CardView btnEasy = findViewById(R.id.easy_cv);
         CardView btnMedium = findViewById(R.id.medium_cv);
         CardView btnHard = findViewById(R.id.hard_cv);
 
-        btnEasy.setOnClickListener(new View.OnClickListener() { //function in easy
+        btnEasy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LessonsActivity.class); //move to next activity
-
-                String difficulty = "easy"; //call
-                intent.putExtra("difficulty", difficulty); //call to get extra in next activity
+                Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
+                String difficulty = "easy";
+                intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
 
                 mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
-
                         mediaPlayer.start();
                     }
                 });
@@ -99,32 +98,12 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        btnMedium.setOnClickListener(new View.OnClickListener() { //same goes
+        btnMedium.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //samegoes
+            public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
 
-                String difficulty = "medium"; //same goes
-                intent.putExtra("difficulty", difficulty); //same goes
-                startActivity(intent);
-
-                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
-                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mp) {
-
-                        mediaPlayer.start();
-                    }
-                });
-            }
-        });
-
-        btnHard.setOnClickListener(new View.OnClickListener() { //same goes
-            @Override
-            public void onClick(View v) { //same goes
-                Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
-
-                String difficulty = "hard"; //same goes
+                String difficulty = "medium";
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
 
@@ -136,11 +115,26 @@ public class MainActivity extends AppCompatActivity {
                         mediaPlayer.start();
                     }
                 });
-
             }
         });
 
+        btnHard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
 
+                String difficulty = "hard";
+                intent.putExtra("difficulty", difficulty);
+                startActivity(intent);
 
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
+            }
+        });
     }
 }

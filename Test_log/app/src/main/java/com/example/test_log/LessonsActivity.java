@@ -1,6 +1,7 @@
 package com.example.test_log;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.graphics.pdf.PdfDocument;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -24,13 +25,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class LessonsActivity extends AppCompatActivity {
     private  MediaPlayer mediaPlayer;
     ArrayList<String> titleArray = new ArrayList<>(); //since array na ung object sa json nag create tayo array for key-pair value under nung obj here para ma integrate sa function later on
     ArrayList<String> summaryArray = new ArrayList<>();
+    ArrayList<String> pdfArray = new ArrayList<>();
     FirebaseAuth auth;
     Button button;
     FirebaseUser user;
@@ -55,6 +59,13 @@ public class LessonsActivity extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
         listView.setAdapter(adapter);
         String difficulty = intent.getStringExtra("difficulty");
+
+        AssetManager assetManager = getAssets();
+
+//        ArrayList<String> easyPDF = (ArrayList<String>) Arrays.asList("module_1.pdf", "module_2.pdf", "module_3.pdf", "module_4.pdf", "module_5.pdf", "module_6.pdf", "module_7.pdf", "module_8.pdf");
+//        ArrayList<String> mediumPDF = (ArrayList<String>) Arrays.asList("module_9.pdf", "module_10.pdf", "module_11.pdf", "module_12.pdf", "module_13.pdf", "module_14.pdf");
+//        ArrayList<String> hardPDF = (ArrayList<String>) Arrays.asList("module_15.pdf", "module_16.pdf", "module_17.pdf", "module_18.pdf");
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,9 +96,12 @@ public class LessonsActivity extends AppCompatActivity {
                         JSONObject accessTitle = new JSONObject(String.valueOf(lessonEasy.get(i)));
                         String title = accessTitle.getString("title");
                         String summary = accessTitle.getString("summary");
+                        String pdf_file = accessTitle.getString("pdf_file");
                         titleArray.add(title);
                         summaryArray.add(summary);
+                        pdfArray.add(pdf_file);
                     }
+
                 } catch (JSONException e) {
                     Log.d("catch", "error on catch");
                     e.printStackTrace();
@@ -111,8 +125,10 @@ public class LessonsActivity extends AppCompatActivity {
                         JSONObject accessTitle = new JSONObject(String.valueOf(lessonMedium.get(i)));
                         String title = accessTitle.getString("title");
                         String summary = accessTitle.getString("summary");
+                        String pdf_file = accessTitle.getString("pdf_file");
                         titleArray.add(title);
                         summaryArray.add(summary);
+                        pdfArray.add(pdf_file);
                     }
                 } catch (JSONException e) {
                     Log.d("catch", "error on catch");
@@ -137,8 +153,10 @@ public class LessonsActivity extends AppCompatActivity {
                         JSONObject accessTitle = new JSONObject(String.valueOf(lessonHard.get(i)));
                         String title = accessTitle.getString("title");
                         String summary = accessTitle.getString("summary");
+                        String pdf_file = accessTitle.getString("pdf_file");
                         titleArray.add(title);
                         summaryArray.add(summary);
+                        pdfArray.add(pdf_file);
                     }
                 } catch (JSONException e) {
                     Log.d("catch", "error on catch");
@@ -158,8 +176,10 @@ public class LessonsActivity extends AppCompatActivity {
 
                 String title = titleArray.get(position);
                 String summary = summaryArray.get(position);
+                String pdf_file = pdfArray.get(position);
                 intent.putExtra("title", title);
-                intent.putExtra("summary", summary); //
+                intent.putExtra("summary", summary);
+                intent.putExtra("pdf_file", pdf_file);
 
                 mediaPlayer = MediaPlayer.create(LessonsActivity.this, R.raw.lessons);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {

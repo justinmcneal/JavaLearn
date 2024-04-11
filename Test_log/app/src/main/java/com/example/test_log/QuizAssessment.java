@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,14 +15,18 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class QuizAssessment extends AppCompatActivity {
 
     FirebaseAuth auth;
     Button button;
-    //    TextView textView;
     FirebaseUser user;
-    ListView listView;
+    private FirebaseFirestore firestore;
+    private int currentQuestionIndex = 0;
+    private int score = 0;
+
+    private TextView choice1, choice2, choice3, choice4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

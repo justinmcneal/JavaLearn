@@ -32,44 +32,32 @@ public class signpage extends AppCompatActivity {
 
     TextView textView;
 
-    TextInputEditText editTextEmail, editTextPassword, editTextName; //same goes
-    Button buttonSign; //same goes
+    TextInputEditText editTextEmail, editTextPassword, editTextName;
+    Button buttonSign;
 
-    FirebaseAuth mAuth; //same goes
+    FirebaseAuth mAuth;
 
-    ProgressBar progressBar; //same goes
+    ProgressBar progressBar;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
-//    }
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) { //limited access, void is the return type, does not return anything.
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_signpage);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets; //built in
+            return insets;
         });
 
 
-        mAuth = FirebaseAuth.getInstance(); //same same lng
+        mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
-//        editTextName = findViewById(R.id.fullname); //to lang nadagdag
+//      editTextName = findViewById(R.id.fullname);
         buttonSign = findViewById(R.id.btn_signup);
 
         textView = findViewById(R.id.othersignin);
@@ -82,13 +70,13 @@ public class signpage extends AppCompatActivity {
             }
         });
 
-        buttonSign.setOnClickListener(new View.OnClickListener() { //when click do something
+        buttonSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar.setVisibility(View.VISIBLE); //set the progress bar to visible
-                String email, password; //create string variable
-                email = String.valueOf(editTextEmail.getText()); //then call the created variable to get the value of edittextemail to be stored in firebase
-                password = String.valueOf(editTextPassword.getText()); //same goes
+                progressBar.setVisibility(View.VISIBLE);
+                String email, password;
+                email = String.valueOf(editTextEmail.getText());
+                password = String.valueOf(editTextPassword.getText());
 
                 mediaPlayer = MediaPlayer.create(signpage.this, R.raw.mismongsigninout);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -110,23 +98,20 @@ public class signpage extends AppCompatActivity {
                     return;
                 }
 
-                mAuth.createUserWithEmailAndPassword(email,password) //user authentication firebase get the email ans password
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() { //copied on firebase then added toasts
+                mAuth.createUserWithEmailAndPassword(email,password)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                progressBar.setVisibility(View.GONE); //remove the progress bar when done
+                                progressBar.setVisibility(View.GONE);
 
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(signpage.this, "Account created.", //same goes
-                                            Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(signpage.this, "Account created.", Toast.LENGTH_SHORT).show();
 
                                     Intent intent = new Intent(signpage.this,logpage.class);
                                     startActivity(intent);
                                     finish();
-
                                 } else {
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(signpage.this, "Authentication failed.", //samegoes
+                                    Toast.makeText(signpage.this, "Authentication failed.",
                                             Toast.LENGTH_SHORT).show();
                                 }
                             }

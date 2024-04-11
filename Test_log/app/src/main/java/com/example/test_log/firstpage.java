@@ -4,16 +4,24 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class firstpage extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
-
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,17 +34,23 @@ public class firstpage extends AppCompatActivity {
             return insets;
         });
 
-        // send and process Message and Runnable objects
-        Handler handler = new Handler();
+        mAuth = FirebaseAuth.getInstance();
 
-        //delay by 2000 millisecond
+        Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                // request an action from this activity to another activity
-                Intent intent = new Intent(firstpage.this,logsignpage.class); //purpose .class is para ma execute ng jvm
-                startActivity(intent);
-                finish(); //para di masyado malaking memory kainin
+                FirebaseUser currentUser = mAuth.getCurrentUser();
+                if (currentUser !=null){
+                    Toast.makeText(getApplicationContext(), "Welcome Back User!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(firstpage.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(firstpage.this, logsignpage.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }, 4000);
 

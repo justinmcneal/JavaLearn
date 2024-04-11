@@ -1,10 +1,14 @@
 package com.example.test_log;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,32 +17,43 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class logsignpage extends AppCompatActivity {
-
-    private Button logpage; //access modifier sya
-    private Button signpage; //same goes
-
+    private Button logpage;
+    private Button signpage;
     private MediaPlayer mediaPlayer;
 
+    public boolean isNetwork(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            return true;
+        }
+        return false;
+    }
 
-    @Override //declares that do inherited class must do something
-    protected void onCreate(Bundle savedInstanceState) { //limited access, void is the return type, does not return anything.
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_logsignpage);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets; //built in
-        }); //built in
 
-        logpage = findViewById(R.id.signinfirst); //kinuha ung logpage sa function sa taas then kinuha ung id sa button from activity_logpage.xml
+            if (isNetwork(getApplicationContext())){
+                Toast.makeText(getApplicationContext(), "Internet Connected", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "Internet Is Not Connected", Toast.LENGTH_SHORT).show();
+            }
+            return insets;
+        });
 
-        logpage.setOnClickListener(new View.OnClickListener() { //sets that this button must be clickable
+        logpage = findViewById(R.id.signinfirst);
+        logpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(logsignpage.this,logpage.class); // request an action from this activity to another activity
+                Intent intent = new Intent(logsignpage.this,logpage.class);
                 startActivity(intent);
-
                 mediaPlayer = MediaPlayer.create(logsignpage.this, R.raw.signinout);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
@@ -49,8 +64,8 @@ public class logsignpage extends AppCompatActivity {
             }
         });
 
-        signpage = findViewById(R.id.signupfirst); //same goes
-        signpage.setOnClickListener(new View.OnClickListener() { //same goes
+        signpage = findViewById(R.id.signupfirst);
+        signpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(logsignpage.this,signpage.class);
@@ -65,7 +80,5 @@ public class logsignpage extends AppCompatActivity {
                 });
             }
         });
-
-
     }
 }
