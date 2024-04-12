@@ -93,7 +93,7 @@ public class LessonsActivity extends AppCompatActivity {
                     JSONArray lessonEasy = easyObject.getJSONArray("easy");
 
                     for (int i = 0; i <= lessonEasy.length(); i++) {
-                        JSONObject accessTitle = new JSONObject(String.valueOf(lessonEasy.get(i)));
+                        JSONObject accessTitle = new JSONObject(String.valueOf((lessonEasy.get(i))));
                         String title = accessTitle.getString("title");
                         String summary = accessTitle.getString("summary");
                         String pdf_file = accessTitle.getString("pdf_file");

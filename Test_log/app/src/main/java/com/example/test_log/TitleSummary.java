@@ -1,5 +1,7 @@
 package com.example.test_log;
 
+import static android.os.Environment.getExternalStoragePublicDirectory;
+
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.text.LineBreaker;
@@ -64,7 +66,8 @@ public class TitleSummary extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
         Intent intent = getIntent();
-        String title = intent.getStringExtra("title");
+        String title =
+                intent.getStringExtra("title");
         String summary = intent.getStringExtra("summary");
         String pdf_file = intent.getStringExtra("pdf_file");
         tvTitle = findViewById(R.id.tv_title);
@@ -121,7 +124,8 @@ public class TitleSummary extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(user != null){
-                    File localFile = new File(getExternalFilesDir(null), "lesson1-test.pdf");
+                    String filename = "module" + System.currentTimeMillis() + ".pdf";
+                    File localFile =new File(getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),"JavaLearn");
                     storageRef.getFile(localFile)
                             .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                                 @Override
