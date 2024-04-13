@@ -17,6 +17,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.json.JSONObject;
+
 public class QuizAssessment extends AppCompatActivity {
 
     FirebaseAuth auth;
@@ -25,8 +27,11 @@ public class QuizAssessment extends AppCompatActivity {
     private FirebaseFirestore firestore;
     private int currentQuestionIndex = 0;
     private int score = 0;
+    TextView question;
+    TextView choiceA, choiceB, choiceC, choiceD;
 
-    private TextView choice1, choice2, choice3, choice4;
+//    public QuizAssessment(String questionText, String answer1, String answer2, String answer3, String answer4, String correctAnswer, int value) {
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +56,41 @@ public class QuizAssessment extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        question = findViewById(R.id.question);
+        choiceA = findViewById(R.id.choiceA);
+        choiceB = findViewById(R.id.choiceB);
+        choiceC = findViewById(R.id.choiceC);
+        choiceD = findViewById(R.id.choiceD);
+
+        choiceA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        choiceB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        choiceC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        choiceD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
     }
 }

@@ -32,9 +32,13 @@ import java.util.Objects;
 
 public class LessonsActivity extends AppCompatActivity {
     private  MediaPlayer mediaPlayer;
-    ArrayList<String> titleArray = new ArrayList<>(); //since array na ung object sa json nag create tayo array for key-pair value under nung obj here para ma integrate sa function later on
+    ArrayList<String> titleArray= new ArrayList<>();
     ArrayList<String> summaryArray = new ArrayList<>();
-    ArrayList<String> pdfArray = new ArrayList<>();
+    ArrayList<String> pdfArray= new ArrayList<>();
+
+
+    ArrayList<String> questionTextArray, answer1Array, answer2Array, answer3Array, answer4Array = new ArrayList<>();
+    ArrayList<String> correctArray, valueArray = new ArrayList<>();
     FirebaseAuth auth;
     Button button;
     FirebaseUser user;
@@ -59,13 +63,6 @@ public class LessonsActivity extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
         listView.setAdapter(adapter);
         String difficulty = intent.getStringExtra("difficulty");
-
-        AssetManager assetManager = getAssets();
-
-//        ArrayList<String> easyPDF = (ArrayList<String>) Arrays.asList("module_1.pdf", "module_2.pdf", "module_3.pdf", "module_4.pdf", "module_5.pdf", "module_6.pdf", "module_7.pdf", "module_8.pdf");
-//        ArrayList<String> mediumPDF = (ArrayList<String>) Arrays.asList("module_9.pdf", "module_10.pdf", "module_11.pdf", "module_12.pdf", "module_13.pdf", "module_14.pdf");
-//        ArrayList<String> hardPDF = (ArrayList<String>) Arrays.asList("module_15.pdf", "module_16.pdf", "module_17.pdf", "module_18.pdf");
-
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
