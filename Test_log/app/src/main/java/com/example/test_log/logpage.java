@@ -84,7 +84,7 @@ public class logpage extends AppCompatActivity {
                 }
 
                 if (!email.endsWith("@gmail.com")) {
-                    Toast.makeText(logpage.this, "Enter a valid Gmail address", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(logpage.this, "Invalid email address", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {

@@ -93,7 +93,7 @@ public class signpage extends AppCompatActivity {
                 }
 
                 if (!email.endsWith("@gmail.com")) {
-                    Toast.makeText(signpage.this, "Enter a valid Gmail address", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(signpage.this, "Invalid email address", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     mediaPlayer = MediaPlayer.create(signpage.this, R.raw.error);
                     mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
