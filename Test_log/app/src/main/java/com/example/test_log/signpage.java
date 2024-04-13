@@ -92,6 +92,19 @@ public class signpage extends AppCompatActivity {
                     return;
                 }
 
+                if (!email.endsWith("@gmail.com")) {
+                    Toast.makeText(signpage.this, "Enter a valid Gmail address", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    mediaPlayer = MediaPlayer.create(signpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mp) {
+                            mediaPlayer.start();
+                        }
+                    });
+                    return;
+                }
+
                 if (TextUtils.isEmpty(password)){ //same goes
                     Toast.makeText(signpage.this,"Enter Password", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);

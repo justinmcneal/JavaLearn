@@ -83,6 +83,19 @@ public class logpage extends AppCompatActivity {
                     return;
                 }
 
+                if (!email.endsWith("@gmail.com")) {
+                    Toast.makeText(logpage.this, "Enter a valid Gmail address", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mp) {
+                            mediaPlayer.start();
+                        }
+                    });
+                    return;
+                }
+
                 if (TextUtils.isEmpty(password)){
                     Toast.makeText(logpage.this,"Enter Password", Toast.LENGTH_SHORT).show();
                    progressBar.setVisibility(View.GONE);
