@@ -55,7 +55,7 @@ public class LessonsActivity extends AppCompatActivity {
         button = findViewById(R.id.logout);
         user = auth.getCurrentUser();
         Intent intent = getIntent();
-        listView = (ListView) findViewById(R.id.listView);
+        listView = findViewById(R.id.listView);
         ArrayAdapter adapter = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
         listView.setAdapter(adapter);
         String difficulty = intent.getStringExtra("difficulty");

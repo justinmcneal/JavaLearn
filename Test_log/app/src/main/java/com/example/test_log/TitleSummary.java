@@ -45,7 +45,7 @@ public class TitleSummary extends AppCompatActivity {
 
     private Button button;
     private TextView tvTitle;
-    private TextView btnStartActivity; // Renamed from startActivity
+    private TextView btnStartActivity;
     private TextView downloadPDF;
     private TextView tvSummary;
     FirebaseUser user;
@@ -66,8 +66,7 @@ public class TitleSummary extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
         Intent intent = getIntent();
-        String title =
-                intent.getStringExtra("title");
+        String title = intent.getStringExtra("title");
         String summary = intent.getStringExtra("summary");
         String pdf_file = intent.getStringExtra("pdf_file");
         tvTitle = findViewById(R.id.tv_title);

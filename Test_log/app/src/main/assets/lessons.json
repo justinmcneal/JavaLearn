@@ -998,7 +998,101 @@
         {
           "title": "Regex and Character Methods",
           "summary": "A Regular Expression, or RegEx, is a set of characters that creates a pattern for searching within text. By using this pattern, you can specify what you're looking for in the data. In Java, the Pattern and Matcher classes are utilized for this purpose. Patterns establish the criteria for the search, while Matchers perform the actual search based on the defined pattern.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_11.pdf"
+          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_11.pdf",
+
+
+          "questions": [
+            {
+              "text": " Regex is short for?",
+              "answer1": "Reconstruct Expressions",
+              "answer2": "Regular Expressions",
+              "answer3": "Reconstruct Expressions",
+              "answer4": "Registered Expression",
+              "correct": "Regular Expressions",
+              "value:": 1
+            },
+            {
+              "text": "Any numeric digit from 0 to 9",
+              "answer1": "\\w",
+              "answer2": "\\d",
+              "answer3": "S",
+              "answer4": "D",
+              "correct": "\\d",
+              "value:": 1
+            },
+            {
+              "text": "Any letter, numeric digit, or the underscore character (Think of matching 'word' characters.)",
+              "answer1": "W",
+              "answer2": "\\w",
+              "answer3": "*//",
+              "answer4": "int",
+              "correct": "\\w",
+              "value:": 1
+            },
+            {
+              "text": "Any character that is not a space, tab, or newline.",
+              "answer1": "A",
+              "answer2": "int",
+              "answer3": "\\S",
+              "answer4": "S",
+              "correct": "\\S",
+              "value:": 1
+            },
+            {
+              "text": "What is \\D ?",
+              "answer1": "Any character that is not a numeric digit from 0 to 9.",
+              "answer2": "A non-whitespace character: [\\^\\s]",
+              "answer3": "Any space, tab, or newline character. (Think of this as matching 'space' characters)",
+              "answer4": "A digit: [0-9]",
+              "correct": "Any character that is not a numeric digit from 0 to 9.",
+              "value:": 1
+            },
+            {
+              "text": "Any character that is not a letter, numeric digit, or the underscore character.",
+              "answer1": "S",
+              "answer2": "W",
+              "answer3": "*",
+              "answer4": " \\W",
+              "correct":" \\W",
+              "value:": 1
+            },
+            {
+              "text": "The java.util.regex package contains regular expressions.",
+              "answer1": "True",
+              "answer2": "False",
+              "answer3": "Neither True or False",
+              "answer4": "Can't Say",
+              "correct": "False",
+              "value:": 1
+            },
+            {
+              "text": "Regex (short for Regular Expressions) is a Java API for defining String patterns that can be used to scan, manipulate, and modify set of characters",
+              "answer1": "True",
+              "answer2": "False",
+              "answer3": "Neither True or False",
+              "answer4": "Can't Say",
+              "correct": "True",
+              "value:": 1
+            },
+            {
+              "text": "Regex is commonly used to describe the constraints in several areas of strings, including email passwords and validation.",
+              "answer1": "True",
+              "answer2": "False",
+              "answer3": "Neither True or False",
+              "answer4": "Can't Say",
+              "correct": "True",
+              "value:": 1
+            },
+            {
+              "text": " Java does not have a built-in Date class, but we can import the java.time package to work with the date and time API.",
+              "answer1": "Python Date and Time",
+              "answer2": "Java Date and Time",
+              "answer3": "LocalDateTime",
+              "answer4": "Local Date and Time",
+              "correct": "Java Date and Time",
+              "value:": 1
+            }
+          ]
         },
         {
           "title": "Exception Handling",
@@ -1303,22 +1397,399 @@
         {
           "title": "Applets and Graphics",
           "summary": "In Java, an applet is a program within another application, usually a Web browser. This can be imported using import.java.swing.JApplet, and usually contains a number of components used for GUI making. There are two ways to run an applet, through a web browser or an applet viewer.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_15.pdf"
+          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_15.pdf",
+
+
+          "questions": [
+            {
+              "text": "It is a program that is called within another application—often a Web browser.",
+              "answer1": "Applet",
+              "answer2": "Japplet",
+              "answer3": "Javac",
+              "answer4": "Java Button",
+              "correct": "Applet",
+              "value:": 1
+            },
+            {
+              "text": "It is a Swing class from which you can inherit to create your own applet. ",
+              "answer1": "Applet",
+              "answer2": "Japplet",
+              "answer3": "Javac",
+              "answer4": "Java Button",
+              "correct": "Japplet",
+              "value:": 1
+            },
+            {
+              "text": "The wideness of the applet on the screen.",
+              "answer1": "Code",
+              "answer2": "Height",
+              "answer3": "Size",
+              "answer4": "Width",
+              "correct": "Width",
+              "value:": 1
+            },
+            {
+              "text": "From the top to the bottom of the applet on the screen.",
+              "answer1": "Code",
+              "answer2": "Height",
+              "answer3": "Size",
+              "answer4": "Width",
+              "correct": "Height",
+              "value:": 1
+            },
+            {
+              "text": "This method puts the color for the object by specific color.",
+              "answer1": "Graphics.setColor()",
+              "answer2": "Graphics.displayColor()",
+              "answer3": "Graphics.fillRect()",
+              "answer4": "Graphics.fillOva()",
+              "correct": "Graphics.setColor()",
+              "value:": 1
+            },
+            {
+              "text": "This method used to fill the color inside the oval by specified color.",
+              "answer1": "Graphics.setColor()",
+              "answer2": "Graphics.displayColor()",
+              "answer3": "Graphics.fillRect()",
+              "answer4": "Graphics.fillOva()",
+              "correct": "Graphics.fillOva()",
+              "value:": 1
+            },
+            {
+              "text": " This method used to fill the color inside the oval by specified color.",
+              "answer1": "Graphics.setColor()",
+              "answer2": "Graphics.displayColor()",
+              "answer3": "Graphics.fillRect()",
+              "answer4": "Graphics.fillRect()",
+              "correct": "Graphics.fillOva()",
+              "value:": 1
+            },
+            {
+              "text": " This method is used to fill the color inside the rectangle by specified color.",
+              "answer1": "Graphics.setColor()",
+              "answer2": "Graphics.displayColor()",
+              "answer3": "Graphics.fillRect()",
+              "answer4": "Graphics.fillOva()",
+              "correct": "Graphics.fillRect())",
+              "value:": 1
+            },
+            {
+              "text": "This method initializes tasks to perform, such as setting up user interface components",
+              "answer1": "start()",
+              "answer2": "destroy()",
+              "answer3": "paint()",
+              "answer4": "init()",
+              "correct": "init()",
+              "value:": 1
+            },
+            {
+              "text": "This method is always called after the init() and start()methods are executed.",
+              "answer1": "start()",
+              "answer2": "destroy()",
+              "answer3": "paint()",
+              "answer4": "init()",
+              "correct": "paint()",
+              "value:": 1
+            }
+          ]
         },
         {
           "title": "Advance GUI",
           "summary": "A layout manager is an object that controls the layout of the components in the container object. Border Layout Manager, Flow Layout Manager, and Grid Layout Manager have specific tasks such as and  are objects that are available to use in the Layout Manager.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_16.pdf"
+          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_16.pdf",
+
+
+          "questions": [
+            {
+              "text": "It is the default manager class for all content panes.",
+              "answer1": "Border Layout Manager",
+              "answer2": "Layout Manager",
+              "answer3": "Grid Layout Manager",
+              "answer4": "Flow Layout Manager",
+              "correct":  "Border Layout Manager",
+              "value:": 1
+            },
+            {
+              "text": "An object that controls the size and position (that is, the layout) of components inside a Container object.",
+              "answer1": "Border Layout Manager",
+              "answer2": "Layout Manager",
+              "answer3": "Grid Layout Manager",
+              "answer4": "Flow Layout Manager",
+              "correct": "Layout Manager",
+              "value:": 1
+            },
+            {
+              "text": "It is used to arrange components into equal rows and columns.",
+              "answer1": "Border Layout Manager",
+              "answer2": "Layout Manager",
+              "answer3": "Grid Layout Manager",
+              "answer4": "Flow Layout Manager",
+              "correct": "Grid Layout Manager",
+              "value:": 1
+            },
+            {
+              "text": "It is the visual experience builder for Java applications.",
+              "answer1": "GUI",
+              "answer2": "VUI",
+              "answer3": "IGU",
+              "answer4": "GIU",
+              "correct": "GUI",
+              "value:": 1
+            },
+            {
+              "text": "It is used to arrange components in rows across the width of a Container",
+              "answer1": "Border Layout Manager",
+              "answer2": "Layout Manager",
+              "answer3": "Grid Layout Manager",
+              "answer4": "Flow Layout Manager",
+              "correct": "Flow Layout Manager",
+              "value:": 1
+            },
+            {
+              "text": "It is used when you need to add components into a single row or a single column.",
+              "answer1": "Grid Layout Manager",
+              "answer2": "Box Layout Manager",
+              "answer3": "Grid Bag Manager",
+              "answer4": "Card Layout Manager",
+              "correct": "Box Layout Manager",
+              "value:": 1
+            },
+            {
+              "text": "It is used when you need to add components that are displayed one at a time.",
+              "answer1": "Grid Layout Manager",
+              "answer2": "Box Layout Manager",
+              "answer3": "Grid Bag Layout Manager",
+              "answer4": "Card Layout Manager",
+              "correct": "Card Layout Manager",
+              "value:": 1
+            },
+            {
+              "text": "Used when you need to set size,placement, and alignment constraints for every component that you add.",
+              "answer1": "Grid Layout Manager",
+              "answer2": "Box Layout Manager",
+              "answer3": "Grid Bag Layout Manager",
+              "answer4": "Card Layout Manager",
+              "correct": "Grid Bag Layout Manager",
+              "value:": 1
+            },
+            {
+              "text": "The FlowLayoutclass contains three constants you can use to align Components with a Container:",
+              "answer1": "FlowLayout.TOP\n   FlowLayout.MIDDLE\n   FlowLayout.BOTTOM\n",
+              "answer2": "FlowLayout.LEFT\n   FlowLayout.CENTER\n   FlowLayout.RIGHT\n",
+              "answer3": "FlowLayout.LEFT\n   FlowLayout.MIDDLE\n   FlowLayout.RIGHT\n",
+              "answer4": "FlowLayout.HIGH\n   FlowLayout.CENTER\n   FlowLayout.LOW\n",
+              "correct": "FlowLayout.LEFT\n   FlowLayout.CENTER\n   FlowLayout.RIGHT\n",
+              "value:": 1
+            },
+            {
+              "text": "________ you used FlowLayout with the content panes of JFrames. With FlowLayout, each Component that you add is placed to the right of previously added components in a row; or, if the current row is filled, the Component is placed to start a new row.",
+              "answer1": "FlowLayout",
+              "answer2": "Container",
+              "answer3": "Grid Layout Manager",
+              "answer4": "Layout Manager",
+              "correct": "Container",
+              "value:": 1
+            }
+          ]
         },
         {
           "title": "Base Object-Oriented Programming",
           "summary": "Inheritance, data binding, polymorphism, and other notions are all part of the paradigm known as object-oriented programming. The design of a program with classes and objects is a paradigm or technique. These are called “classes” which are basically blueprints for the object.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_17.pdf"
+          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_17.pdf",
+
+
+          "questions": [
+            {
+              "text": "Is a blueprint for the object.",
+              "answer1": "Object",
+              "answer2": "Class",
+              "answer3": " Behaviors",
+              "answer4": "State",
+              "correct": "Class",
+              "value:": 1
+            },
+            {
+              "text": "It is a methodology or paradigm to design a program using classes and objects.",
+              "answer1": "Subject Oriented Programming",
+              "answer2": "Object- Oriented Programming",
+              "answer3": "Subject- Orientation Programmers",
+              "answer4": "Object- Orientation Programmers",
+              "correct": "Object- Oriented Programming",
+              "value:": 1
+            },
+            {
+              "text": "The wideness of the applet on the screen.",
+              "answer1": "Code",
+              "answer2": "Height",
+              "answer3": "Size",
+              "answer4": "Width",
+              "correct": "Width",
+              "value:": 1
+            },
+            {
+              "text": "From the top to the bottom of the applet on the screen.",
+              "answer1": "Code",
+              "answer2": "Height",
+              "answer3": "Size",
+              "answer4": "Width",
+              "correct": "Height",
+              "value:": 1
+            },
+            {
+              "text": "This method puts the color for the object by specific color.",
+              "answer1": "Graphics.setColor()",
+              "answer2": "Graphics.displayColor()",
+              "answer3": "Graphics.fillRect()",
+              "answer4": "Graphics.fillOva()",
+              "correct": "Graphics.setColor()",
+              "value:": 1
+            },
+            {
+              "text": "This method used to fill the color inside the oval by specified color.",
+              "answer1": "Graphics.setColor()",
+              "answer2": "Graphics.displayColor()",
+              "answer3": "Graphics.fillRect()",
+              "answer4": "Graphics.fillOva()",
+              "correct": "Graphics.fillOva()",
+              "value:": 1
+            },
+            {
+              "text": " This method used to fill the color inside the oval by specified color.",
+              "answer1": "Graphics.setColor()",
+              "answer2": "Graphics.displayColor()",
+              "answer3": "Graphics.fillRect()",
+              "answer4": "Graphics.fillRect()",
+              "correct": "Graphics.fillOva()",
+              "value:": 1
+            },
+            {
+              "text": " This method is used to fill the color inside the rectangle by specified color.",
+              "answer1": "Graphics.setColor()",
+              "answer2": "Graphics.displayColor()",
+              "answer3": "Graphics.fillRect()",
+              "answer4": "Graphics.fillOva()",
+              "correct": "Graphics.fillRect())",
+              "value:": 1
+            },
+            {
+              "text": "This method initializes tasks to perform, such as setting up user interface components",
+              "answer1": "start()",
+              "answer2": "destroy()",
+              "answer3": "paint()",
+              "answer4": "init()",
+              "correct": "init()",
+              "value:": 1
+            },
+            {
+              "text": "This method is always called after the init() and start()methods are executed.",
+              "answer1": "start()",
+              "answer2": "destroy()",
+              "answer3": "paint()",
+              "answer4": "init()",
+              "correct": "paint()",
+              "value:": 1
+            }
+          ]
+
         },
         {
           "title": "Java Classes",
           "summary": "Inheritance, Extends, Polymorphism, render(), and Encapsulation are classes and keywords that serve as key features of object-oriented programming. A method, on the other hand, contains statements that carry out tasks and accepts a method parameter’s value. The two types of methods are User-defined methods that let the user make methods based on the requirements, and Standard Library Methods that are built-in Java methods that are ready to be used.\n",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_18.pdf"
+          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_18.pdf",
+
+
+          "questions": [
+            {
+              "text": "It prevents outer classes from accessing and changing fields and methods of a class.",
+              "answer1": "Encapsulation",
+              "answer2": "Polymorphism",
+              "answer3": "extends",
+              "answer4": "Inheritance",
+              "correct":  "Encapsulation",
+              "value:": 1
+            },
+            {
+              "text": "The same entity can perform different operations in different scenarios.",
+              "answer1": "Encapsulation",
+              "answer2": "Polymorphism",
+              "answer3": "extends",
+              "answer4": "Inheritance",
+              "correct": "Polymorphism",
+              "value:": 1
+            },
+            {
+              "text": "One of the key features of OOP that allows us to create a new class from an existing class.",
+              "answer1": "Encapsulation",
+              "answer2": "Polymorphism",
+              "answer3": "extends",
+              "answer4": "Inheritance",
+              "correct": "Inheritance",
+              "value:": 1
+            },
+            {
+              "text": "This keyword is used to perform inheritance in Java.",
+              "answer1": "Encapsulation",
+              "answer2": "Polymorphism",
+              "answer3": "extends",
+              "answer4": "Inheritance",
+              "correct": "extends",
+              "value:": 1
+            },
+            {
+              "text": "What is the main purpose of the render() method?",
+              "answer1": "render the height",
+              "answer2": "render the weight",
+              "answer3": "render the shape",
+              "answer4": "render the color",
+              "correct": "render the shape",
+              "value:": 1
+            },
+            {
+              "text": "We can create our own method based on our requirements.",
+              "answer1": "Standard Library Methods",
+              "answer2": "User-defined Methods",
+              "answer3": "methodName",
+              "answer4": "method body",
+              "correct": "User-defined Methods",
+              "value:": 1
+            },
+            {
+              "text": "It can be accessed without creating objects.",
+              "answer1": "static",
+              "answer2": "modifier",
+              "answer3": "returnType",
+              "answer4": "method",
+              "correct": "static",
+              "value:": 1
+            },
+            {
+              "text": "These are built-in methods in Java that are available to use.",
+              "answer1": "Standard Library Methods",
+              "answer2": "User-defined Methods",
+              "answer3": "methodName",
+              "answer4": "method body",
+              "correct": "Standard Library Methods",
+              "value:": 1
+            },
+            {
+              "text": "It is a program module that contains a series of statements that carry out a task.",
+              "answer1": "static",
+              "answer2": "modifier",
+              "answer3": "returnType",
+              "answer4": "method",
+              "correct": "method",
+              "value:": 1
+            },
+            {
+              "text": "It defines access types whether the method is public, private, and so on. ",
+              "answer1": "methodName",
+              "answer2": "parameter1/parameter2",
+              "answer3": "method body",
+              "answer4": "modifier",
+              "correct": "modifier",
+              "value:": 1
+            }
+          ]
         }
       ]
 
