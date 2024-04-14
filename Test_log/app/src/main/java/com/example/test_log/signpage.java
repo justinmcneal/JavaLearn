@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+
 public class signpage extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
@@ -51,16 +52,14 @@ public class signpage extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-
         mAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
 //      editTextName = findViewById(R.id.fullname);
         buttonSign = findViewById(R.id.btn_signup);
-
         textView = findViewById(R.id.othersignin);
+
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,17 +77,16 @@ public class signpage extends AppCompatActivity {
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
-                mediaPlayer = MediaPlayer.create(signpage.this, R.raw.mismongsigninout);
-                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mp) {
-                        mediaPlayer.start();
-                    }
-                });
-
-                if (TextUtils.isEmpty(email)){ //same goes
+                if (TextUtils.isEmpty(email)){
                     Toast.makeText(signpage.this,"Enter Email", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
+                    mediaPlayer = MediaPlayer.create(signpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mp) {
+                            mediaPlayer.start();
+                        }
+                    });
                     return;
                 }
 
@@ -105,8 +103,15 @@ public class signpage extends AppCompatActivity {
                     return;
                 }
 
-                if (TextUtils.isEmpty(password)){ //same goes
+                if (TextUtils.isEmpty(password)){
                     Toast.makeText(signpage.this,"Enter Password", Toast.LENGTH_SHORT).show();
+                    mediaPlayer = MediaPlayer.create(signpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mp) {
+                            mediaPlayer.start();
+                        }
+                    });
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
@@ -119,8 +124,14 @@ public class signpage extends AppCompatActivity {
 
                                 if (task.isSuccessful()) {
                                     Toast.makeText(signpage.this, "Account created.", Toast.LENGTH_SHORT).show();
-
-                                    Intent intent = new Intent(signpage.this,logpage.class);
+                                    mediaPlayer = MediaPlayer.create(signpage.this, R.raw.mismongsigninout);
+                                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                        @Override
+                                        public void onPrepared(MediaPlayer mp) {
+                                            mediaPlayer.start();
+                                        }
+                                    });
+                                    Intent intent = new Intent(signpage.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {

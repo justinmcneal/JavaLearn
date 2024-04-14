@@ -53,6 +53,15 @@ public class logpage extends AppCompatActivity {
         buttonLogin = findViewById(R.id.btn_signin);
         textView = findViewById(R.id.othersignup);
 
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(logpage.this, signpage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         buttonLogin.setOnClickListener(v -> {
             String email = editTextEmail.getText().toString();
             String password = editTextPassword.getText().toString();
@@ -114,15 +123,6 @@ public class logpage extends AppCompatActivity {
                 Log.d("dddd", e.toString());
             }
 
-        });
-
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(logpage.this, signpage.class);
-                startActivity(intent);
-                finish();
-            }
         });
     }
 }
