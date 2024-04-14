@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +36,9 @@ public class LessonsActivity extends AppCompatActivity {
     private Button button;
     private FirebaseUser user;
     private ListView listView;
+    TextView textView;
     private MediaPlayer mediaPlayer;
+
 
     private ArrayList<String> titleArray = new ArrayList<>();
     private ArrayList<String> summaryArray = new ArrayList<>();
@@ -55,7 +58,21 @@ public class LessonsActivity extends AppCompatActivity {
         setupLogoutButton();
         setupListView();
         parseLessonsData(getIntent().getStringExtra("difficulty"));
+
+        auth = FirebaseAuth.getInstance();
+        button = findViewById(R.id.logout);
+        textView = findViewById(R.id.user_details);
+        user = auth.getCurrentUser();
+
+        if(user == null){
+            Intent intent = new Intent(getApplicationContext(), logpage.class);
+            startActivity(intent);
+            finish();
+        } else {
+            textView.setText(user.getEmail());
+        }
     }
+
 
     private void setupLogoutButton() {
         auth = FirebaseAuth.getInstance();

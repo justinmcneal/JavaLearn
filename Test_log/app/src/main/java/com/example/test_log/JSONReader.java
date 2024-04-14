@@ -35,12 +35,4 @@ public class JSONReader {
         }
     }
 
-//    public static JSONArray loadJSONArrayFromAsset(Context context, String filename) {
-//        try {
-//            return new JSONArray(loadJSONFromAsset(context, filename));
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//            return null;
-//        }
-//    }
 }
