@@ -20,11 +20,8 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class signpage extends AppCompatActivity {
@@ -33,14 +30,15 @@ public class signpage extends AppCompatActivity {
 
     TextView textView;
 
-    TextInputEditText editTextEmail, editTextPassword, editTextName;
+    TextInputEditText editTextEmail, editTextPassword;
+//    editTextName
     Button buttonSign;
 
     FirebaseAuth mAuth;
 
     ProgressBar progressBar;
 
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+//    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

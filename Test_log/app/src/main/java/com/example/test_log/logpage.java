@@ -23,8 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
+
 
 public class logpage extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -72,19 +71,19 @@ public class logpage extends AppCompatActivity {
                 Toast.makeText(logpage.this, "Enter Email", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
                 mediaPlayer = MediaPlayer.create(this, R.raw.error);
-                mediaPlayer.setOnPreparedListener(mp -> mp.start());
+                mediaPlayer.setOnPreparedListener(MediaPlayer::start);
 
             } else if (!email.endsWith("@gmail.com")) {
                 Toast.makeText(logpage.this, "Invalid email address", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
                 mediaPlayer = MediaPlayer.create(this, R.raw.error);
-                mediaPlayer.setOnPreparedListener(mp -> mp.start());
+                mediaPlayer.setOnPreparedListener(MediaPlayer::start);
 
             } else if (TextUtils.isEmpty(password)) {
                 Toast.makeText(logpage.this, "Enter password", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
                 mediaPlayer = MediaPlayer.create(this, R.raw.error);
-                mediaPlayer.setOnPreparedListener(mp -> mp.start());
+                mediaPlayer.setOnPreparedListener(MediaPlayer::start);
             }
 
             try {

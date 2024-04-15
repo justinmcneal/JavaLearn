@@ -3,13 +3,11 @@ package com.example.test_log;
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.graphics.text.LineBreaker;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -27,31 +25,15 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
-
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Objects;
+
 
 public class TitleSummary extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
-    private Button button;
-    private TextView tvTitle;
-    private TextView btnStartActivity;
-    private TextView downloadPDF;
-    private TextView tvSummary;
     FirebaseUser user;
     FirebaseAuth auth;
     FirebaseStorage firebaseStorage;
@@ -73,14 +55,13 @@ public class TitleSummary extends AppCompatActivity {
         String title = intent.getStringExtra("title");
         String summary = intent.getStringExtra("summary");
         String pdf_file = intent.getStringExtra("pdf_file");
-        tvTitle = findViewById(R.id.tv_title);
-        tvSummary = findViewById(R.id.tv_summary);
-        downloadPDF = findViewById(R.id.downloadPDF);
+        TextView tvTitle = findViewById(R.id.tv_title);
+        TextView tvSummary = findViewById(R.id.tv_summary);
+        TextView downloadPDF = findViewById(R.id.downloadPDF);
         tvTitle.setText(title);
         tvSummary.setText(summary);
-        downloadPDF.setText(pdf_file);
-        button = findViewById(R.id.logout);
-        btnStartActivity = findViewById(R.id.startActivity);
+        Button button = findViewById(R.id.logout);
+        TextView btnStartActivity = findViewById(R.id.startActivity);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             tvSummary.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
@@ -125,8 +106,8 @@ public class TitleSummary extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(user != null){
-                    String filename = "module" + System.currentTimeMillis() + ".pdf";
-                    File localFile =new File(getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),"JavaLearn");
+                    String filename = title + ".pdf";
+                    File localFile =new File(getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),filename);
                     storageRef.getFile(localFile)
                             .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                                 @Override
@@ -150,7 +131,7 @@ public class TitleSummary extends AppCompatActivity {
         });
 
 //        String difficulty = intent.getStringExtra("difficulty");
-
+//
 //        if (Objects.equals(difficulty, "easy")) {
 //            JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json");
 //
@@ -173,6 +154,13 @@ public class TitleSummary extends AppCompatActivity {
 //                            String answer4 = question.getString("answer4");
 //                            String correctAnswer = question.getString("correct");
 //                            int value = question.getInt("value");
+//
+//                            QuizAssessment quizzes = new QuizAssessment(questionText, answer1, answer2, answer3, answer4, correctAnswer, value);
+//                            quizQuestions.add((Parcelable) quizzes);
+//
+//                            intent = new Intent(TitleSummary.this, QuizAssessment.class);
+//                            intent.putParcelableArrayListExtra("quizzes", (ArrayList<? extends Parcelable>) quizQuestions);
+//                            startActivity(intent);
 //                        }
 //                    }
 //

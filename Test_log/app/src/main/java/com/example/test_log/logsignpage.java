@@ -17,18 +17,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class logsignpage extends AppCompatActivity {
-    private Button logpage;
-    private Button signpage;
     private MediaPlayer mediaPlayer;
 
     public boolean isNetwork(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        }
-        return false;
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
     @Override
@@ -48,7 +43,7 @@ public class logsignpage extends AppCompatActivity {
             return insets;
         });
 
-        logpage = findViewById(R.id.signinfirst);
+        Button logpage = findViewById(R.id.signinfirst);
         logpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +59,7 @@ public class logsignpage extends AppCompatActivity {
             }
         });
 
-        signpage = findViewById(R.id.signupfirst);
+        Button signpage = findViewById(R.id.signupfirst);
         signpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

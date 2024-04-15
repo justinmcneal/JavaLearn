@@ -14,7 +14,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class firstpage extends AppCompatActivity {
-    private MediaPlayer mediaPlayer;
     private FirebaseAuth mAuth;
 
     @Override
@@ -48,7 +47,7 @@ public class firstpage extends AppCompatActivity {
             }
         }, 4000);
 
-        mediaPlayer = MediaPlayer.create(firstpage.this, R.raw.welcometojavalearn);
-        mediaPlayer.setOnPreparedListener(mp -> mp.start());
+        MediaPlayer mediaPlayer = MediaPlayer.create(firstpage.this, R.raw.welcometojavalearn);
+        mediaPlayer.setOnPreparedListener(MediaPlayer::start);
     }
 }

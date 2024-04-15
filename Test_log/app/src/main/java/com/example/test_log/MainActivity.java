@@ -17,15 +17,9 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import org.json.JSONObject;
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
-
     FirebaseAuth auth;
     Button button;
     TextView textView;
@@ -138,3 +132,45 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
+
+
+
+
+//        String difficulty = intent.getStringExtra("difficulty");
+
+//        if (Objects.equals(difficulty, "easy")) {
+//            JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json");
+//
+//            if (jsonObject != null) {
+//                try {
+//                    JSONObject easyObject = jsonObject.getJSONObject("difficulty");
+//                    JSONArray lessonEasy = easyObject.getJSONArray("easy");
+//
+//                    for (int i = 0; i <= lessonEasy.length(); i++) {
+//                        JSONObject accessTitle = new JSONObject(String.valueOf((lessonEasy.get(i))));
+//
+//                        JSONArray questionEasy = accessTitle.getJSONArray("questions");
+//
+//                        for (int j = 0; j <= questionEasy.length(); j++) {
+//                            JSONObject question = questionEasy.getJSONObject(j);
+//                            String questionText = question.getString("text");
+//                            String answer1 = question.getString("answer1");
+//                            String answer2 = question.getString("answer2");
+//                            String answer3 = question.getString("answer3");
+//                            String answer4 = question.getString("answer4");
+//                            String correctAnswer = question.getString("correct");
+//                            int value = question.getInt("value");
+//                        }
+//                    }
+//
+//                } catch (JSONException e) {
+//                    Log.d("catch", "error on catch");
+//                    e.printStackTrace();
+//                }
+//            } else {
+//                Log.d("elsejson", "error on json else");
+//            }
+//        } else {
+//            Log.d("objectjson", "error on json object");
+//        }
