@@ -75,7 +75,7 @@
     </LinearLayout>
 
 
-    <TextView
+    <Button
         android:id="@+id/choiceA"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -88,7 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    <TextView
+    <Button
         android:id="@+id/choiceB"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -102,7 +102,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choiceA" />
 
-    <TextView
+    <Button
         android:id="@+id/choiceC"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -115,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choiceB" />
 
-    <TextView
+    <Button
         android:id="@+id/choiceD"
         android:layout_width="match_parent"
         android:layout_height="55dp"

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,6 +45,27 @@ public class QuizAssessment extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
         user = auth.getCurrentUser();
+        Intent intent = getIntent();
+        String text = intent.getStringExtra("text");
+        String answer1 = intent.getStringExtra("answer1");
+        String answer2 = intent.getStringExtra("answer2");
+        String answer3 = intent.getStringExtra("answer3");
+        String answer4 = intent.getStringExtra("answer4");
+        String correct = intent.getStringExtra("correct");
+
+        // Find the views in the layout
+        question = findViewById(R.id.question);
+        choiceA = findViewById(R.id.choiceA);
+        choiceB = findViewById(R.id.choiceB);
+        choiceC = findViewById(R.id.choiceC);
+        choiceD = findViewById(R.id.choiceD);
+
+        // Set the text to the views
+        question.setText(text);
+        choiceA.setText(answer1);
+        choiceB.setText(answer2);
+        choiceC.setText(answer3);
+        choiceD.setText(answer4);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,60 +76,5 @@ public class QuizAssessment extends AppCompatActivity {
             }
         });
 
-        question = findViewById(R.id.question);
-        choiceA = findViewById(R.id.choiceA);
-        choiceB = findViewById(R.id.choiceB);
-        choiceC = findViewById(R.id.choiceC);
-        choiceD = findViewById(R.id.choiceD);
-
-        choiceA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        choiceB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        choiceC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        choiceD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-
-    }
-
-    public class Question {
-        private String text;
-        private String answer1;
-        private String answer2;
-        private String answer3;
-        private String answer4;
-        private String correct;
-        private int value;
-
-        public Question(String text, String answer1, String answer2, String answer3, String answer4, String correct, int value) {
-            this.text = text;
-            this.answer1 = answer1;
-            this.answer2 = answer2;
-            this.answer3 = answer3;
-            this.answer4 = answer4;
-            this.correct = correct;
-            this.value = value;
-        }
     }
 }

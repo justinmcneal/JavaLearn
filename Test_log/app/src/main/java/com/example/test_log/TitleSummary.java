@@ -29,7 +29,13 @@ import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class TitleSummary extends AppCompatActivity {
@@ -37,6 +43,13 @@ public class TitleSummary extends AppCompatActivity {
     FirebaseUser user;
     FirebaseAuth auth;
     FirebaseStorage firebaseStorage;
+    private final ArrayList<String> textArray = new ArrayList<>();
+    private final ArrayList<String> answer1Array= new ArrayList<>();
+    private final ArrayList<String> answer2Array= new ArrayList<>();
+    private final ArrayList<String> answer3Array= new ArrayList<>();
+    private final ArrayList<String> answer4Array= new ArrayList<>();
+    private final ArrayList<String> correctArray= new ArrayList<>();
+    private final ArrayList<Integer> valueArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,21 +96,38 @@ public class TitleSummary extends AppCompatActivity {
                 });
             }
         });
+
         btnStartActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Get the position of the item clicked
+                int position = getIntent().getIntExtra("position", -1);
 
-                Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
-                startActivity(intent);
-                mediaPlayer = MediaPlayer.create(TitleSummary.this, R.raw.lessons);
-                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mp) {
-                        mediaPlayer.start();
-                    }
-                });
+                if (position != -1) {
+                    Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
+                    // Pass the data including the correct answer
+                    intent.putExtra("text", textArray.get(position));
+                    intent.putExtra("answer1", answer1Array.get(position));
+                    intent.putExtra("answer2", answer2Array.get(position));
+                    intent.putExtra("answer3", answer3Array.get(position));
+                    intent.putExtra("answer4", answer4Array.get(position));
+                    intent.putExtra("correct", correctArray.get(position));
+                    Log.d("Position", "Position in TitleSummary: " + position);
+                    Log.d("Array", "TextArray: " + textArray);
+                    Log.d("Array", "Answer1Array: " + answer1Array);
+
+                    mediaPlayer = MediaPlayer.create(TitleSummary.this, R.raw.lessons);
+                    mediaPlayer.setOnPreparedListener(MediaPlayer::start);
+                    startActivity(intent);
+                } else {
+                    // Handle the case where the position is invalid
+                    Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();
+                    Log.d("error here", "error");
+
+                }
             }
         });
+
 
         firebaseStorage = FirebaseStorage.getInstance();
         final StorageReference storageRef = firebaseStorage.getReferenceFromUrl(pdf_file);
@@ -129,51 +159,7 @@ public class TitleSummary extends AppCompatActivity {
                 }
             }
         });
-
-//        String difficulty = intent.getStringExtra("difficulty");
-//
-//        if (Objects.equals(difficulty, "easy")) {
-//            JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json");
-//
-//            if (jsonObject != null) {
-//                try {
-//                    JSONObject easyObject = jsonObject.getJSONObject("difficulty");
-//                    JSONArray lessonEasy = easyObject.getJSONArray("easy");
-//
-//                    for (int i = 0; i <= lessonEasy.length(); i++) {
-//                        JSONObject accessTitle = new JSONObject(String.valueOf((lessonEasy.get(i))));
-//
-//                        JSONArray questionEasy = accessTitle.getJSONArray("questions");
-//
-//                        for (int j = 0; j <= questionEasy.length(); j++) {
-//                            JSONObject question = questionEasy.getJSONObject(j);
-//                            String questionText = question.getString("text");
-//                            String answer1 = question.getString("answer1");
-//                            String answer2 = question.getString("answer2");
-//                            String answer3 = question.getString("answer3");
-//                            String answer4 = question.getString("answer4");
-//                            String correctAnswer = question.getString("correct");
-//                            int value = question.getInt("value");
-//
-//                            QuizAssessment quizzes = new QuizAssessment(questionText, answer1, answer2, answer3, answer4, correctAnswer, value);
-//                            quizQuestions.add((Parcelable) quizzes);
-//
-//                            intent = new Intent(TitleSummary.this, QuizAssessment.class);
-//                            intent.putParcelableArrayListExtra("quizzes", (ArrayList<? extends Parcelable>) quizQuestions);
-//                            startActivity(intent);
-//                        }
-//                    }
-//
-//                } catch (JSONException e) {
-//                    Log.d("catch", "error on catch");
-//                    e.printStackTrace();
-//                }
-//            } else {
-//                Log.d("elsejson", "error on json else");
-//            }
-//        } else {
-//            Log.d("objectjson", "error on json object");
-//        }
-
     }
+
+
 }

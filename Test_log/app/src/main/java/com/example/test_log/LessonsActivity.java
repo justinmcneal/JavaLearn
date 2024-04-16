@@ -35,6 +35,13 @@ public class LessonsActivity extends AppCompatActivity {
     private final ArrayList<String> titleArray = new ArrayList<>();
     private final ArrayList<String> summaryArray = new ArrayList<>();
     private final ArrayList<String> pdfArray = new ArrayList<>();
+    private final ArrayList<String> textArray = new ArrayList<>();
+    private final ArrayList<String> answer1Array= new ArrayList<>();
+    private final ArrayList<String> answer2Array= new ArrayList<>();
+    private final ArrayList<String> answer3Array= new ArrayList<>();
+    private final ArrayList<String> answer4Array= new ArrayList<>();
+    private final ArrayList<String> correctArray= new ArrayList<>();
+    private final ArrayList<Integer> valueArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,23 +85,7 @@ public class LessonsActivity extends AppCompatActivity {
         });
     }
 
-    private void setupListView() {
-        user = auth.getCurrentUser();
-        ListView listView = findViewById(R.id.listView);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
-        listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener((parent, view, position, id) -> {
-            Intent intent = new Intent(LessonsActivity.this, TitleSummary.class);
-            intent.putExtra("title", titleArray.get(position));
-            intent.putExtra("summary", summaryArray.get(position));
-            intent.putExtra("pdf_file", pdfArray.get(position));
-
-            mediaPlayer = MediaPlayer.create(this, R.raw.lessons);
-            mediaPlayer.setOnPreparedListener(MediaPlayer::start);
-            startActivity(intent);
-        });
-    }
 
     private void parseLessonsData(String difficulty) {
         if (!Objects.equals(difficulty, "easy") && !Objects.equals(difficulty, "medium") && !Objects.equals(difficulty, "hard")) {
@@ -123,7 +114,6 @@ public class LessonsActivity extends AppCompatActivity {
 
                 // Access and parse the questions array
                 JSONArray questionsArray = lessonObject.getJSONArray("questions");
-                List<Question> questions = new ArrayList<QuizAssessment.Question>();
                 for (int j = 0; j < questionsArray.length(); j++) {
                     JSONObject questionObject = questionsArray.getJSONObject(j);
                     String text = questionObject.getString("text");
@@ -132,16 +122,46 @@ public class LessonsActivity extends AppCompatActivity {
                     String answer3 = questionObject.getString("answer3");
                     String answer4 = questionObject.getString("answer4");
                     String correct = questionObject.getString("correct");
-                    int value = questionObject.getInt("value");
 
-                    // Create a Question object and add it to the list
-                    Question question = new Question(text, answer1, answer2, answer3, answer4, correct, value);
-                    questions.add(question);
+                    textArray.add(text);
+                    answer1Array.add(answer1);
+                    answer2Array.add(answer2);
+                    answer3Array.add(answer3);
+                    answer4Array.add(answer4);
+                    correctArray.add(correct);
                 }
             }
 
         } catch (JSONException e) {
             Log.e("catch", "Error parsing JSON data", e);
         }
+    }
+
+    private void setupListView() {
+        user = auth.getCurrentUser();
+        ListView listView = findViewById(R.id.listView);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(LessonsActivity.this, TitleSummary.class);
+            intent.putExtra("title", titleArray.get(position));
+            intent.putExtra("summary", summaryArray.get(position));
+            intent.putExtra("pdf_file", pdfArray.get(position));
+            intent.putExtra("position", position); // Pass the position here
+
+            intent.putExtra("text", textArray.get(position));
+            intent.putExtra("answer1", answer1Array.get(position));
+            intent.putExtra("answer2", answer2Array.get(position));
+            intent.putExtra("answer3", answer3Array.get(position));
+            intent.putExtra("answer4", answer4Array.get(position));
+            intent.putExtra("correct", correctArray.get(position));
+            Log.d("Position", "Position in LessonsActivity: " + position);
+
+
+            mediaPlayer = MediaPlayer.create(this, R.raw.lessons);
+            mediaPlayer.setOnPreparedListener(MediaPlayer::start);
+            startActivity(intent);
+        });
     }
 }
