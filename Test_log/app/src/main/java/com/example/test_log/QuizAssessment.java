@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,21 +14,22 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
 
-import org.json.JSONObject;
+import java.util.ArrayList;
 
 public class QuizAssessment extends AppCompatActivity {
 
     FirebaseAuth auth;
     Button button;
-    FirebaseUser user;
-    private FirebaseFirestore firestore;
     private int currentQuestionIndex = 0;
-    private int score = 0;
     TextView question;
     TextView choiceA, choiceB, choiceC, choiceD;
+    ArrayList<String> textList;
+    ArrayList<String> answer1List;
+    ArrayList<String> answer2List;
+    ArrayList<String> answer3List;
+    ArrayList<String> answer4List;
+    ArrayList<String> correctList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,29 +44,25 @@ public class QuizAssessment extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
-        user = auth.getCurrentUser();
         Intent intent = getIntent();
-        String text = intent.getStringExtra("text");
-        String answer1 = intent.getStringExtra("answer1");
-        String answer2 = intent.getStringExtra("answer2");
-        String answer3 = intent.getStringExtra("answer3");
-        String answer4 = intent.getStringExtra("answer4");
-        String correct = intent.getStringExtra("correct");
+        textList = intent.getStringArrayListExtra("text");
+        answer1List = intent.getStringArrayListExtra("answer1");
+        answer2List = intent.getStringArrayListExtra("answer2");
+        answer3List = intent.getStringArrayListExtra("answer3");
+        answer4List = intent.getStringArrayListExtra("answer4");
+        correctList = intent.getStringArrayListExtra("correct");
 
-        // Find the views in the layout
+        // Initialize views
         question = findViewById(R.id.question);
         choiceA = findViewById(R.id.choiceA);
         choiceB = findViewById(R.id.choiceB);
         choiceC = findViewById(R.id.choiceC);
         choiceD = findViewById(R.id.choiceD);
 
-        // Set the text to the views
-        question.setText(text);
-        choiceA.setText(answer1);
-        choiceB.setText(answer2);
-        choiceC.setText(answer3);
-        choiceD.setText(answer4);
+        // Display the first question
+        displayQuestion();
 
+        // Button click listener for logout
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,5 +72,63 @@ public class QuizAssessment extends AppCompatActivity {
             }
         });
 
+        // Click listeners for choices
+        choiceA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(choiceA.getText().toString());
+            }
+        });
+
+        choiceB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(choiceB.getText().toString());
+            }
+        });
+
+        choiceC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(choiceC.getText().toString());
+            }
+        });
+
+        choiceD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(choiceD.getText().toString());
+            }
+        });
+    }
+
+    // Method to display the current question
+    private void displayQuestion() {
+        if (textList != null && currentQuestionIndex >= 0 && currentQuestionIndex < textList.size()) {
+            question.setText(textList.get(currentQuestionIndex));
+            choiceA.setText(answer1List.get(currentQuestionIndex));
+            choiceB.setText(answer2List.get(currentQuestionIndex));
+            choiceC.setText(answer3List.get(currentQuestionIndex));
+            choiceD.setText(answer4List.get(currentQuestionIndex));
+        } else {
+            Toast.makeText(this, "Invalid question index", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // Method to check the user's answer
+    private void checkAnswer(String selectedAnswer) {
+        if (correctList != null && currentQuestionIndex >= 0 && currentQuestionIndex < correctList.size()) {
+            String correctAnswer = correctList.get(currentQuestionIndex);
+            if (selectedAnswer.equals(correctAnswer)) {
+                Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show();
+            }
+            // Move to the next question
+            currentQuestionIndex++;
+            displayQuestion();
+        } else {
+            Toast.makeText(this, "Invalid answer list or index", Toast.LENGTH_SHORT).show();
+        }
     }
 }

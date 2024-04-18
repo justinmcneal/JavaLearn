@@ -29,27 +29,14 @@ import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Objects;
-
 
 public class TitleSummary extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     FirebaseUser user;
     FirebaseAuth auth;
     FirebaseStorage firebaseStorage;
-    private final ArrayList<String> textArray = new ArrayList<>();
-    private final ArrayList<String> answer1Array= new ArrayList<>();
-    private final ArrayList<String> answer2Array= new ArrayList<>();
-    private final ArrayList<String> answer3Array= new ArrayList<>();
-    private final ArrayList<String> answer4Array= new ArrayList<>();
-    private final ArrayList<String> correctArray= new ArrayList<>();
-    private final ArrayList<Integer> valueArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +48,7 @@ public class TitleSummary extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -90,7 +78,6 @@ public class TitleSummary extends AppCompatActivity {
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
-
                         mediaPlayer.start();
                     }
                 });
@@ -103,32 +90,21 @@ public class TitleSummary extends AppCompatActivity {
                 int position = TitleSummary.this.getIntent().getIntExtra("position", -1);
 
                 if (position != -1) {
-                    String text = getIntent().getStringExtra("text");
-                    String answer1 = getIntent().getStringExtra("answer1");
-                    String answer2 = getIntent().getStringExtra("answer2");
-                    String answer3 = getIntent().getStringExtra("answer3");
-                    String answer4 = getIntent().getStringExtra("answer4");
-                    String correct = getIntent().getStringExtra("correct");
+                    ArrayList<String> text = getIntent().getStringArrayListExtra("text");
+                    ArrayList<String> answer1 = getIntent().getStringArrayListExtra("answer1");
+                    ArrayList<String> answer2 = getIntent().getStringArrayListExtra("answer2");
+                    ArrayList<String> answer3 = getIntent().getStringArrayListExtra("answer3");
+                    ArrayList<String> answer4 = getIntent().getStringArrayListExtra("answer4");
+                    ArrayList<String> correct = getIntent().getStringArrayListExtra("correct");
 
-                    // Use the retrieved data (text, answer1, etc.)
-
-                    Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
-                    intent.putExtra("text", text);
-                    intent.putExtra("answer1", answer1);
-                    intent.putExtra("answer2", answer2);
-                    intent.putExtra("answer3", answer3);
-                    intent.putExtra("answer4", answer4);
-                    intent.putExtra("correct", correct);
-                    startActivity(intent);
+                    // Call the method to display the question
+                    displayQuestion(position, text, answer1, answer2, answer3, answer4, correct);
                 } else {
                     // Handle the case where the position is invalid
                     Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();
-                    Log.d("error here", "error");
                 }
             }
         });
-
-
 
         firebaseStorage = FirebaseStorage.getInstance();
         final StorageReference storageRef = firebaseStorage.getReferenceFromUrl(pdf_file);
@@ -162,5 +138,29 @@ public class TitleSummary extends AppCompatActivity {
         });
     }
 
+    private void displayQuestion(int position, ArrayList<String> text, ArrayList<String> answer1, ArrayList<String> answer2, ArrayList<String> answer3, ArrayList<String> answer4, ArrayList<String> correct) {
+        // Check if the position is within the bounds of the arrays
+        if (position >= 0 && position < text.size()) {
+            // Get the question and its answers at the specified position
+            String question = text.get(position);
+            String option1 = answer1.get(position);
+            String option2 = answer2.get(position);
+            String option3 = answer3.get(position);
+            String option4 = answer4.get(position);
+            String correctAnswer = correct.get(position);
 
+            // Pass the question and its answers to the next activity
+            Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
+            intent.putExtra("question", question);
+            intent.putExtra("option1", option1);
+            intent.putExtra("option2", option2);
+            intent.putExtra("option3", option3);
+            intent.putExtra("option4", option4);
+            intent.putExtra("correctAnswer", correctAnswer);
+            startActivity(intent);
+        } else {
+            // Handle the case where the position is out of bounds
+            Toast.makeText(TitleSummary.this, "Question not found", Toast.LENGTH_SHORT).show();
+        }
+    }
 }

@@ -72,7 +72,6 @@ public class LessonsActivity extends AppCompatActivity {
         }
     }
 
-
     private void setupLogoutButton() {
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
@@ -86,8 +85,7 @@ public class LessonsActivity extends AppCompatActivity {
     }
 
 
-
-    private void parseLessonsData(String difficulty) {
+    public void parseLessonsData(String difficulty) {
         if (!Objects.equals(difficulty, "easy") && !Objects.equals(difficulty, "medium") && !Objects.equals(difficulty, "hard")) {
             Log.d("objectjson", "Invalid difficulty level");
             return;
@@ -104,7 +102,7 @@ public class LessonsActivity extends AppCompatActivity {
             JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
 
             for (int i = 0; i < lessonArray.length(); i++) {
-                JSONObject lessonObject = new JSONObject(String.valueOf(lessonArray.get(i)));
+                JSONObject lessonObject = lessonArray.getJSONObject(i);
                 String title = lessonObject.getString("title");
                 String summary = lessonObject.getString("summary");
                 String pdf_file = lessonObject.getString("pdf_file");
@@ -112,9 +110,15 @@ public class LessonsActivity extends AppCompatActivity {
                 summaryArray.add(summary);
                 pdfArray.add(pdf_file);
 
-                // Access and parse the questions array
+                ArrayList<String> lessonTextArray = new ArrayList<>();
+                ArrayList<String> lessonAnswer1Array = new ArrayList<>();
+                ArrayList<String> lessonAnswer2Array = new ArrayList<>();
+                ArrayList<String> lessonAnswer3Array = new ArrayList<>();
+                ArrayList<String> lessonAnswer4Array = new ArrayList<>();
+                ArrayList<String> lessonCorrectArray = new ArrayList<>();
+
                 JSONArray questionsArray = lessonObject.getJSONArray("questions");
-                for (int j = 0; j < questionsArray.length(); j++) {
+                for (int j = 0; j < Math.min(questionsArray.length(), 10); j++) {
                     JSONObject questionObject = questionsArray.getJSONObject(j);
                     String text = questionObject.getString("text");
                     String answer1 = questionObject.getString("answer1");
@@ -123,19 +127,26 @@ public class LessonsActivity extends AppCompatActivity {
                     String answer4 = questionObject.getString("answer4");
                     String correct = questionObject.getString("correct");
 
-                    textArray.add(text);
-                    answer1Array.add(answer1);
-                    answer2Array.add(answer2);
-                    answer3Array.add(answer3);
-                    answer4Array.add(answer4);
-                    correctArray.add(correct);
+                    lessonTextArray.add(text);
+                    lessonAnswer1Array.add(answer1);
+                    lessonAnswer2Array.add(answer2);
+                    lessonAnswer3Array.add(answer3);
+                    lessonAnswer4Array.add(answer4);
+                    lessonCorrectArray.add(correct);
                 }
-            }
 
+                textArray.add(lessonTextArray.toString());
+                answer1Array.add(lessonAnswer1Array.toString());
+                answer2Array.add(lessonAnswer2Array.toString());
+                answer3Array.add(lessonAnswer3Array.toString());
+                answer4Array.add(lessonAnswer4Array.toString());
+                correctArray.add(lessonCorrectArray.toString());
+            }
         } catch (JSONException e) {
             Log.e("catch", "Error parsing JSON data", e);
         }
     }
+
 
     private void setupListView() {
         user = auth.getCurrentUser();
@@ -150,18 +161,21 @@ public class LessonsActivity extends AppCompatActivity {
             intent.putExtra("pdf_file", pdfArray.get(position));
             intent.putExtra("position", position); // Pass the position here
 
-            intent.putExtra("text", textArray.get(position));
-            intent.putExtra("answer1", answer1Array.get(position));
-            intent.putExtra("answer2", answer2Array.get(position));
-            intent.putExtra("answer3", answer3Array.get(position));
-            intent.putExtra("answer4", answer4Array.get(position));
-            intent.putExtra("correct", correctArray.get(position));
-            Log.d("Position", "Position in LessonsActivity: " + position);
+            // pass lists of questions and answers for the selected lesson
+            intent.putStringArrayListExtra("text", textArray);
+            intent.putStringArrayListExtra("answer1", answer1Array);
+            intent.putStringArrayListExtra("answer2", answer2Array);
+            intent.putStringArrayListExtra("answer3", answer3Array);
+            intent.putStringArrayListExtra("answer4", answer4Array);
+            intent.putStringArrayListExtra("correct", correctArray);
 
+            Log.d("Position", "Position in LessonsActivity: " + position);
 
             mediaPlayer = MediaPlayer.create(this, R.raw.lessons);
             mediaPlayer.setOnPreparedListener(MediaPlayer::start);
             startActivity(intent);
         });
     }
+
+
 }
