@@ -29,6 +29,10 @@ import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -56,6 +60,7 @@ public class TitleSummary extends AppCompatActivity {
         String title = intent.getStringExtra("title");
         String summary = intent.getStringExtra("summary");
         String pdf_file = intent.getStringExtra("pdf_file");
+        String difficulty = intent.getStringExtra("difficulty"); // Retrieve the difficulty here
         TextView tvTitle = findViewById(R.id.tv_title);
         TextView tvSummary = findViewById(R.id.tv_summary);
         TextView downloadPDF = findViewById(R.id.downloadPDF);
@@ -87,21 +92,41 @@ public class TitleSummary extends AppCompatActivity {
         btnStartActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int position = TitleSummary.this.getIntent().getIntExtra("position", -1);
+                try {
+                    JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(TitleSummary.this, "lessons.json");
+                    if (jsonObject == null) {
+                        Log.d("elsejson", "Error loading JSON file");
+                        return;
+                    }
 
-                if (position != -1) {
-                    ArrayList<String> text = getIntent().getStringArrayListExtra("text");
-                    ArrayList<String> answer1 = getIntent().getStringArrayListExtra("answer1");
-                    ArrayList<String> answer2 = getIntent().getStringArrayListExtra("answer2");
-                    ArrayList<String> answer3 = getIntent().getStringArrayListExtra("answer3");
-                    ArrayList<String> answer4 = getIntent().getStringArrayListExtra("answer4");
-                    ArrayList<String> correct = getIntent().getStringArrayListExtra("correct");
+                    JSONObject difficultyObject = jsonObject.getJSONObject("difficulty");
+                    JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
 
-                    // Call the method to display the question
-                    displayQuestion(position, text, answer1, answer2, answer3, answer4, correct);
-                } else {
-                    // Handle the case where the position is invalid
-                    Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();
+                    for (int i = 0; i < lessonArray.length(); i++) {
+                        JSONObject lessonObject = lessonArray.getJSONObject(i);
+                        JSONArray questionsArray = lessonObject.getJSONArray("questions");
+
+                        // Loop through the questions array
+                        for (int j = 0; j < questionsArray.length(); j++) {
+                            JSONObject questionObject = questionsArray.getJSONObject(j);
+                            String text = questionObject.getString("text");
+                            String answer1 = questionObject.getString("answer1");
+                            String answer2 = questionObject.getString("answer2");
+                            String answer3 = questionObject.getString("answer3");
+                            String answer4 = questionObject.getString("answer4");
+                            String correct = questionObject.getString("correct");
+
+                            // Display or use the question data as needed
+                            Log.d("Question", "Question: " + text);
+                            Log.d("Answer1", "Answer1: " + answer1);
+                            Log.d("Answer2", "Answer2: " + answer2);
+                            Log.d("Answer3", "Answer3: " + answer3);
+                            Log.d("Answer4", "Answer4: " + answer4);
+                            Log.d("Correct", "Correct: " + correct);
+                        }
+                    }
+                } catch (JSONException e) {
+                    Log.e("catch", "Error parsing JSON data", e);
                 }
             }
         });
@@ -138,29 +163,5 @@ public class TitleSummary extends AppCompatActivity {
         });
     }
 
-    private void displayQuestion(int position, ArrayList<String> text, ArrayList<String> answer1, ArrayList<String> answer2, ArrayList<String> answer3, ArrayList<String> answer4, ArrayList<String> correct) {
-        // Check if the position is within the bounds of the arrays
-        if (position >= 0 && position < text.size()) {
-            // Get the question and its answers at the specified position
-            String question = text.get(position);
-            String option1 = answer1.get(position);
-            String option2 = answer2.get(position);
-            String option3 = answer3.get(position);
-            String option4 = answer4.get(position);
-            String correctAnswer = correct.get(position);
 
-            // Pass the question and its answers to the next activity
-            Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
-            intent.putExtra("question", question);
-            intent.putExtra("option1", option1);
-            intent.putExtra("option2", option2);
-            intent.putExtra("option3", option3);
-            intent.putExtra("option4", option4);
-            intent.putExtra("correctAnswer", correctAnswer);
-            startActivity(intent);
-        } else {
-            // Handle the case where the position is out of bounds
-            Toast.makeText(TitleSummary.this, "Question not found", Toast.LENGTH_SHORT).show();
-        }
-    }
 }

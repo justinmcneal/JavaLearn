@@ -101,6 +101,7 @@ public class LessonsActivity extends AppCompatActivity {
             JSONObject difficultyObject = jsonObject.getJSONObject("difficulty");
             JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
 
+
             for (int i = 0; i < lessonArray.length(); i++) {
                 JSONObject lessonObject = lessonArray.getJSONObject(i);
                 String title = lessonObject.getString("title");
@@ -159,6 +160,7 @@ public class LessonsActivity extends AppCompatActivity {
             intent.putExtra("title", titleArray.get(position));
             intent.putExtra("summary", summaryArray.get(position));
             intent.putExtra("pdf_file", pdfArray.get(position));
+            intent.putExtra("difficulty", getIntent().getStringExtra("difficulty")); // Retrieve difficulty from the intent
             intent.putExtra("position", position); // Pass the position here
 
             // pass lists of questions and answers for the selected lesson
