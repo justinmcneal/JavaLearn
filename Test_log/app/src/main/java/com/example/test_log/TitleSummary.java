@@ -100,33 +100,34 @@ public class TitleSummary extends AppCompatActivity {
         btnStartActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get the position of the item clicked
-                int position = getIntent().getIntExtra("position", -1);
+                int position = TitleSummary.this.getIntent().getIntExtra("position", -1);
 
                 if (position != -1) {
-                    Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
-                    // Pass the data including the correct answer
-                    intent.putExtra("text", textArray.get(position));
-                    intent.putExtra("answer1", answer1Array.get(position));
-                    intent.putExtra("answer2", answer2Array.get(position));
-                    intent.putExtra("answer3", answer3Array.get(position));
-                    intent.putExtra("answer4", answer4Array.get(position));
-                    intent.putExtra("correct", correctArray.get(position));
-                    Log.d("Position", "Position in TitleSummary: " + position);
-                    Log.d("Array", "TextArray: " + textArray);
-                    Log.d("Array", "Answer1Array: " + answer1Array);
+                    String text = getIntent().getStringExtra("text");
+                    String answer1 = getIntent().getStringExtra("answer1");
+                    String answer2 = getIntent().getStringExtra("answer2");
+                    String answer3 = getIntent().getStringExtra("answer3");
+                    String answer4 = getIntent().getStringExtra("answer4");
+                    String correct = getIntent().getStringExtra("correct");
 
-                    mediaPlayer = MediaPlayer.create(TitleSummary.this, R.raw.lessons);
-                    mediaPlayer.setOnPreparedListener(MediaPlayer::start);
+                    // Use the retrieved data (text, answer1, etc.)
+
+                    Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
+                    intent.putExtra("text", text);
+                    intent.putExtra("answer1", answer1);
+                    intent.putExtra("answer2", answer2);
+                    intent.putExtra("answer3", answer3);
+                    intent.putExtra("answer4", answer4);
+                    intent.putExtra("correct", correct);
                     startActivity(intent);
                 } else {
                     // Handle the case where the position is invalid
                     Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();
                     Log.d("error here", "error");
-
                 }
             }
         });
+
 
 
         firebaseStorage = FirebaseStorage.getInstance();
