@@ -3,793 +3,799 @@
 
       "easy": [
         {
-          "title": "Introduction to Java Programming",
-          "summary": "Java is everywhere. It remains widely used in the development of web applications, e-commerce, social media, and enterprise-level systems. This lesson provides a brief introduction to Java as an object-oriented language. Learn about the various Java career chances you could get as programming abilities stay on top of today’s technology jobs.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_1.pdf",
-
-          "questions": [
+          "lesson": [
             {
-              "text": "The process of creating video games or other types of entertainment software is called?",
-              "answer1": "Web Development",
-              "answer2": "Game Development",
-              "answer3": "Mobile App Development",
-              "answer4": "Video Games Development",
-              "correct": "Game Development",
-              "value:": 1
-            },
-            {
-              "text": "They are also involved in maintaining, debugging, and troubleshooting software and systems to keep things running smoothly.",
-              "answer1": "Debuggers",
-              "answer2": "Software Engineer",
-              "answer3": "Developer",
-              "answer4": "Programmers",
-              "correct": "Developer",
-              "value:": 1
-            },
-            {
-              "text": "It is an object-oriented programming language.",
-              "answer1": "Cobra",
-              "answer2": "Scripted",
-              "answer3": "How To Make Lumpia",
-              "answer4": "Java",
-              "correct": "Java",
-              "value:": 1
-            },
-            {
-              "text": "A Java category that’s accustomed to handling communications protocol requests.",
-              "answer1": "Servlets",
-              "answer2": "Jars",
-              "answer3": "UI",
-              "answer4": "Studio Emulator",
-              "correct": "Servlets",
-              "value:": 1
-            },
-            {
-              "text": "This is often used for aggregation of files and information into one file.",
-              "answer1": "Swing toolkit",
-              "answer2": "Jars",
-              "answer3": "Servlets",
-              "answer4": "Java SE",
-              "correct": "Jars",
-              "value:": 1
-            },
-            {
-              "text": "Meaning of “WORA”",
-              "answer1": "Write Once, Read Advance",
-              "answer2": "Write Once, Run Anywhere",
-              "answer3": "Write Oriented, Run Anywhere",
-              "answer4": "Write Oriented , Read Advance",
-              "correct": "Write Once, Run Anywhere",
-              "value:": 1
-            },
-            {
-              "text": "What does JDK means?",
-              "answer1": "Java Department Kit",
-              "answer2": "Javascript Development Kit",
-              "answer3":  "Java Developers Kit",
-              "answer4":  "Java Development Kit",
-              "correct": "Java Development Kit",
-              "value:": 1
-            },
-            {
-              "text": "It translates the instructions into something the machine can understand.",
-              "answer1": "Jars",
-              "answer2": "JDK",
-              "answer3": "Compiler",
-              "answer4": "Interpreter",
-              "correct": "Interpreter",
-              "value:": 1
-            },
-            {
-              "text": "A set of instructions specifically designed for a particular type of machine and operating system.",
-              "answer1": "Jars",
-              "answer2": "JDK",
-              "answer3": "Compiler",
-              "answer4": "Interpreter",
-              "correct": "Compiler",
-              "value:": 1
-            },
-            {
-              "text": "Java is both a compiled language as well as an interpreted language.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither true nor False",
-              "answer4": "Can’t say",
-              "correct": "true",
-              "value:": 1
+              "title": "Introduction to Java Programming",
+              "summary": "Java is everywhere. It remains widely used in the development of web applications, e-commerce, social media, and enterprise-level systems. This lesson provides a brief introduction to Java as an object-oriented language. Learn about the various Java career chances you could get as programming abilities stay on top of today’s technology jobs.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_1.pdf",
+              "questions": [
+                {
+                  "text": "The process of creating video games or other types of entertainment software is called?",
+                  "answer1": "Web Development",
+                  "answer2": "Game Development",
+                  "answer3": "Mobile App Development",
+                  "answer4": "Video Games Development",
+                  "correct": "Game Development",
+                  "value:": 1
+                },
+                {
+                  "text": "They are also involved in maintaining, debugging, and troubleshooting software and systems to keep things running smoothly.",
+                  "answer1": "Debuggers",
+                  "answer2": "Software Engineer",
+                  "answer3": "Developer",
+                  "answer4": "Programmers",
+                  "correct": "Developer",
+                  "value:": 1
+                },
+                {
+                  "text": "It is an object-oriented programming language.",
+                  "answer1": "Cobra",
+                  "answer2": "Scripted",
+                  "answer3": "How To Make Lumpia",
+                  "answer4": "Java",
+                  "correct": "Java",
+                  "value:": 1
+                },
+                {
+                  "text": "A Java category that’s accustomed to handling communications protocol requests.",
+                  "answer1": "Servlets",
+                  "answer2": "Jars",
+                  "answer3": "UI",
+                  "answer4": "Studio Emulator",
+                  "correct": "Servlets",
+                  "value:": 1
+                },
+                {
+                  "text": "This is often used for aggregation of files and information into one file.",
+                  "answer1": "Swing toolkit",
+                  "answer2": "Jars",
+                  "answer3": "Servlets",
+                  "answer4": "Java SE",
+                  "correct": "Jars",
+                  "value:": 1
+                },
+                {
+                  "text": "Meaning of “WORA”",
+                  "answer1": "Write Once, Read Advance",
+                  "answer2": "Write Once, Run Anywhere",
+                  "answer3": "Write Oriented, Run Anywhere",
+                  "answer4": "Write Oriented , Read Advance",
+                  "correct": "Write Once, Run Anywhere",
+                  "value:": 1
+                },
+                {
+                  "text": "What does JDK means?",
+                  "answer1": "Java Department Kit",
+                  "answer2": "Javascript Development Kit",
+                  "answer3":  "Java Developers Kit",
+                  "answer4":  "Java Development Kit",
+                  "correct": "Java Development Kit",
+                  "value:": 1
+                },
+                {
+                  "text": "It translates the instructions into something the machine can understand.",
+                  "answer1": "Jars",
+                  "answer2": "JDK",
+                  "answer3": "Compiler",
+                  "answer4": "Interpreter",
+                  "correct": "Interpreter",
+                  "value:": 1
+                },
+                {
+                  "text": "A set of instructions specifically designed for a particular type of machine and operating system.",
+                  "answer1": "Jars",
+                  "answer2": "JDK",
+                  "answer3": "Compiler",
+                  "answer4": "Interpreter",
+                  "correct": "Compiler",
+                  "value:": 1
+                },
+                {
+                  "text": "Java is both a compiled language as well as an interpreted language.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither true nor False",
+                  "answer4": "Can’t say",
+                  "correct": "true",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Concepts of Java Programming",
-          "summary": "Let us start to take in and discover the concepts of Java as a program. We will also be learning its main features and functions necessary to grasp how the program works. In this lesson, we will gain an understanding of Java’s mostly used statements and effectively use them.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_2.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "It is used to end a Java statement. ",
-              "answer1": "Parenthesis",
-              "answer2": "Exclamation mark",
-              "answer3": "Semicolon",
-              "answer4": "Bracket",
-              "correct": "Semicolon",
-              "value:": 1
-            },
-            {
-              "text": "A software used by a developer to easily code in certain language.",
-              "answer1": "Integrated Development Environment",
-              "answer2": "Interconnected Development Environment",
-              "answer3": "Internet Developers Environment",
-              "answer4": "Integrated Developers Environment",
-              "correct": "Integrated Development Environment",
-              "value:": 1
-            },
-            {
-              "text": "It is a method in Java that prints a message to the standard output (typically the console) and appends a newline character.",
-              "answer1": "System.in.print()",
-              "answer2": "System.in.display()",
-              "answer3": "System.out.print()",
-              "answer4": "System.out.display()",
-              "correct": "System.out.print()",
-              "value:": 1
-            },
-            {
-              "text": "A folder in a directory where we can put all our related codes in the same directory.",
-              "answer1": "Packages",
-              "answer2": "Jars",
-              "answer3":"JDK",
-              "answer4": "IDE",
-              "correct": "Packages",
-              "value:": 1
-            },
-            {
-              "text": "Class name should start in lower case.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither true nor false",
-              "answer4": "Can't say",
-              "correct": "False",
-              "value:": 1
-            },
-            {
-              "text": "It is a keyword and is used to specify that a method doesn’t return anything. If main method is not void, we will get an error.",
-              "answer1": "Private",
-              "answer2": "Static",
-              "answer3": "Void",
-              "answer4": "Public",
-              "correct": "Void",
-              "value:": 1
-            },
-            {
-              "text": "This means that any other class can access a public field or method.",
-              "answer1": "Private",
-              "answer2": "Static",
-              "answer3": "Void",
-              "answer4": "Public",
-              "correct": "Public",
-              "value:": 1
-            },
-            {
-              "text": "A class that cannot be instantiated.",
-              "answer1": "Private",
-              "answer2": "Static",
-              "answer3": "Void",
-              "answer4": "Public",
-              "correct": "Static",
-              "value:": 1
-            },
-            {
-              "text": "It is the identifier that the  JVM looks for as the starting point of the java program.",
-              "answer1": "JDK",
-              "answer2": "Packages",
-              "answer3": "Main",
-              "answer4": "IDE",
-              "correct": "Main",
-              "value:": 1
-            },
-            {
-              "text": "What is Java’s main() method called?",
-              "answer1": "public static void main String() args;",
-              "answer2": "public static void main(String[] args);",
-              "answer3": "public static void main(String[] args)",
-              "answer4":  "public void main String() args",
-              "correct": "public static void main String() args;",
-              "value:": 1
+              "title": "Concepts of Java Programming",
+              "summary": "Let us start to take in and discover the concepts of Java as a program. We will also be learning its main features and functions necessary to grasp how the program works. In this lesson, we will gain an understanding of Java’s mostly used statements and effectively use them.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_2.pdf",
+              "questions": [
+                {
+                  "text": "It is used to end a Java statement. ",
+                  "answer1": "Parenthesis",
+                  "answer2": "Exclamation mark",
+                  "answer3": "Semicolon",
+                  "answer4": "Bracket",
+                  "correct": "Semicolon",
+                  "value:": 1
+                },
+                {
+                  "text": "A software used by a developer to easily code in certain language.",
+                  "answer1": "Integrated Development Environment",
+                  "answer2": "Interconnected Development Environment",
+                  "answer3": "Internet Developers Environment",
+                  "answer4": "Integrated Developers Environment",
+                  "correct": "Integrated Development Environment",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a method in Java that prints a message to the standard output (typically the console) and appends a newline character.",
+                  "answer1": "System.in.print()",
+                  "answer2": "System.in.display()",
+                  "answer3": "System.out.print()",
+                  "answer4": "System.out.display()",
+                  "correct": "System.out.print()",
+                  "value:": 1
+                },
+                {
+                  "text": "A folder in a directory where we can put all our related codes in the same directory.",
+                  "answer1": "Packages",
+                  "answer2": "Jars",
+                  "answer3":"JDK",
+                  "answer4": "IDE",
+                  "correct": "Packages",
+                  "value:": 1
+                },
+                {
+                  "text": "Class name should start in lower case.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither true nor false",
+                  "answer4": "Can't say",
+                  "correct": "False",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a keyword and is used to specify that a method doesn’t return anything. If main method is not void, we will get an error.",
+                  "answer1": "Private",
+                  "answer2": "Static",
+                  "answer3": "Void",
+                  "answer4": "Public",
+                  "correct": "Void",
+                  "value:": 1
+                },
+                {
+                  "text": "This means that any other class can access a public field or method.",
+                  "answer1": "Private",
+                  "answer2": "Static",
+                  "answer3": "Void",
+                  "answer4": "Public",
+                  "correct": "Public",
+                  "value:": 1
+                },
+                {
+                  "text": "A class that cannot be instantiated.",
+                  "answer1": "Private",
+                  "answer2": "Static",
+                  "answer3": "Void",
+                  "answer4": "Public",
+                  "correct": "Static",
+                  "value:": 1
+                },
+                {
+                  "text": "It is the identifier that the  JVM looks for as the starting point of the java program.",
+                  "answer1": "JDK",
+                  "answer2": "Packages",
+                  "answer3": "Main",
+                  "answer4": "IDE",
+                  "correct": "Main",
+                  "value:": 1
+                },
+                {
+                  "text": "What is Java’s main() method called?",
+                  "answer1": "public static void main String() args;",
+                  "answer2": "public static void main(String[] args);",
+                  "answer3": "public static void main(String[] args)",
+                  "answer4":  "public void main String() args",
+                  "correct": "public static void main String() args;",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Values, Data Types, and Concatenations",
-          "summary": "Enhancing your understanding of the concepts and components is a great way to start! In this lesson, the different values, data types, and the concept of concatenation will be introduced. Here, you will learn which data type is appropriate for each function. Declaring variables, using boolean logic, and joining strings together for an end result will also be explored.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_3.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "The eight basic data types are called _________ because they are simple and uncomplicated.",
-              "answer1": "Primitive",
-              "answer2": "Advance",
-              "answer3": "Modern",
-              "answer4": "Boolean",
-              "correct": "Primitive",
-              "value:": 1
-            },
-            {
-              "text": "Variable names must start with a _____ and cannot be any reserved keyword.",
-              "answer1": "Hindi ko po alam",
-              "answer2": "Symbols",
-              "answer3": "Letter",
-              "answer4": "Emoji",
-              "correct": "Letter",
-              "value:": 1
-            },
-            {
-              "text": "Variable names conventionally begin with _______________ to distinguish them from class names.",
-              "answer1": "Numbers",
-              "answer2": "Symbols",
-              "answer3": "Uppercase Letters",
-              "answer4": "Lowercase Letters",
-              "correct": "Lowercase Letters",
-              "value:": 1
-            },
-            {
-              "text": "The ____ sign is the assignment operator.",
-              "answer1": "equal",
-              "answer2": "is not equal",
-              "answer3": "greater than",
-              "answer4": "less than",
-              "correct": "equal",
-              "value:": 1
-            },
-            {
-              "text": "Primitive types also serve as the building blocks for more complex data types, called _______.",
-              "answer1": "Data Types",
-              "answer2": "Reference Types",
-              "answer3": "Boolean",
-              "answer4": "String",
-              "correct":  "Reference Types",
-              "value:": 1
-            },
-            {
-              "text": "When you perform integer division, whether the two operators used in the arithmetic expression are integer constants or integer variables, the result is an ________. ",
-              "answer1": "Sum",
-              "answer2": "Even",
-              "answer3": "Integer",
-              "answer4": "Decimal",
-              "correct":  "Integer",
-              "value:": 1
-            },
-            {
-              "text": "A floating-point number contains _______ positions.",
-              "answer1": "Integer",
-              "answer2": "Decimal",
-              "answer3": "String",
-              "answer4": "Value",
-              "correct":  "Decimal",
-              "value:": 1
-            },
-            {
-              "text": "A ____________ can hold floating-point values of up to six or seven significant digits of accuracy.",
-              "answer1": "String",
-              "answer2": "Boolean",
-              "answer3": "Float Data Types",
-              "answer4": "Reference Types",
-              "correct": "Float Data Types",
-              "value:": 1
-            },
-            {
-              "text": "Java supports two floating-point data type. The first one is?",
-              "answer1": "Coke Float",
-              "answer2": "McFloat",
-              "answer3": "Float",
-              "answer4": "UpFloat",
-              "correct": "Float",
-              "value:": 1
-            },
-            {
-              "text": "If the the other floating-point data type is “float” what is the other data type?",
-              "answer1": "Double",
-              "answer2": "Variable",
-              "answer3": "Single",
-              "answer4": "Mama mo",
-              "correct": "Double",
-              "value:": 1
+              "title": "Values, Data Types, and Concatenations",
+              "summary": "Enhancing your understanding of the concepts and components is a great way to start! In this lesson, the different values, data types, and the concept of concatenation will be introduced. Here, you will learn which data type is appropriate for each function. Declaring variables, using boolean logic, and joining strings together for an end result will also be explored.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_3.pdf",
+              "questions": [
+                {
+                  "text": "The eight basic data types are called _________ because they are simple and uncomplicated.",
+                  "answer1": "Primitive",
+                  "answer2": "Advance",
+                  "answer3": "Modern",
+                  "answer4": "Boolean",
+                  "correct": "Primitive",
+                  "value:": 1
+                },
+                {
+                  "text": "Variable names must start with a _____ and cannot be any reserved keyword.",
+                  "answer1": "Hindi ko po alam",
+                  "answer2": "Symbols",
+                  "answer3": "Letter",
+                  "answer4": "Emoji",
+                  "correct": "Letter",
+                  "value:": 1
+                },
+                {
+                  "text": "Variable names conventionally begin with _______________ to distinguish them from class names.",
+                  "answer1": "Numbers",
+                  "answer2": "Symbols",
+                  "answer3": "Uppercase Letters",
+                  "answer4": "Lowercase Letters",
+                  "correct": "Lowercase Letters",
+                  "value:": 1
+                },
+                {
+                  "text": "The ____ sign is the assignment operator.",
+                  "answer1": "equal",
+                  "answer2": "is not equal",
+                  "answer3": "greater than",
+                  "answer4": "less than",
+                  "correct": "equal",
+                  "value:": 1
+                },
+                {
+                  "text": "Primitive types also serve as the building blocks for more complex data types, called _______.",
+                  "answer1": "Data Types",
+                  "answer2": "Reference Types",
+                  "answer3": "Boolean",
+                  "answer4": "String",
+                  "correct":  "Reference Types",
+                  "value:": 1
+                },
+                {
+                  "text": "When you perform integer division, whether the two operators used in the arithmetic expression are integer constants or integer variables, the result is an ________. ",
+                  "answer1": "Sum",
+                  "answer2": "Even",
+                  "answer3": "Integer",
+                  "answer4": "Decimal",
+                  "correct":  "Integer",
+                  "value:": 1
+                },
+                {
+                  "text": "A floating-point number contains _______ positions.",
+                  "answer1": "Integer",
+                  "answer2": "Decimal",
+                  "answer3": "String",
+                  "answer4": "Value",
+                  "correct":  "Decimal",
+                  "value:": 1
+                },
+                {
+                  "text": "A ____________ can hold floating-point values of up to six or seven significant digits of accuracy.",
+                  "answer1": "String",
+                  "answer2": "Boolean",
+                  "answer3": "Float Data Types",
+                  "answer4": "Reference Types",
+                  "correct": "Float Data Types",
+                  "value:": 1
+                },
+                {
+                  "text": "Java supports two floating-point data type. The first one is?",
+                  "answer1": "Coke Float",
+                  "answer2": "McFloat",
+                  "answer3": "Float",
+                  "answer4": "UpFloat",
+                  "correct": "Float",
+                  "value:": 1
+                },
+                {
+                  "text": "If the the other floating-point data type is “float” what is the other data type?",
+                  "answer1": "Double",
+                  "answer2": "Variable",
+                  "answer3": "Single",
+                  "answer4": "Mama mo",
+                  "correct": "Double",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Conditional Statements",
-          "summary": "Now that we’ve stepped into knowing the different data types and values while working with Java, it’s time to address conditional structures components of a program. This lesson will show which controls the processes and outputs based on syntax and semantics.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_4.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": " ________ are programming blocks that can change the path we take through those instructions.",
-              "answer1": "Discrete Structures",
-              "answer2": "Control Structures",
-              "answer3": "if statement",
-              "answer4": "else statement",
-              "correct": "Control Structures",
-              "value:": 1
-            },
-            {
-              "text": " In programming, we use the _________  to run a block of code among more than one alternative.",
-              "answer1": "Discrete Structures",
-              "answer2": "Control Structures",
-              "answer3": "Logical Operators",
-              "answer4": "Relational Operators",
-              "correct": "Control Structures",
-              "value:": 1
-            },
-            {
-              "text": "This statement executes a certain section of code if the test expression is evaluated to true.",
-              "answer1": "if statement",
-              "answer2": "else statement",
-              "answer3": "true",
-              "answer4": "false",
-              "correct": "if statement",
-              "value:": 1
-            },
-            {
-              "text": "Statements inside the body of the ‘else’ block are executed if the test expression is evaluated to ___.",
-              "answer1": "if",
-              "answer2": "else",
-              "answer3": "true",
-              "answer4": "false",
-              "correct": "false",
-              "value:": 1
-            },
-            {
-              "text": "Statements in which an if structure is contained inside another if structure are commonly called ???",
-              "answer1": "Nested if statement",
-              "answer2": "Nested else statement",
-              "answer3": "Nested loop statement",
-              "answer4": "Nested else if statement",
-              "correct": "Nested if statement",
-              "value:": 1
-            },
-            {
-              "text": "In a Java if statement, a semicolon follows the Boolean expression.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither",
-              "answer4": "Can’t say",
-              "correct": "False",
-              "value:": 1
-            },
-            {
-              "text": "Indentation can be used to cause statements following an if statement to depend on the evaluation of the Boolean expression.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither",
-              "answer4": "Can’t say",
-              "correct": "False",
-              "value:": 1
-            },
-            {
-              "text": "Statements in which an if structure is contained inside another if structure are commonly called nested if statements.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither",
-              "answer4": "Can’t say",
-              "correct": "True",
-              "value:": 1
-            },
-            {
-              "text": "if condition evaluates to true, statements are executed.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither",
-              "answer4": "Can’t say",
-              "correct": "True",
-              "value:": 1
-            },
-            {
-              "text": "if condition evaluates to false, statements are skipped.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither",
-              "answer4": "Can’t say",
-              "correct": "True",
-              "value:": 1
+              "title": "Conditional Statements",
+              "summary": "Now that we’ve stepped into knowing the different data types and values while working with Java, it’s time to address conditional structures components of a program. This lesson will show which controls the processes and outputs based on syntax and semantics.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_4.pdf",
+              "questions": [
+                {
+                  "text": " ________ are programming blocks that can change the path we take through those instructions.",
+                  "answer1": "Discrete Structures",
+                  "answer2": "Control Structures",
+                  "answer3": "if statement",
+                  "answer4": "else statement",
+                  "correct": "Control Structures",
+                  "value:": 1
+                },
+                {
+                  "text": " In programming, we use the _________  to run a block of code among more than one alternative.",
+                  "answer1": "Discrete Structures",
+                  "answer2": "Control Structures",
+                  "answer3": "Logical Operators",
+                  "answer4": "Relational Operators",
+                  "correct": "Control Structures",
+                  "value:": 1
+                },
+                {
+                  "text": "This statement executes a certain section of code if the test expression is evaluated to true.",
+                  "answer1": "if statement",
+                  "answer2": "else statement",
+                  "answer3": "true",
+                  "answer4": "false",
+                  "correct": "if statement",
+                  "value:": 1
+                },
+                {
+                  "text": "Statements inside the body of the ‘else’ block are executed if the test expression is evaluated to ___.",
+                  "answer1": "if",
+                  "answer2": "else",
+                  "answer3": "true",
+                  "answer4": "false",
+                  "correct": "false",
+                  "value:": 1
+                },
+                {
+                  "text": "Statements in which an if structure is contained inside another if structure are commonly called ???",
+                  "answer1": "Nested if statement",
+                  "answer2": "Nested else statement",
+                  "answer3": "Nested loop statement",
+                  "answer4": "Nested else if statement",
+                  "correct": "Nested if statement",
+                  "value:": 1
+                },
+                {
+                  "text": "In a Java if statement, a semicolon follows the Boolean expression.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither",
+                  "answer4": "Can’t say",
+                  "correct": "False",
+                  "value:": 1
+                },
+                {
+                  "text": "Indentation can be used to cause statements following an if statement to depend on the evaluation of the Boolean expression.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither",
+                  "answer4": "Can’t say",
+                  "correct": "False",
+                  "value:": 1
+                },
+                {
+                  "text": "Statements in which an if structure is contained inside another if structure are commonly called nested if statements.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither",
+                  "answer4": "Can’t say",
+                  "correct": "True",
+                  "value:": 1
+                },
+                {
+                  "text": "if condition evaluates to true, statements are executed.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither",
+                  "answer4": "Can’t say",
+                  "correct": "True",
+                  "value:": 1
+                },
+                {
+                  "text": "if condition evaluates to false, statements are skipped.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither",
+                  "answer4": "Can’t say",
+                  "correct": "True",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "For Loop, While Loop, Do While Loop",
-          "summary": "This lesson is going to teach you how to deal with what controls a program with the help of iterative structures. These structures are called loops. In computer programming, a loop is a sequence of instructions that is continually repeated until a certain condition is reached. In using these, we do not need to write the same code again and again.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_5.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "This is used to run a block of code for a certain number of times while the condition is met.",
-              "answer1": "updateExpression",
-              "answer2": "initialExpression",
-              "answer3": "while loop",
-              "answer4": "for loop",
-              "correct": "for loop",
-              "value:": 1
-            },
-            {
-              "text": "This initializes variables and executes only once.",
-              "answer1": "updateExpression",
-              "answer2": "initialExpression",
-              "answer3": "while loop",
-              "answer4": "for loop",
-              "correct": "initialExpression",
-              "value:": 1
-            },
-            {
-              "text": "This is used to run a specific code until a certain condition is met.",
-              "answer1": "updateExpression",
-              "answer2": "initialExpression",
-              "answer3": "while loop",
-              "answer4": "for loop",
-              "correct": "updateExpression",
-              "value:": 1
-            },
-            {
-              "text": "The condition is evaluated here.",
-              "answer1": "updateExpression",
-              "answer2": "initialExpression",
-              "answer3": "while loop",
-              "answer4": "do…while loop",
-              "correct": "do…while loop",
-              "value:": 1
-            },
-            {
-              "text": "This is similar to the ‘while loop.’ However, it is executed once before the test expression is checked.",
-              "answer1": "updateExpression",
-              "answer2": "initialExpression",
-              "answer3": "while loop",
-              "answer4": "do…while loop",
-              "correct": "updateExpression",
-              "value:": 1
-            },
-            {
-              "text": "The correct order of ‘for loop’",
-              "answer1": " for (testExpression; initialExpression; updateExpression)",
-              "answer2": "for (updateExpression; testExpression; initialExpression)",
-              "answer3": "for (initialExpression; testExpression; updateExpression)",
-              "answer4": "for (testExpression; updateExpression; initialExpression)",
-              "correct": "for (initialExpression; testExpression; updateExpression)",
-              "value:": 1
-            },
-            {
-              "text": "This updates the value of the initialExpression.",
-              "answer1": "updateExpression",
-              "answer2": "initialExpression",
-              "answer3": "testExpression",
-              "answer4": "do…while loop",
-              "correct": "updateExpression",
-              "value:": 1
-            },
-            {
-              "text": "It is the syntax for while loop.",
-              "answer1": "while (initialExpression)",
-              "answer2": "while (doExpression)",
-              "answer3": "while (testExpression)",
-              "answer4": " while (updatedExpression)",
-              "correct": "while (testExpression)",
-              "value:": 1
-            },
-            {
-              "text": "If the condition of a loop is always true, the loop runs for how many times?",
-              "answer1": "Twenty",
-              "answer2": "Ten",
-              "answer3": "A hundred",
-              "answer4": "Infinite",
-              "correct": "Infinite",
-              "value:": 1
-            },
-            {
-              "text": " If the textExpression evaluates to _____, the code inside the while loop is executed.",
-              "answer1": "Equals",
-              "answer2": "Greater than",
-              "answer3": "False",
-              "answer4": "True",
-              "correct": "True",
-              "value:": 1
+              "title": "For Loop, While Loop, Do While Loop",
+              "summary": "This lesson is going to teach you how to deal with what controls a program with the help of iterative structures. These structures are called loops. In computer programming, a loop is a sequence of instructions that is continually repeated until a certain condition is reached. In using these, we do not need to write the same code again and again.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_5.pdf",
+              "questions": [
+                {
+                  "text": "This is used to run a block of code for a certain number of times while the condition is met.",
+                  "answer1": "updateExpression",
+                  "answer2": "initialExpression",
+                  "answer3": "while loop",
+                  "answer4": "for loop",
+                  "correct": "for loop",
+                  "value:": 1
+                },
+                {
+                  "text": "This initializes variables and executes only once.",
+                  "answer1": "updateExpression",
+                  "answer2": "initialExpression",
+                  "answer3": "while loop",
+                  "answer4": "for loop",
+                  "correct": "initialExpression",
+                  "value:": 1
+                },
+                {
+                  "text": "This is used to run a specific code until a certain condition is met.",
+                  "answer1": "updateExpression",
+                  "answer2": "initialExpression",
+                  "answer3": "while loop",
+                  "answer4": "for loop",
+                  "correct": "updateExpression",
+                  "value:": 1
+                },
+                {
+                  "text": "The condition is evaluated here.",
+                  "answer1": "updateExpression",
+                  "answer2": "initialExpression",
+                  "answer3": "while loop",
+                  "answer4": "do…while loop",
+                  "correct": "do…while loop",
+                  "value:": 1
+                },
+                {
+                  "text": "This is similar to the ‘while loop.’ However, it is executed once before the test expression is checked.",
+                  "answer1": "updateExpression",
+                  "answer2": "initialExpression",
+                  "answer3": "while loop",
+                  "answer4": "do…while loop",
+                  "correct": "updateExpression",
+                  "value:": 1
+                },
+                {
+                  "text": "The correct order of ‘for loop’",
+                  "answer1": " for (testExpression; initialExpression; updateExpression)",
+                  "answer2": "for (updateExpression; testExpression; initialExpression)",
+                  "answer3": "for (initialExpression; testExpression; updateExpression)",
+                  "answer4": "for (testExpression; updateExpression; initialExpression)",
+                  "correct": "for (initialExpression; testExpression; updateExpression)",
+                  "value:": 1
+                },
+                {
+                  "text": "This updates the value of the initialExpression.",
+                  "answer1": "updateExpression",
+                  "answer2": "initialExpression",
+                  "answer3": "testExpression",
+                  "answer4": "do…while loop",
+                  "correct": "updateExpression",
+                  "value:": 1
+                },
+                {
+                  "text": "It is the syntax for while loop.",
+                  "answer1": "while (initialExpression)",
+                  "answer2": "while (doExpression)",
+                  "answer3": "while (testExpression)",
+                  "answer4": " while (updatedExpression)",
+                  "correct": "while (testExpression)",
+                  "value:": 1
+                },
+                {
+                  "text": "If the condition of a loop is always true, the loop runs for how many times?",
+                  "answer1": "Twenty",
+                  "answer2": "Ten",
+                  "answer3": "A hundred",
+                  "answer4": "Infinite",
+                  "correct": "Infinite",
+                  "value:": 1
+                },
+                {
+                  "text": " If the textExpression evaluates to _____, the code inside the while loop is executed.",
+                  "answer1": "Equals",
+                  "answer2": "Greater than",
+                  "answer3": "False",
+                  "answer4": "True",
+                  "correct": "True",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Basic Arrays",
-          "summary": "Here’s an easy  way to store multiple values in a single variable. Java has what we call ‘arrays’ to help us do just that. In this lesson, we’ll be learning how to use elements, create and initialize arrays, as well as create multidimensional arrays.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_6.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "These are individual values in an array.",
-              "answer1": "Index",
-              "answer2": "Elements",
-              "answer3": "Data Types",
-              "answer4": "Array Names",
-              "correct": "Elements",
-              "value:": 1
-            },
-            {
-              "text": "These are primitive data types like int, char, double, byte, etc. or Java objects.",
-              "answer1": "Index",
-              "answer2": "Elements",
-              "answer3": "Data Types",
-              "answer4": "Array Names",
-              "correct": "Data Types",
-              "value:": 1
-            },
-            {
-              "text": "It is used as an identifier in creating arrays.",
-              "answer1": "Index",
-              "answer2": "Elements",
-              "answer3": "Data Types",
-              "answer4": "Array Names",
-              "correct": "Array Names",
-              "value:": 1
-            },
-            {
-              "text": "This is a collection of multiple values in a single variable with similar data types",
-              "answer1": "Array",
-              "answer2": "Data",
-              "answer3": "Double",
-              "answer4": "Elements",
-              "correct": "Array",
-              "value:": 1
-            },
-            {
-              "text": "The index in an array always starts at ____.",
-              "answer1": "3",
-              "answer2": "2a",
-              "answer3": "1",
-              "answer4": "0",
-              "correct": "0",
-              "value:": 1
-            },
-            {
-              "text": "It is the syntax for creating an array.",
-              "answer1": "dataType[] arrayName",
-              "answer2": "String [] array = new String [100];",
-              "answer3": "dataType arrayName []",
-              "answer4": "Array[index]",
-              "correct": "dataType arrayName []",
-              "value:": 1
-            },
-            {
-              "text": "It is the syntax for accessing an element of an array.",
-              "answer1": "dataType[] arrayName",
-              "answer2": "String [] array = new String [100];",
-              "answer3": "dataType arrayName []",
-              "answer4": "Array[index]",
-              "correct": "Array[index]",
-              "value:": 1
-            },
-            {
-              "text": "This is used to terminate from the loop immediately.",
-              "answer1": "Scanner",
-              "answer2": "Multidimensional array",
-              "answer3": "Iterating arrays",
-              "answer4": "Break",
-              "correct": "Break",
-              "value:": 1
-            },
-            {
-              "text": "It is an array of arrays.",
-              "answer1": "Scanner",
-              "answer2": "Multidimensional array",
-              "answer3": "Iterating arrays",
-              "answer4": "Break",
-              "correct": "Multidimensional array",
-              "value:": 1
-            },
-            {
-              "text": "This reads every element of the array and does something with it.",
-              "answer1": "Scanner",
-              "answer2": "Multidimensional array",
-              "answer3": "Iterating arrays",
-              "answer4": "Break",
-              "correct": "Iterating arrays",
-              "value:": 1
+              "title": "Basic Arrays",
+              "summary": "Here’s an easy  way to store multiple values in a single variable. Java has what we call ‘arrays’ to help us do just that. In this lesson, we’ll be learning how to use elements, create and initialize arrays, as well as create multidimensional arrays.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_6.pdf",
+              "questions": [
+                {
+                  "text": "These are individual values in an array.",
+                  "answer1": "Index",
+                  "answer2": "Elements",
+                  "answer3": "Data Types",
+                  "answer4": "Array Names",
+                  "correct": "Elements",
+                  "value:": 1
+                },
+                {
+                  "text": "These are primitive data types like int, char, double, byte, etc. or Java objects.",
+                  "answer1": "Index",
+                  "answer2": "Elements",
+                  "answer3": "Data Types",
+                  "answer4": "Array Names",
+                  "correct": "Data Types",
+                  "value:": 1
+                },
+                {
+                  "text": "It is used as an identifier in creating arrays.",
+                  "answer1": "Index",
+                  "answer2": "Elements",
+                  "answer3": "Data Types",
+                  "answer4": "Array Names",
+                  "correct": "Array Names",
+                  "value:": 1
+                },
+                {
+                  "text": "This is a collection of multiple values in a single variable with similar data types",
+                  "answer1": "Array",
+                  "answer2": "Data",
+                  "answer3": "Double",
+                  "answer4": "Elements",
+                  "correct": "Array",
+                  "value:": 1
+                },
+                {
+                  "text": "The index in an array always starts at ____.",
+                  "answer1": "3",
+                  "answer2": "2a",
+                  "answer3": "1",
+                  "answer4": "0",
+                  "correct": "0",
+                  "value:": 1
+                },
+                {
+                  "text": "It is the syntax for creating an array.",
+                  "answer1": "dataType[] arrayName",
+                  "answer2": "String [] array = new String [100];",
+                  "answer3": "dataType arrayName []",
+                  "answer4": "Array[index]",
+                  "correct": "dataType arrayName []",
+                  "value:": 1
+                },
+                {
+                  "text": "It is the syntax for accessing an element of an array.",
+                  "answer1": "dataType[] arrayName",
+                  "answer2": "String [] array = new String [100];",
+                  "answer3": "dataType arrayName []",
+                  "answer4": "Array[index]",
+                  "correct": "Array[index]",
+                  "value:": 1
+                },
+                {
+                  "text": "This is used to terminate from the loop immediately.",
+                  "answer1": "Scanner",
+                  "answer2": "Multidimensional array",
+                  "answer3": "Iterating arrays",
+                  "answer4": "Break",
+                  "correct": "Break",
+                  "value:": 1
+                },
+                {
+                  "text": "It is an array of arrays.",
+                  "answer1": "Scanner",
+                  "answer2": "Multidimensional array",
+                  "answer3": "Iterating arrays",
+                  "answer4": "Break",
+                  "correct": "Multidimensional array",
+                  "value:": 1
+                },
+                {
+                  "text": "This reads every element of the array and does something with it.",
+                  "answer1": "Scanner",
+                  "answer2": "Multidimensional array",
+                  "answer3": "Iterating arrays",
+                  "answer4": "Break",
+                  "correct": "Iterating arrays",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Array Methods",
-          "summary": "As a continuation to the concepts of arrays, we’ll be learning about the different methods for this area. This is useful when we need to store large amounts of data and process them efficiently. Organizing data elements clearly and efficiently helps in creating better programs.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_7.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "This is a built-in package that contains various utility classes and interfaces and provides basic functionality for commonly occurring use cases.",
-              "answer1": "Apple Package",
-              "answer2": "Util Package",
-              "answer3": "Language Package",
-              "answer4": "Net Package",
-              "correct": "Util Package",
-              "value:": 1
-            },
-            {
-              "text": "This method is used to compare two integer values treating them as unsigned.",
-              "answer1": "static int binarySearch method",
-              "answer2": "copyOf method",
-              "answer3": "compareUnsigned method",
-              "answer4": "static boolean deepEquals method",
-              "correct": "compareUnsigned method",
-              "value:": 1
-            },
-            {
-              "text": "This copies the mentioned array,pads it with a default value, so that copy has got the mentioned length.",
-              "answer1": "static int binarySearch method",
-              "answer2": "copyOf method",
-              "answer3": "compareUnsigned method",
-              "answer4": "static boolean deepEquals method",
-              "correct": "copyOf method",
-              "value:": 1
-            },
-            {
-              "text": "This is used to search for a mentioned element in the array.",
-              "answer1": "static int binarySearch method",
-              "answer2": "copyOf method",
-              "answer3": "compareUnsigned method",
-              "answer4": "static boolean deepEquals method",
-              "correct": "static int binarySearch method",
-              "value:": 1
-            },
-            {
-              "text": "This gives methods that are static to create and access Java arrays dynamically.",
-              "answer1": "Nested inner class",
-              "answer2": "Static nested class",
-              "answer3": "Arrays class",
-              "answer4": "Static class",
-              "correct": "Arrays class",
-              "value:": 1
-            },
-            {
-              "text": "It is used to return the fixed-size list that mentioned Arrays back.",
-              "answer1": "asList method",
-              "answer2": "static int binarySearch method",
-              "answer3": "compareUnsigned method",
-              "answer4": "static boolean deepEquals method",
-              "correct": "asList method",
-              "value:": 1
-            },
-            {
-              "text": "This would return true in case the two mentioned arrays are deeply equal to the other array or not.",
-              "answer1": "asList method",
-              "answer2": "static int binarySearch method",
-              "answer3": "compareUnsigned method",
-              "answer4": "static boolean deepEquals method",
-              "correct": "static boolean deepEquals method",
-              "value:": 1
-            },
-            {
-              "text": "It is the syntax for the asList method.",
-              "answer1": "int [] arr = {}",
-              "answer2": "int [] Arr = {}",
-              "answer3": "int Arr {} = {}",
-              "answer4": "int Arr [] = {}",
-              "correct": "int Arr [] = {}",
-              "value:": 1
-            },
-            {
-              "text": "The syntax for the copyOf method.",
-              "answer1": "copyOf(new length, original array)",
-              "answer2": "Arrays.copyof (new length, original array)",
-              "answer3": "Arrays.copyOf (original array, new length)",
-              "answer4": "CopyOf(original array, new length)",
-              "correct": "Arrays.copyOf (original array, new length)",
-              "value:": 1
-            },
-            {
-              "text": "The syntax for the static boolean deepEquals method.",
-              "answer1": "deepEquals (Object [] m2, Object [] m1]",
-              "answer2": "deep.Equals (Object [] m2, Object [] m1]",
-              "answer3": "Arrays.deepEquals(Object [] m1, Object [] m2)",
-              "answer4": "arrays.deepEqual (Object [] m1, Object [] m2)",
-              "correct": "Arrays.deepEquals(Object [] m1, Object [] m2)",
-              "value:": 1
+              "title": "Array Methods",
+              "summary": "As a continuation to the concepts of arrays, we’ll be learning about the different methods for this area. This is useful when we need to store large amounts of data and process them efficiently. Organizing data elements clearly and efficiently helps in creating better programs.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_7.pdf",
+              "questions": [
+                {
+                  "text": "This is a built-in package that contains various utility classes and interfaces and provides basic functionality for commonly occurring use cases.",
+                  "answer1": "Apple Package",
+                  "answer2": "Util Package",
+                  "answer3": "Language Package",
+                  "answer4": "Net Package",
+                  "correct": "Util Package",
+                  "value:": 1
+                },
+                {
+                  "text": "This method is used to compare two integer values treating them as unsigned.",
+                  "answer1": "static int binarySearch method",
+                  "answer2": "copyOf method",
+                  "answer3": "compareUnsigned method",
+                  "answer4": "static boolean deepEquals method",
+                  "correct": "compareUnsigned method",
+                  "value:": 1
+                },
+                {
+                  "text": "This copies the mentioned array,pads it with a default value, so that copy has got the mentioned length.",
+                  "answer1": "static int binarySearch method",
+                  "answer2": "copyOf method",
+                  "answer3": "compareUnsigned method",
+                  "answer4": "static boolean deepEquals method",
+                  "correct": "copyOf method",
+                  "value:": 1
+                },
+                {
+                  "text": "This is used to search for a mentioned element in the array.",
+                  "answer1": "static int binarySearch method",
+                  "answer2": "copyOf method",
+                  "answer3": "compareUnsigned method",
+                  "answer4": "static boolean deepEquals method",
+                  "correct": "static int binarySearch method",
+                  "value:": 1
+                },
+                {
+                  "text": "This gives methods that are static to create and access Java arrays dynamically.",
+                  "answer1": "Nested inner class",
+                  "answer2": "Static nested class",
+                  "answer3": "Arrays class",
+                  "answer4": "Static class",
+                  "correct": "Arrays class",
+                  "value:": 1
+                },
+                {
+                  "text": "It is used to return the fixed-size list that mentioned Arrays back.",
+                  "answer1": "asList method",
+                  "answer2": "static int binarySearch method",
+                  "answer3": "compareUnsigned method",
+                  "answer4": "static boolean deepEquals method",
+                  "correct": "asList method",
+                  "value:": 1
+                },
+                {
+                  "text": "This would return true in case the two mentioned arrays are deeply equal to the other array or not.",
+                  "answer1": "asList method",
+                  "answer2": "static int binarySearch method",
+                  "answer3": "compareUnsigned method",
+                  "answer4": "static boolean deepEquals method",
+                  "correct": "static boolean deepEquals method",
+                  "value:": 1
+                },
+                {
+                  "text": "It is the syntax for the asList method.",
+                  "answer1": "int [] arr = {}",
+                  "answer2": "int [] Arr = {}",
+                  "answer3": "int Arr {} = {}",
+                  "answer4": "int Arr [] = {}",
+                  "correct": "int Arr [] = {}",
+                  "value:": 1
+                },
+                {
+                  "text": "The syntax for the copyOf method.",
+                  "answer1": "copyOf(new length, original array)",
+                  "answer2": "Arrays.copyof (new length, original array)",
+                  "answer3": "Arrays.copyOf (original array, new length)",
+                  "answer4": "CopyOf(original array, new length)",
+                  "correct": "Arrays.copyOf (original array, new length)",
+                  "value:": 1
+                },
+                {
+                  "text": "The syntax for the static boolean deepEquals method.",
+                  "answer1": "deepEquals (Object [] m2, Object [] m1]",
+                  "answer2": "deep.Equals (Object [] m2, Object [] m1]",
+                  "answer3": "Arrays.deepEquals(Object [] m1, Object [] m2)",
+                  "answer4": "arrays.deepEqual (Object [] m1, Object [] m2)",
+                  "correct": "Arrays.deepEquals(Object [] m1, Object [] m2)",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Character, String, and Number Methods",
-          "summary": "Java’s Number class represents numeric values convertible to primitive data types such as short, byte, int, long, float, and double. We’ll be comprehending the different methods in this class and how to use them in a program.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_8.pdf",
+          ],
+          "lesson": [
+            {
+              "title": "Character, String, and Number Methods",
+              "summary": "Java’s Number class represents numeric values convertible to primitive data types such as short, byte, int, long, float, and double. We’ll be comprehending the different methods in this class and how to use them in a program.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_8.pdf",
 
 
-          "questions": [
-            {
-              "text": "This function compares a given object to a different object of the same type.",
-              "answer1": "valueOf",
-              "answer2": "indexOf()",
-              "answer3": "equals()",
-              "answer4": "compareTo",
-              "correct": "compareTo",
-              "value:": 1
-            },
-            {
-              "text": "This method checks if the number and the argument passed through the method is not null and equal to the number.",
-              "answer1": "equals",
-              "answer2": "compareTo",
-              "answer3": "valueOf",
-              "answer4": "toString",
-              "correct": "equals",
-              "value:": 1
-            },
-            {
-              "text": " This method returns the number object which is relevant. Simply put, this method converts the argument passed through it to an Integer object.",
-              "answer1": "equals",
-              "answer2": "compareTo",
-              "answer3": "valueOf",
-              "answer4": "toString",
-              "correct": "valueOf",
-              "value:": 1
-            },
-            {
-              "text": "This method is used for converting a numeric datatype to a string. This helps in returning the value of an object.",
-              "answer1": "equals",
-              "answer2": "compareTo",
-              "answer3": "valueOf",
-              "answer4": "toString",
-              "correct": "toString",
-              "value:": 1
-            },
-            {
-              "text": "It is an example of a wrapper class which converts a primitive data type to an object of the class.",
-              "answer1": "Java Number class",
-              "answer2": "class Main",
-              "answer3": "class type",
-              "answer4": "Arrays class",
-              "correct": "Arrays class",
-              "value:": 1
-            },
-            {
-              "text": "The ________ () method returns the length of a String.",
-              "answer1": "length",
-              "answer2": "width",
-              "answer3": "height",
-              "answer4": "weight",
-              "correct": "length",
-              "value:": 1
-            },
-            {
-              "text": "The ___________ () method returns the larger of two values.",
-              "answer1": "Math.max",
-              "answer2": "Math.abs",
-              "answer3": "Math.low",
-              "answer4": "Math.high",
-              "correct": "Math.max",
-              "value:": 1
-            },
-            {
-              "text": " The method _________ () returns the absolute value of a number. ",
-              "answer1": "Math.max",
-              "answer2": "Math.abs",
-              "answer3": "Math.low",
-              "answer4": "Math.high",
-              "correct": "Math.absh",
-              "value:": 1
-            },
-            {
-              "text": "This  method determines whether a specific character occurs within a String.",
-              "answer1": "Math.max",
-              "answer2": "endswith()",
-              "answer3": "indexOf()",
-              "answer4": "class java.lang.Math",
-              "correct": "indexOf()",
-              "value:": 1
-            },
-            {
-              "text": "It contains constants and methods that you can use to perform common mathematical functions.",
-              "answer1": "Math.max",
-              "answer2": "endswith()",
-              "answer3": "indexOf()",
-              "answer4": "class java.lang.Math",
-              "correct": "class java.lang.Math",
-              "value:": 1
+              "questions": [
+                {
+                  "text": "This function compares a given object to a different object of the same type.",
+                  "answer1": "valueOf",
+                  "answer2": "indexOf()",
+                  "answer3": "equals()",
+                  "answer4": "compareTo",
+                  "correct": "compareTo",
+                  "value:": 1
+                },
+                {
+                  "text": "This method checks if the number and the argument passed through the method is not null and equal to the number.",
+                  "answer1": "equals",
+                  "answer2": "compareTo",
+                  "answer3": "valueOf",
+                  "answer4": "toString",
+                  "correct": "equals",
+                  "value:": 1
+                },
+                {
+                  "text": " This method returns the number object which is relevant. Simply put, this method converts the argument passed through it to an Integer object.",
+                  "answer1": "equals",
+                  "answer2": "compareTo",
+                  "answer3": "valueOf",
+                  "answer4": "toString",
+                  "correct": "valueOf",
+                  "value:": 1
+                },
+                {
+                  "text": "This method is used for converting a numeric datatype to a string. This helps in returning the value of an object.",
+                  "answer1": "equals",
+                  "answer2": "compareTo",
+                  "answer3": "valueOf",
+                  "answer4": "toString",
+                  "correct": "toString",
+                  "value:": 1
+                },
+                {
+                  "text": "It is an example of a wrapper class which converts a primitive data type to an object of the class.",
+                  "answer1": "Java Number class",
+                  "answer2": "class Main",
+                  "answer3": "class type",
+                  "answer4": "Arrays class",
+                  "correct": "Arrays class",
+                  "value:": 1
+                },
+                {
+                  "text": "The ________ () method returns the length of a String.",
+                  "answer1": "length",
+                  "answer2": "width",
+                  "answer3": "height",
+                  "answer4": "weight",
+                  "correct": "length",
+                  "value:": 1
+                },
+                {
+                  "text": "The ___________ () method returns the larger of two values.",
+                  "answer1": "Math.max",
+                  "answer2": "Math.abs",
+                  "answer3": "Math.low",
+                  "answer4": "Math.high",
+                  "correct": "Math.max",
+                  "value:": 1
+                },
+                {
+                  "text": " The method _________ () returns the absolute value of a number. ",
+                  "answer1": "Math.max",
+                  "answer2": "Math.abs",
+                  "answer3": "Math.low",
+                  "answer4": "Math.high",
+                  "correct": "Math.absh",
+                  "value:": 1
+                },
+                {
+                  "text": "This  method determines whether a specific character occurs within a String.",
+                  "answer1": "Math.max",
+                  "answer2": "endswith()",
+                  "answer3": "indexOf()",
+                  "answer4": "class java.lang.Math",
+                  "correct": "indexOf()",
+                  "value:": 1
+                },
+                {
+                  "text": "It contains constants and methods that you can use to perform common mathematical functions.",
+                  "answer1": "Math.max",
+                  "answer2": "endswith()",
+                  "answer3": "indexOf()",
+                  "answer4": "class java.lang.Math",
+                  "correct": "class java.lang.Math",
+                  "value:": 1
+                }
+              ]
+
             }
           ]
         }
@@ -797,596 +803,598 @@
 
       "medium": [
         {
-          "title": "Java Structure",
-          "summary": "Data structures refer to the specific ways in which data is organized in a specialized format on a computer for them to be handled effectively. Java Data Structure is very important, especially for Java developers. This includes bitset, vector, stack dictionary and more.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_9.pdf",
-
-
-          "questions": [
+          "lesson": [
             {
-              "text": "This is also known as map or dictionary data structure.",
-              "answer1": "hash table",
-              "answer2": "Java API",
-              "answer3": "set",
-              "answer4": "linked list",
-              "correct": "hash table",
-              "value:": 1
-            },
-            {
-              "text": "It is another basic data structure in programming.",
-              "answer1": "hash table",
-              "answer2": "Java API",
-              "answer3": "set",
-              "answer4": "linked list",
-              "correct": "linked list",
-              "value:": 1
-            },
-            {
-              "text": "It provides built-in support for common data structures, essential for writing programs like an array, linked list, map, set, stack, and queue.",
-              "answer1": "hash table",
-              "answer2": "Java API",
-              "answer3": "set",
-              "answer4": "linked list",
-              "correct": "Java API",
-              "value:": 1
-            },
-            {
-              "text": "It is a good data structure to store unique elements.",
-              "answer1": "hash table",
-              "answer2": "Java API",
-              "answer3": "set",
-              "answer4": "linked list",
-              "correct":"set",
-              "value:": 1
-            },
-            {
-              "text": "It is a thread-safe extension of the Queue interface and can be used to implement producer-consumer patterns in Java.",
-              "answer1": "Queue",
-              "answer2": "DoubleQueue",
-              "answer3": "BlockingQueue",
-              "answer4": " MultiQueue",
-              "correct": "BlockingQueue",
-              "value:": 1
-            },
-            {
-              "text": "It is a building block of programs.",
-              "answer1": "Mobile Data",
-              "answer2": "Database",
-              "answer3": "Data Structure",
-              "answer4": "Data",
-              "correct": "Data Structure",
-              "value:": 1
-            },
-            {
-              "text": "“Data Structure + Algorithms= ____________",
-              "answer1": "Java API",
-              "answer2": "set",
-              "answer3": "Program",
-              "answer4": "linked list",
-              "correct": "Program",
-              "value:": 1
-            },
-            {
-              "text": "You can also implement Queue by using ____________.",
-              "answer1": "array",
-              "answer2": "string",
-              "answer3": "set",
-              "answer4": "variable",
-              "correct": "array",
-              "value:": 1
-            },
-            {
-              "text": " This class can be used whenever a linked list data structure is needed.",
-              "answer1": "System.Out.Println",
-              "answer2": "System.Out.Println(\"linked list\")",
-              "answer3": "java.util. LinkedList",
-              "answer4": "java.util.Stack",
-              "correct": "java.util. LinkedList",
-              "value:": 1
-            },
-            {
-              "text": "This class extends the legacy Vector class for storing elements.",
-              "answer1": "System.Out.Println",
-              "answer2": " system.out.println(\"linked list\");",
-              "answer3": "java.util. LinkedList",
-              "answer4": "java.util.Stack",
-              "correct": "java.util.Stack",
-              "value:": 1
+              "title": "Java Structure",
+              "summary": "Data structures refer to the specific ways in which data is organized in a specialized format on a computer for them to be handled effectively. Java Data Structure is very important, especially for Java developers. This includes bitset, vector, stack dictionary and more.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_9.pdf",
+              "questions": [
+                {
+                  "text": "This is also known as map or dictionary data structure.",
+                  "answer1": "hash table",
+                  "answer2": "Java API",
+                  "answer3": "set",
+                  "answer4": "linked list",
+                  "correct": "hash table",
+                  "value:": 1
+                },
+                {
+                  "text": "It is another basic data structure in programming.",
+                  "answer1": "hash table",
+                  "answer2": "Java API",
+                  "answer3": "set",
+                  "answer4": "linked list",
+                  "correct": "linked list",
+                  "value:": 1
+                },
+                {
+                  "text": "It provides built-in support for common data structures, essential for writing programs like an array, linked list, map, set, stack, and queue.",
+                  "answer1": "hash table",
+                  "answer2": "Java API",
+                  "answer3": "set",
+                  "answer4": "linked list",
+                  "correct": "Java API",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a good data structure to store unique elements.",
+                  "answer1": "hash table",
+                  "answer2": "Java API",
+                  "answer3": "set",
+                  "answer4": "linked list",
+                  "correct":"set",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a thread-safe extension of the Queue interface and can be used to implement producer-consumer patterns in Java.",
+                  "answer1": "Queue",
+                  "answer2": "DoubleQueue",
+                  "answer3": "BlockingQueue",
+                  "answer4": " MultiQueue",
+                  "correct": "BlockingQueue",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a building block of programs.",
+                  "answer1": "Mobile Data",
+                  "answer2": "Database",
+                  "answer3": "Data Structure",
+                  "answer4": "Data",
+                  "correct": "Data Structure",
+                  "value:": 1
+                },
+                {
+                  "text": "“Data Structure + Algorithms= ____________",
+                  "answer1": "Java API",
+                  "answer2": "set",
+                  "answer3": "Program",
+                  "answer4": "linked list",
+                  "correct": "Program",
+                  "value:": 1
+                },
+                {
+                  "text": "You can also implement Queue by using ____________.",
+                  "answer1": "array",
+                  "answer2": "string",
+                  "answer3": "set",
+                  "answer4": "variable",
+                  "correct": "array",
+                  "value:": 1
+                },
+                {
+                  "text": " This class can be used whenever a linked list data structure is needed.",
+                  "answer1": "System.Out.Println",
+                  "answer2": "System.Out.Println(\"linked list\")",
+                  "answer3": "java.util. LinkedList",
+                  "answer4": "java.util.Stack",
+                  "correct": "java.util. LinkedList",
+                  "value:": 1
+                },
+                {
+                  "text": "This class extends the legacy Vector class for storing elements.",
+                  "answer1": "System.Out.Println",
+                  "answer2": " system.out.println(\"linked list\");",
+                  "answer3": "java.util. LinkedList",
+                  "answer4": "java.util.Stack",
+                  "correct": "java.util.Stack",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Data, Time, and Regex Method",
-          "summary": "Date and Time classes in Java are very important for deriving programs that make use of date, time, and year computations. The four classes in this package will be differentiated alongside the demonstration on how these classes are to be used accordingly.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_10.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": " This class is to display the current date.",
-              "answer1": "java.time.LocalTime",
-              "answer2": "java.time.LocalDate",
-              "answer3": "java.time.LocalDateTime",
-              "answer4": "lSystem.out.println",
-              "correct": "java.time.LocalDate",
-              "value:": 1
-            },
-            {
-              "text": "This class is to display the current time.",
-              "answer1": "java.time.LocalTime",
-              "answer2": "java.time.LocalDate",
-              "answer3": "java.time.LocalDateTime",
-              "answer4": "lSystem.out.println",
-              "correct": "java.time.LocalTime",
-              "value:": 1
-            },
-            {
-              "text": "This class is to display the current date and time.",
-              "answer1": "java.time.LocalTime",
-              "answer2": "java.time.LocalDate",
-              "answer3": "java.time.LocalDateTime",
-              "answer4": "lSystem.out.println",
-              "correct": "java.time.LocalDateTime",
-              "value:": 1
-            },
-            {
-              "text": "It is an API to define a pattern for searching or manipulating strings",
-              "answer1": "Java Rice",
-              "answer2": "Java API",
-              "answer3": "Java application",
-              "answer4": "Java Regex",
-              "correct": "Java Regex",
-              "value:": 1
-            },
-            {
-              "text": "It is a thread-safe extension of the Queue interface and can be used to implement producer-consumer patterns in Java.",
-              "answer1": "Queue",
-              "answer2": "DoubleQueue",
-              "answer3": "BlockingQueue",
-              "answer4": " MultiQueue",
-              "correct": "BlockingQueue",
-              "value:": 1
-            },
-            {
-              "text": "The first parameter indicates which ________ is being searched for and the second parameter has a flag to indicate that the search should be case-insensitive.",
-              "answer1": "pattern",
-              "answer2": "symbol",
-              "answer3": "meter",
-              "answer4": "number",
-              "correct":"pattern",
-              "value:": 1
-            },
-            {
-              "text": "It is method used to search for the pattern in a string.",
-              "answer1": "matcher()",
-              "answer2": "search()",
-              "answer3": "pattern()",
-              "answer4": "find()",
-              "correct": "matcher()",
-              "value:": 1
-            },
-            {
-              "text": "It is a method returns true if the pattern was found in the string and false if it was not found.",
-              "answer1": "matcher()",
-              "answer2": "search()",
-              "answer3": "pattern()",
-              "answer4": "find()",
-              "correct": "find()",
-              "value:": 1
-            },
-            {
-              "text": " TThe second parameter is ________ . ",
-              "answer1": "needed",
-              "answer2": "optional",
-              "answer3": "mandatory",
-              "answer4": "required",
-              "correct": "optional",
-              "value:": 1
-            },
-            {
-              "text": " Java does not have a built-in Date class, but we can import the java.time package to work with the date and time API.",
-              "answer1": "Python Date and Time",
-              "answer2": "Java Date and Time",
-              "answer3": "LocalDateTime",
-              "answer4": "Local Date and Time",
-              "correct": "Java Date and Time",
-              "value:": 1
+              "title": "Data, Time, and Regex Method",
+              "summary": "Date and Time classes in Java are very important for deriving programs that make use of date, time, and year computations. The four classes in this package will be differentiated alongside the demonstration on how these classes are to be used accordingly.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_10.pdf",
+              "questions": [
+                {
+                  "text": " This class is to display the current date.",
+                  "answer1": "java.time.LocalTime",
+                  "answer2": "java.time.LocalDate",
+                  "answer3": "java.time.LocalDateTime",
+                  "answer4": "lSystem.out.println",
+                  "correct": "java.time.LocalDate",
+                  "value:": 1
+                },
+                {
+                  "text": "This class is to display the current time.",
+                  "answer1": "java.time.LocalTime",
+                  "answer2": "java.time.LocalDate",
+                  "answer3": "java.time.LocalDateTime",
+                  "answer4": "lSystem.out.println",
+                  "correct": "java.time.LocalTime",
+                  "value:": 1
+                },
+                {
+                  "text": "This class is to display the current date and time.",
+                  "answer1": "java.time.LocalTime",
+                  "answer2": "java.time.LocalDate",
+                  "answer3": "java.time.LocalDateTime",
+                  "answer4": "lSystem.out.println",
+                  "correct": "java.time.LocalDateTime",
+                  "value:": 1
+                },
+                {
+                  "text": "It is an API to define a pattern for searching or manipulating strings",
+                  "answer1": "Java Rice",
+                  "answer2": "Java API",
+                  "answer3": "Java application",
+                  "answer4": "Java Regex",
+                  "correct": "Java Regex",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a thread-safe extension of the Queue interface and can be used to implement producer-consumer patterns in Java.",
+                  "answer1": "Queue",
+                  "answer2": "DoubleQueue",
+                  "answer3": "BlockingQueue",
+                  "answer4": " MultiQueue",
+                  "correct": "BlockingQueue",
+                  "value:": 1
+                },
+                {
+                  "text": "The first parameter indicates which ________ is being searched for and the second parameter has a flag to indicate that the search should be case-insensitive.",
+                  "answer1": "pattern",
+                  "answer2": "symbol",
+                  "answer3": "meter",
+                  "answer4": "number",
+                  "correct":"pattern",
+                  "value:": 1
+                },
+                {
+                  "text": "It is method used to search for the pattern in a string.",
+                  "answer1": "matcher()",
+                  "answer2": "search()",
+                  "answer3": "pattern()",
+                  "answer4": "find()",
+                  "correct": "matcher()",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a method returns true if the pattern was found in the string and false if it was not found.",
+                  "answer1": "matcher()",
+                  "answer2": "search()",
+                  "answer3": "pattern()",
+                  "answer4": "find()",
+                  "correct": "find()",
+                  "value:": 1
+                },
+                {
+                  "text": " TThe second parameter is ________ . ",
+                  "answer1": "needed",
+                  "answer2": "optional",
+                  "answer3": "mandatory",
+                  "answer4": "required",
+                  "correct": "optional",
+                  "value:": 1
+                },
+                {
+                  "text": " Java does not have a built-in Date class, but we can import the java.time package to work with the date and time API.",
+                  "answer1": "Python Date and Time",
+                  "answer2": "Java Date and Time",
+                  "answer3": "LocalDateTime",
+                  "answer4": "Local Date and Time",
+                  "correct": "Java Date and Time",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Regex and Character Methods",
-          "summary": "A Regular Expression, or RegEx, is a set of characters that creates a pattern for searching within text. By using this pattern, you can specify what you're looking for in the data. In Java, the Pattern and Matcher classes are utilized for this purpose. Patterns establish the criteria for the search, while Matchers perform the actual search based on the defined pattern.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_11.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": " Regex is short for?",
-              "answer1": "Reconstruct Expressions",
-              "answer2": "Regular Expressions",
-              "answer3": "Reconstruct Expressions",
-              "answer4": "Registered Expression",
-              "correct": "Regular Expressions",
-              "value:": 1
-            },
-            {
-              "text": "Any numeric digit from 0 to 9",
-              "answer1": "\\w",
-              "answer2": "\\d",
-              "answer3": "S",
-              "answer4": "D",
-              "correct": "\\d",
-              "value:": 1
-            },
-            {
-              "text": "Any letter, numeric digit, or the underscore character (Think of matching 'word' characters.)",
-              "answer1": "W",
-              "answer2": "\\w",
-              "answer3": "*//",
-              "answer4": "int",
-              "correct": "\\w",
-              "value:": 1
-            },
-            {
-              "text": "Any character that is not a space, tab, or newline.",
-              "answer1": "A",
-              "answer2": "int",
-              "answer3": "\\S",
-              "answer4": "S",
-              "correct": "\\S",
-              "value:": 1
-            },
-            {
-              "text": "What is \\D ?",
-              "answer1": "Any character that is not a numeric digit from 0 to 9.",
-              "answer2": "A non-whitespace character: [\\^\\s]",
-              "answer3": "Any space, tab, or newline character. (Think of this as matching 'space' characters)",
-              "answer4": "A digit: [0-9]",
-              "correct": "Any character that is not a numeric digit from 0 to 9.",
-              "value:": 1
-            },
-            {
-              "text": "Any character that is not a letter, numeric digit, or the underscore character.",
-              "answer1": "S",
-              "answer2": "W",
-              "answer3": "*",
-              "answer4": " \\W",
-              "correct":" \\W",
-              "value:": 1
-            },
-            {
-              "text": "The java.util.regex package contains regular expressions.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither True or False",
-              "answer4": "Can't Say",
-              "correct": "False",
-              "value:": 1
-            },
-            {
-              "text": "Regex (short for Regular Expressions) is a Java API for defining String patterns that can be used to scan, manipulate, and modify set of characters",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither True or False",
-              "answer4": "Can't Say",
-              "correct": "True",
-              "value:": 1
-            },
-            {
-              "text": "Regex is commonly used to describe the constraints in several areas of strings, including email passwords and validation.",
-              "answer1": "True",
-              "answer2": "False",
-              "answer3": "Neither True or False",
-              "answer4": "Can't Say",
-              "correct": "True",
-              "value:": 1
-            },
-            {
-              "text": " Java does not have a built-in Date class, but we can import the java.time package to work with the date and time API.",
-              "answer1": "Python Date and Time",
-              "answer2": "Java Date and Time",
-              "answer3": "LocalDateTime",
-              "answer4": "Local Date and Time",
-              "correct": "Java Date and Time",
-              "value:": 1
+              "title": "Regex and Character Methods",
+              "summary": "A Regular Expression, or RegEx, is a set of characters that creates a pattern for searching within text. By using this pattern, you can specify what you're looking for in the data. In Java, the Pattern and Matcher classes are utilized for this purpose. Patterns establish the criteria for the search, while Matchers perform the actual search based on the defined pattern.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_11.pdf",
+              "questions": [
+                {
+                  "text": " Regex is short for?",
+                  "answer1": "Reconstruct Expressions",
+                  "answer2": "Regular Expressions",
+                  "answer3": "Reconstruct Expressions",
+                  "answer4": "Registered Expression",
+                  "correct": "Regular Expressions",
+                  "value:": 1
+                },
+                {
+                  "text": "Any numeric digit from 0 to 9",
+                  "answer1": "\\w",
+                  "answer2": "\\d",
+                  "answer3": "S",
+                  "answer4": "D",
+                  "correct": "\\d",
+                  "value:": 1
+                },
+                {
+                  "text": "Any letter, numeric digit, or the underscore character (Think of matching 'word' characters.)",
+                  "answer1": "W",
+                  "answer2": "\\w",
+                  "answer3": "*//",
+                  "answer4": "int",
+                  "correct": "\\w",
+                  "value:": 1
+                },
+                {
+                  "text": "Any character that is not a space, tab, or newline.",
+                  "answer1": "A",
+                  "answer2": "int",
+                  "answer3": "\\S",
+                  "answer4": "S",
+                  "correct": "\\S",
+                  "value:": 1
+                },
+                {
+                  "text": "What is \\D ?",
+                  "answer1": "Any character that is not a numeric digit from 0 to 9.",
+                  "answer2": "A non-whitespace character: [\\^\\s]",
+                  "answer3": "Any space, tab, or newline character. (Think of this as matching 'space' characters)",
+                  "answer4": "A digit: [0-9]",
+                  "correct": "Any character that is not a numeric digit from 0 to 9.",
+                  "value:": 1
+                },
+                {
+                  "text": "Any character that is not a letter, numeric digit, or the underscore character.",
+                  "answer1": "S",
+                  "answer2": "W",
+                  "answer3": "*",
+                  "answer4": " \\W",
+                  "correct":" \\W",
+                  "value:": 1
+                },
+                {
+                  "text": "The java.util.regex package contains regular expressions.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither True or False",
+                  "answer4": "Can't Say",
+                  "correct": "False",
+                  "value:": 1
+                },
+                {
+                  "text": "Regex (short for Regular Expressions) is a Java API for defining String patterns that can be used to scan, manipulate, and modify set of characters",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither True or False",
+                  "answer4": "Can't Say",
+                  "correct": "True",
+                  "value:": 1
+                },
+                {
+                  "text": "Regex is commonly used to describe the constraints in several areas of strings, including email passwords and validation.",
+                  "answer1": "True",
+                  "answer2": "False",
+                  "answer3": "Neither True or False",
+                  "answer4": "Can't Say",
+                  "correct": "True",
+                  "value:": 1
+                },
+                {
+                  "text": " Java does not have a built-in Date class, but we can import the java.time package to work with the date and time API.",
+                  "answer1": "Python Date and Time",
+                  "answer2": "Java Date and Time",
+                  "answer3": "LocalDateTime",
+                  "answer4": "Local Date and Time",
+                  "correct": "Java Date and Time",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Exception Handling",
-          "summary": "An exception is an unexpected event during program execution that can cause abnormal program termination. It can be caught and handled by the program, creating an exception object. Java exception types include runtime and IO exceptions. Exceptions can be handled using try...catch blocks, finally blocks, or throws keyword blocks.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_12.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "It is an unexpected event that can be caught and handled by the program.",
-              "answer1": "errors",
-              "answer2": "exceptions",
-              "answer3": "throws keyword block",
-              "answer4": "finally block",
-              "correct": "exceptions",
-              "value:": 1
-            },
-            {
-              "text": "It is used to explicitly throw a single exception.",
-              "answer1": "errors",
-              "answer2": "exceptions",
-              "answer3": "throws keyword block",
-              "answer4": "finally block",
-              "correct": "throws keyword block",
-              "value:": 1
-            },
-            {
-              "text": "It is always executed no matter whether there is an exception or not.",
-              "answer1": "errors",
-              "answer2": "exceptions",
-              "answer3": "throws keyword block",
-              "answer4": "finally block",
-              "correct": "finally block",
-              "value:": 1
-            },
-            {
-              "text": "This catches the exception,  and statements inside the catch block are executed.",
-              "answer1": "finally block",
-              "answer2": "throws keyword block",
-              "answer3": "catch block",
-              "answer4": "exception block",
-              "correct": "catch block",
-              "value:": 1
-            },
-            {
-              "text": "These happen due to a programming error and exceptions are not checked at compile-time but run-time.",
-              "answer1": "RuntimeException",
-              "answer2": "IOException",
-              "answer3": "JavaExceptions",
-              "answer4": "Exception Handling",
-              "correct": "RuntimeException",
-              "value:": 1
-            },
-            {
-              "text": "They are checked by the compiler at the compile-time and the programmer is prompted to handle these exceptions.",
-              "answer1": "RuntimeException",
-              "answer2": "IOException",
-              "answer3": "JavaExceptions",
-              "answer4": "Exception Handling",
-              "correct": "IOException",
-              "value:": 1
-            },
-            {
-              "text": "What is the meaning of JVM?",
-              "answer1": "Java Value Machine",
-              "answer2": "Java Virtual Machine",
-              "answer3": "Java Versus Machine",
-              "answer4": "Java Vertical Machine",
-              "correct": "Java Virtual Machine",
-              "value:": 1
-            },
-            {
-              "text": "These represent irrecoverable conditions such as JVM.",
-              "answer1": "errors",
-              "answer2": "exceptions",
-              "answer3": "throws  keyword block",
-              "answer4": "finally block",
-              "correct": "errors",
-              "value:": 1
-            },
-            {
-              "text": "What are the 2 types of Java Exception Types? ",
-              "answer1": "ArithmeticException and NumberFormatException",
-              "answer2": "Predefined exceptions and Non-predefined exceptions",
-              "answer3": "RuntimeException and IOException",
-              "answer4": "User-defined exceptions and Non-predefined exceptions",
-              "correct": "optional",
-              "value:": 1
-            },
-            {
-              "text": "This block is used to handle exceptions in Java.",
-              "answer1": "catch block",
-              "answer2": "finally block",
-              "answer3": "throws keyword block",
-              "answer4": "try…catch block",
-              "correct": "Java Date and Time",
-              "value:": 1
+              "title": "Exception Handling",
+              "summary": "An exception is an unexpected event during program execution that can cause abnormal program termination. It can be caught and handled by the program, creating an exception object. Java exception types include runtime and IO exceptions. Exceptions can be handled using try...catch blocks, finally blocks, or throws keyword blocks.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_12.pdf",
+              "questions": [
+                {
+                  "text": "It is an unexpected event that can be caught and handled by the program.",
+                  "answer1": "errors",
+                  "answer2": "exceptions",
+                  "answer3": "throws keyword block",
+                  "answer4": "finally block",
+                  "correct": "exceptions",
+                  "value:": 1
+                },
+                {
+                  "text": "It is used to explicitly throw a single exception.",
+                  "answer1": "errors",
+                  "answer2": "exceptions",
+                  "answer3": "throws keyword block",
+                  "answer4": "finally block",
+                  "correct": "throws keyword block",
+                  "value:": 1
+                },
+                {
+                  "text": "It is always executed no matter whether there is an exception or not.",
+                  "answer1": "errors",
+                  "answer2": "exceptions",
+                  "answer3": "throws keyword block",
+                  "answer4": "finally block",
+                  "correct": "finally block",
+                  "value:": 1
+                },
+                {
+                  "text": "This catches the exception,  and statements inside the catch block are executed.",
+                  "answer1": "finally block",
+                  "answer2": "throws keyword block",
+                  "answer3": "catch block",
+                  "answer4": "exception block",
+                  "correct": "catch block",
+                  "value:": 1
+                },
+                {
+                  "text": "These happen due to a programming error and exceptions are not checked at compile-time but run-time.",
+                  "answer1": "RuntimeException",
+                  "answer2": "IOException",
+                  "answer3": "JavaExceptions",
+                  "answer4": "Exception Handling",
+                  "correct": "RuntimeException",
+                  "value:": 1
+                },
+                {
+                  "text": "They are checked by the compiler at the compile-time and the programmer is prompted to handle these exceptions.",
+                  "answer1": "RuntimeException",
+                  "answer2": "IOException",
+                  "answer3": "JavaExceptions",
+                  "answer4": "Exception Handling",
+                  "correct": "IOException",
+                  "value:": 1
+                },
+                {
+                  "text": "What is the meaning of JVM?",
+                  "answer1": "Java Value Machine",
+                  "answer2": "Java Virtual Machine",
+                  "answer3": "Java Versus Machine",
+                  "answer4": "Java Vertical Machine",
+                  "correct": "Java Virtual Machine",
+                  "value:": 1
+                },
+                {
+                  "text": "These represent irrecoverable conditions such as JVM.",
+                  "answer1": "errors",
+                  "answer2": "exceptions",
+                  "answer3": "throws  keyword block",
+                  "answer4": "finally block",
+                  "correct": "errors",
+                  "value:": 1
+                },
+                {
+                  "text": "What are the 2 types of Java Exception Types? ",
+                  "answer1": "ArithmeticException and NumberFormatException",
+                  "answer2": "Predefined exceptions and Non-predefined exceptions",
+                  "answer3": "RuntimeException and IOException",
+                  "answer4": "User-defined exceptions and Non-predefined exceptions",
+                  "correct": "optional",
+                  "value:": 1
+                },
+                {
+                  "text": "This block is used to handle exceptions in Java.",
+                  "answer1": "catch block",
+                  "answer2": "finally block",
+                  "answer3": "throws keyword block",
+                  "answer4": "try…catch block",
+                  "correct": "Java Date and Time",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Introduction to GUI",
-          "summary": "Java’s Graphical User Interface(GUI)  is an easy-to-use user experience builder for Java applications. Under this is Java Swing, a toolkit in Java that includes components like widgets and packages suited for your GUI. These components include JButton, JList, JComboBox, JLabel, and JTextField.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_13.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "What is the meaning of GUI? ",
-              "answer1": "Graphical User Interaction",
-              "answer2": "Graphical User Interface",
-              "answer3": "Graphical User Internet",
-              "answer4": "Graphical User Indemand",
-              "correct": "Graphical User Interface",
-              "value:": 1
-            },
-            {
-              "text": " It is used for placing text in a container.",
-              "answer1": "class Main",
-              "answer2": "JLabel Class",
-              "answer3": "JTextField Class",
-              "answer4": "JButton Class",
-              "correct": " JLabel Class",
-              "value:": 1
-            },
-            {
-              "text": " It is a component into which a user can type a single line of text data.",
-              "answer1": "class Main",
-              "answer2": "JLabel Class",
-              "answer3": "JTextField Class",
-              "answer4": "JButton Class",
-              "correct": "JLabel Class",
-              "value:": 1
-            },
-            {
-              "text": "It is a component the user can click with a mouse to make a selection.",
-              "answer1": "class Main",
-              "answer2": "JLabel Class",
-              "answer3": "JTextField Class",
-              "answer4": "JButton Class",
-              "correct": "JButton Class",
-              "value:": 1
-            },
-            {
-              "text": "It is an easy-to-use visual experience builder for Java applications.",
-              "answer1": "GUI in Java",
-              "answer2": "UI in Java",
-              "answer3": "Java Swing",
-              "answer4": "Java API",
-              "correct": "GUI in Java",
-              "value:": 1
-            },
-            {
-              "text": "It provides a rich set of widgets and packages to make sophisticated GUI components for Java applications.",
-              "answer1": "GUI in Java",
-              "answer2": "UI in Java",
-              "answer3": "Java Swing",
-              "answer4": "Java API",
-              "correct": "Java Swing",
-              "value:": 1
-            },
-            {
-              "text": " It can be constructed as you do other objects using class name, identifier, and assignment operator.",
-              "answer1": "JOption",
-              "answer2": "JFrame",
-              "answer3": "JComponent",
-              "answer4": " JTitle ",
-              "correct": "JFrame",
-              "value:": 1
-            },
-            {
-              "text": "All the components in swing like JButton, JComboBox, JList, JLabel are inherited from this class which can be added to the container classes.",
-              "answer1": "JOption",
-              "answer2": "JFrame",
-              "answer3": "JComponent",
-              "answer4": " JTitle ",
-              "correct": "JComponent",
-              "value:": 1
-            },
-            {
-              "text": "They are the windows like frames and dialog boxes.",
-              "answer1": "combox",
-              "answer2": "containers",
-              "answer3": "list",
-              "answer4": "label",
-              "correct": "containers",
-              "value:": 1
-            },
-            {
-              "text": "It is a method used to attach the new Label component to your Frame.",
-              "answer1": "remove()",
-              "answer2": "insert()",
-              "answer3": "add()",
-              "answer4": "get()",
-              "correct": "add()",
-              "value:": 1
+              "title": "Introduction to GUI",
+              "summary": "Java’s Graphical User Interface(GUI)  is an easy-to-use user experience builder for Java applications. Under this is Java Swing, a toolkit in Java that includes components like widgets and packages suited for your GUI. These components include JButton, JList, JComboBox, JLabel, and JTextField.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_13.pdf",
+              "questions": [
+                {
+                  "text": "What is the meaning of GUI? ",
+                  "answer1": "Graphical User Interaction",
+                  "answer2": "Graphical User Interface",
+                  "answer3": "Graphical User Internet",
+                  "answer4": "Graphical User Indemand",
+                  "correct": "Graphical User Interface",
+                  "value:": 1
+                },
+                {
+                  "text": " It is used for placing text in a container.",
+                  "answer1": "class Main",
+                  "answer2": "JLabel Class",
+                  "answer3": "JTextField Class",
+                  "answer4": "JButton Class",
+                  "correct": " JLabel Class",
+                  "value:": 1
+                },
+                {
+                  "text": " It is a component into which a user can type a single line of text data.",
+                  "answer1": "class Main",
+                  "answer2": "JLabel Class",
+                  "answer3": "JTextField Class",
+                  "answer4": "JButton Class",
+                  "correct": "JLabel Class",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a component the user can click with a mouse to make a selection.",
+                  "answer1": "class Main",
+                  "answer2": "JLabel Class",
+                  "answer3": "JTextField Class",
+                  "answer4": "JButton Class",
+                  "correct": "JButton Class",
+                  "value:": 1
+                },
+                {
+                  "text": "It is an easy-to-use visual experience builder for Java applications.",
+                  "answer1": "GUI in Java",
+                  "answer2": "UI in Java",
+                  "answer3": "Java Swing",
+                  "answer4": "Java API",
+                  "correct": "GUI in Java",
+                  "value:": 1
+                },
+                {
+                  "text": "It provides a rich set of widgets and packages to make sophisticated GUI components for Java applications.",
+                  "answer1": "GUI in Java",
+                  "answer2": "UI in Java",
+                  "answer3": "Java Swing",
+                  "answer4": "Java API",
+                  "correct": "Java Swing",
+                  "value:": 1
+                },
+                {
+                  "text": " It can be constructed as you do other objects using class name, identifier, and assignment operator.",
+                  "answer1": "JOption",
+                  "answer2": "JFrame",
+                  "answer3": "JComponent",
+                  "answer4": " JTitle ",
+                  "correct": "JFrame",
+                  "value:": 1
+                },
+                {
+                  "text": "All the components in swing like JButton, JComboBox, JList, JLabel are inherited from this class which can be added to the container classes.",
+                  "answer1": "JOption",
+                  "answer2": "JFrame",
+                  "answer3": "JComponent",
+                  "answer4": " JTitle ",
+                  "correct": "JComponent",
+                  "value:": 1
+                },
+                {
+                  "text": "They are the windows like frames and dialog boxes.",
+                  "answer1": "combox",
+                  "answer2": "containers",
+                  "answer3": "list",
+                  "answer4": "label",
+                  "correct": "containers",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a method used to attach the new Label component to your Frame.",
+                  "answer1": "remove()",
+                  "answer2": "insert()",
+                  "answer3": "add()",
+                  "answer4": "get()",
+                  "correct": "add()",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "GUI Design and Application",
-          "summary": "Event Handling is an essential aspect of GUI programs. The parent class for all event objects is EventObject, which is derived from the Object class. Menus are a common feature for this aspect, included in this feature are JCheckboxMenuItem that uses a checkbox and JRadioMenuItem that uses radio buttons.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_14.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "An item can be selected (displaying a check mark in the box) or not.",
-              "answer1": "JRadioButtonMenuItem",
-              "answer2": "JmenuEvent",
-              "answer3": "JCheckBoxMenuItem",
-              "answer4": "JCheckBoxMenuEvent",
-              "correct": "JCheckBoxMenuItem",
-              "value:": 1
-            },
-            {
-              "text": "Clicking a component results in a(n) ____.",
-              "answer1": "ActionEvent",
-              "answer2": " ItemEvent",
-              "answer3": "MouseEvent",
-              "answer4": "WindowEvent",
-              "correct": "MouseEvent",
-              "value:": 1
-            },
-            {
-              "text": "Clicking an item in a list box results in a(n) ____",
-              "answer1": "ActionEvent",
-              "answer2": "ItemEvent",
-              "answer3": "MouseEvent",
-              "answer4": "WindowEvent",
-              "correct": "ItemEvent",
-              "value:": 1
-            },
-            {
-              "text": "Each JMenu can contain options, called JMenuItems, or can contain submenus that are ____.",
-              "answer1": "JMenuBars",
-              "answer2": "JMenuInterface",
-              "answer3": "JSubMenus",
-              "answer4": "JMenus",
-              "correct": "JMenus",
-              "value:": 1
-            },
-            {
-              "text": "It is placed at the top of a container and contains user options.",
-              "answer1": "glass pane",
-              "answer2": "containment hierarchy",
-              "answer3": "content pane",
-              "answer4": "menu bar",
-              "correct": "menu bar",
-              "value:": 1
-            },
-            {
-              "text": "The JMenus are added to the JMenuBar using this method.",
-              "answer1": " setMenu()",
-              "answer2": "addMenu()",
-              "answer3": "addNewMenu()",
-              "answer4": "add()",
-              "correct": "addNewMenu()",
-              "value:": 1
-            },
-            {
-              "text": "The focusGained(FocusEvent) handler is defined in this interface.",
-              "answer1": "ActionListener",
-              "answer2": "FocusListener",
-              "answer3": "AdjustmentListener",
-              "answer4": "ComponentListener",
-              "correct": "FocusListener",
-              "value:": 1
-            },
-            {
-              "text": "The parent class for all event objects is named ____, which descends from the Object class.",
-              "answer1": "Event",
-              "answer2": "EventObject",
-              "answer3": "JParentEvent",
-              "answer4": "AWTEvent",
-              "correct": "EventObject",
-              "value:": 1
-            },
-            {
-              "text": "Which of the following is NOT a method of the KeyListener interface?",
-              "answer1": "keyTyped()",
-              "answer2": "keyPressed()",
-              "answer3": "keyClicked()",
-              "answer4": "keyReleased()",
-              "correct": "keyClicked()",
-              "value:": 1
-            },
-            {
-              "text": "The parent class for all event objects is named EventObject, which descends from the Object class. EventObject is the parent of AWTEvent, which in turn is the parent of specific event classes such as ActionEvent and ComponentEvent.",
-              "answer1": "Event Handling",
-              "answer2": "Listener Event",
-              "answer3": "JMenus",
-              "answer4": "AWT Event",
-              "correct": "Event Handling",
-              "value:": 1
+              "title": "GUI Design and Application",
+              "summary": "Event Handling is an essential aspect of GUI programs. The parent class for all event objects is EventObject, which is derived from the Object class. Menus are a common feature for this aspect, included in this feature are JCheckboxMenuItem that uses a checkbox and JRadioMenuItem that uses radio buttons.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_14.pdf",
+              "questions": [
+                {
+                  "text": "An item can be selected (displaying a check mark in the box) or not.",
+                  "answer1": "JRadioButtonMenuItem",
+                  "answer2": "JmenuEvent",
+                  "answer3": "JCheckBoxMenuItem",
+                  "answer4": "JCheckBoxMenuEvent",
+                  "correct": "JCheckBoxMenuItem",
+                  "value:": 1
+                },
+                {
+                  "text": "Clicking a component results in a(n) ____.",
+                  "answer1": "ActionEvent",
+                  "answer2": " ItemEvent",
+                  "answer3": "MouseEvent",
+                  "answer4": "WindowEvent",
+                  "correct": "MouseEvent",
+                  "value:": 1
+                },
+                {
+                  "text": "Clicking an item in a list box results in a(n) ____",
+                  "answer1": "ActionEvent",
+                  "answer2": "ItemEvent",
+                  "answer3": "MouseEvent",
+                  "answer4": "WindowEvent",
+                  "correct": "ItemEvent",
+                  "value:": 1
+                },
+                {
+                  "text": "Each JMenu can contain options, called JMenuItems, or can contain submenus that are ____.",
+                  "answer1": "JMenuBars",
+                  "answer2": "JMenuInterface",
+                  "answer3": "JSubMenus",
+                  "answer4": "JMenus",
+                  "correct": "JMenus",
+                  "value:": 1
+                },
+                {
+                  "text": "It is placed at the top of a container and contains user options.",
+                  "answer1": "glass pane",
+                  "answer2": "containment hierarchy",
+                  "answer3": "content pane",
+                  "answer4": "menu bar",
+                  "correct": "menu bar",
+                  "value:": 1
+                },
+                {
+                  "text": "The JMenus are added to the JMenuBar using this method.",
+                  "answer1": " setMenu()",
+                  "answer2": "addMenu()",
+                  "answer3": "addNewMenu()",
+                  "answer4": "add()",
+                  "correct": "addNewMenu()",
+                  "value:": 1
+                },
+                {
+                  "text": "The focusGained(FocusEvent) handler is defined in this interface.",
+                  "answer1": "ActionListener",
+                  "answer2": "FocusListener",
+                  "answer3": "AdjustmentListener",
+                  "answer4": "ComponentListener",
+                  "correct": "FocusListener",
+                  "value:": 1
+                },
+                {
+                  "text": "The parent class for all event objects is named ____, which descends from the Object class.",
+                  "answer1": "Event",
+                  "answer2": "EventObject",
+                  "answer3": "JParentEvent",
+                  "answer4": "AWTEvent",
+                  "correct": "EventObject",
+                  "value:": 1
+                },
+                {
+                  "text": "Which of the following is NOT a method of the KeyListener interface?",
+                  "answer1": "keyTyped()",
+                  "answer2": "keyPressed()",
+                  "answer3": "keyClicked()",
+                  "answer4": "keyReleased()",
+                  "correct": "keyClicked()",
+                  "value:": 1
+                },
+                {
+                  "text": "The parent class for all event objects is named EventObject, which descends from the Object class. EventObject is the parent of AWTEvent, which in turn is the parent of specific event classes such as ActionEvent and ComponentEvent.",
+                  "answer1": "Event Handling",
+                  "answer2": "Listener Event",
+                  "answer3": "JMenus",
+                  "answer4": "AWT Event",
+                  "correct": "Event Handling",
+                  "value:": 1
+                }
+              ]
             }
           ]
         }
@@ -1394,399 +1402,400 @@
 
       "hard" : [
         {
-          "title": "Applets and Graphics",
-          "summary": "In Java, an applet is a program within another application, usually a Web browser. This can be imported using import.java.swing.JApplet, and usually contains a number of components used for GUI making. There are two ways to run an applet, through a web browser or an applet viewer.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_15.pdf",
-
-
-          "questions": [
+          "lesson": [
             {
-              "text": "It is a program that is called within another application—often a Web browser.",
-              "answer1": "Applet",
-              "answer2": "Japplet",
-              "answer3": "Javac",
-              "answer4": "Java Button",
-              "correct": "Applet",
-              "value:": 1
-            },
-            {
-              "text": "It is a Swing class from which you can inherit to create your own applet. ",
-              "answer1": "Applet",
-              "answer2": "Japplet",
-              "answer3": "Javac",
-              "answer4": "Java Button",
-              "correct": "Japplet",
-              "value:": 1
-            },
-            {
-              "text": "The wideness of the applet on the screen.",
-              "answer1": "Code",
-              "answer2": "Height",
-              "answer3": "Size",
-              "answer4": "Width",
-              "correct": "Width",
-              "value:": 1
-            },
-            {
-              "text": "From the top to the bottom of the applet on the screen.",
-              "answer1": "Code",
-              "answer2": "Height",
-              "answer3": "Size",
-              "answer4": "Width",
-              "correct": "Height",
-              "value:": 1
-            },
-            {
-              "text": "This method puts the color for the object by specific color.",
-              "answer1": "Graphics.setColor()",
-              "answer2": "Graphics.displayColor()",
-              "answer3": "Graphics.fillRect()",
-              "answer4": "Graphics.fillOva()",
-              "correct": "Graphics.setColor()",
-              "value:": 1
-            },
-            {
-              "text": "This method used to fill the color inside the oval by specified color.",
-              "answer1": "Graphics.setColor()",
-              "answer2": "Graphics.displayColor()",
-              "answer3": "Graphics.fillRect()",
-              "answer4": "Graphics.fillOva()",
-              "correct": "Graphics.fillOva()",
-              "value:": 1
-            },
-            {
-              "text": " This method used to fill the color inside the oval by specified color.",
-              "answer1": "Graphics.setColor()",
-              "answer2": "Graphics.displayColor()",
-              "answer3": "Graphics.fillRect()",
-              "answer4": "Graphics.fillRect()",
-              "correct": "Graphics.fillOva()",
-              "value:": 1
-            },
-            {
-              "text": " This method is used to fill the color inside the rectangle by specified color.",
-              "answer1": "Graphics.setColor()",
-              "answer2": "Graphics.displayColor()",
-              "answer3": "Graphics.fillRect()",
-              "answer4": "Graphics.fillOva()",
-              "correct": "Graphics.fillRect())",
-              "value:": 1
-            },
-            {
-              "text": "This method initializes tasks to perform, such as setting up user interface components",
-              "answer1": "start()",
-              "answer2": "destroy()",
-              "answer3": "paint()",
-              "answer4": "init()",
-              "correct": "init()",
-              "value:": 1
-            },
-            {
-              "text": "This method is always called after the init() and start()methods are executed.",
-              "answer1": "start()",
-              "answer2": "destroy()",
-              "answer3": "paint()",
-              "answer4": "init()",
-              "correct": "paint()",
-              "value:": 1
+              "title": "Applets and Graphics",
+              "summary": "In Java, an applet is a program within another application, usually a Web browser. This can be imported using import.java.swing.JApplet, and usually contains a number of components used for GUI making. There are two ways to run an applet, through a web browser or an applet viewer.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_15.pdf",
+              "questions": [
+                {
+                  "text": "It is a program that is called within another application—often a Web browser.",
+                  "answer1": "Applet",
+                  "answer2": "Japplet",
+                  "answer3": "Javac",
+                  "answer4": "Java Button",
+                  "correct": "Applet",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a Swing class from which you can inherit to create your own applet. ",
+                  "answer1": "Applet",
+                  "answer2": "Japplet",
+                  "answer3": "Javac",
+                  "answer4": "Java Button",
+                  "correct": "Japplet",
+                  "value:": 1
+                },
+                {
+                  "text": "The wideness of the applet on the screen.",
+                  "answer1": "Code",
+                  "answer2": "Height",
+                  "answer3": "Size",
+                  "answer4": "Width",
+                  "correct": "Width",
+                  "value:": 1
+                },
+                {
+                  "text": "From the top to the bottom of the applet on the screen.",
+                  "answer1": "Code",
+                  "answer2": "Height",
+                  "answer3": "Size",
+                  "answer4": "Width",
+                  "correct": "Height",
+                  "value:": 1
+                },
+                {
+                  "text": "This method puts the color for the object by specific color.",
+                  "answer1": "Graphics.setColor()",
+                  "answer2": "Graphics.displayColor()",
+                  "answer3": "Graphics.fillRect()",
+                  "answer4": "Graphics.fillOva()",
+                  "correct": "Graphics.setColor()",
+                  "value:": 1
+                },
+                {
+                  "text": "This method used to fill the color inside the oval by specified color.",
+                  "answer1": "Graphics.setColor()",
+                  "answer2": "Graphics.displayColor()",
+                  "answer3": "Graphics.fillRect()",
+                  "answer4": "Graphics.fillOva()",
+                  "correct": "Graphics.fillOva()",
+                  "value:": 1
+                },
+                {
+                  "text": " This method used to fill the color inside the oval by specified color.",
+                  "answer1": "Graphics.setColor()",
+                  "answer2": "Graphics.displayColor()",
+                  "answer3": "Graphics.fillRect()",
+                  "answer4": "Graphics.fillRect()",
+                  "correct": "Graphics.fillOva()",
+                  "value:": 1
+                },
+                {
+                  "text": " This method is used to fill the color inside the rectangle by specified color.",
+                  "answer1": "Graphics.setColor()",
+                  "answer2": "Graphics.displayColor()",
+                  "answer3": "Graphics.fillRect()",
+                  "answer4": "Graphics.fillOva()",
+                  "correct": "Graphics.fillRect())",
+                  "value:": 1
+                },
+                {
+                  "text": "This method initializes tasks to perform, such as setting up user interface components",
+                  "answer1": "start()",
+                  "answer2": "destroy()",
+                  "answer3": "paint()",
+                  "answer4": "init()",
+                  "correct": "init()",
+                  "value:": 1
+                },
+                {
+                  "text": "This method is always called after the init() and start()methods are executed.",
+                  "answer1": "start()",
+                  "answer2": "destroy()",
+                  "answer3": "paint()",
+                  "answer4": "init()",
+                  "correct": "paint()",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Advance GUI",
-          "summary": "A layout manager is an object that controls the layout of the components in the container object. Border Layout Manager, Flow Layout Manager, and Grid Layout Manager have specific tasks such as and  are objects that are available to use in the Layout Manager.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_16.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "It is the default manager class for all content panes.",
-              "answer1": "Border Layout Manager",
-              "answer2": "Layout Manager",
-              "answer3": "Grid Layout Manager",
-              "answer4": "Flow Layout Manager",
-              "correct":  "Border Layout Manager",
-              "value:": 1
-            },
-            {
-              "text": "An object that controls the size and position (that is, the layout) of components inside a Container object.",
-              "answer1": "Border Layout Manager",
-              "answer2": "Layout Manager",
-              "answer3": "Grid Layout Manager",
-              "answer4": "Flow Layout Manager",
-              "correct": "Layout Manager",
-              "value:": 1
-            },
-            {
-              "text": "It is used to arrange components into equal rows and columns.",
-              "answer1": "Border Layout Manager",
-              "answer2": "Layout Manager",
-              "answer3": "Grid Layout Manager",
-              "answer4": "Flow Layout Manager",
-              "correct": "Grid Layout Manager",
-              "value:": 1
-            },
-            {
-              "text": "It is the visual experience builder for Java applications.",
-              "answer1": "GUI",
-              "answer2": "VUI",
-              "answer3": "IGU",
-              "answer4": "GIU",
-              "correct": "GUI",
-              "value:": 1
-            },
-            {
-              "text": "It is used to arrange components in rows across the width of a Container",
-              "answer1": "Border Layout Manager",
-              "answer2": "Layout Manager",
-              "answer3": "Grid Layout Manager",
-              "answer4": "Flow Layout Manager",
-              "correct": "Flow Layout Manager",
-              "value:": 1
-            },
-            {
-              "text": "It is used when you need to add components into a single row or a single column.",
-              "answer1": "Grid Layout Manager",
-              "answer2": "Box Layout Manager",
-              "answer3": "Grid Bag Manager",
-              "answer4": "Card Layout Manager",
-              "correct": "Box Layout Manager",
-              "value:": 1
-            },
-            {
-              "text": "It is used when you need to add components that are displayed one at a time.",
-              "answer1": "Grid Layout Manager",
-              "answer2": "Box Layout Manager",
-              "answer3": "Grid Bag Layout Manager",
-              "answer4": "Card Layout Manager",
-              "correct": "Card Layout Manager",
-              "value:": 1
-            },
-            {
-              "text": "Used when you need to set size,placement, and alignment constraints for every component that you add.",
-              "answer1": "Grid Layout Manager",
-              "answer2": "Box Layout Manager",
-              "answer3": "Grid Bag Layout Manager",
-              "answer4": "Card Layout Manager",
-              "correct": "Grid Bag Layout Manager",
-              "value:": 1
-            },
-            {
-              "text": "The FlowLayoutclass contains three constants you can use to align Components with a Container:",
-              "answer1": "FlowLayout.TOP\n   FlowLayout.MIDDLE\n   FlowLayout.BOTTOM\n",
-              "answer2": "FlowLayout.LEFT\n   FlowLayout.CENTER\n   FlowLayout.RIGHT\n",
-              "answer3": "FlowLayout.LEFT\n   FlowLayout.MIDDLE\n   FlowLayout.RIGHT\n",
-              "answer4": "FlowLayout.HIGH\n   FlowLayout.CENTER\n   FlowLayout.LOW\n",
-              "correct": "FlowLayout.LEFT\n   FlowLayout.CENTER\n   FlowLayout.RIGHT\n",
-              "value:": 1
-            },
-            {
-              "text": "________ you used FlowLayout with the content panes of JFrames. With FlowLayout, each Component that you add is placed to the right of previously added components in a row; or, if the current row is filled, the Component is placed to start a new row.",
-              "answer1": "FlowLayout",
-              "answer2": "Container",
-              "answer3": "Grid Layout Manager",
-              "answer4": "Layout Manager",
-              "correct": "Container",
-              "value:": 1
+              "title": "Advance GUI",
+              "summary": "A layout manager is an object that controls the layout of the components in the container object. Border Layout Manager, Flow Layout Manager, and Grid Layout Manager have specific tasks such as and  are objects that are available to use in the Layout Manager.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_16.pdf",
+              "questions": [
+                {
+                  "text": "It is the default manager class for all content panes.",
+                  "answer1": "Border Layout Manager",
+                  "answer2": "Layout Manager",
+                  "answer3": "Grid Layout Manager",
+                  "answer4": "Flow Layout Manager",
+                  "correct":  "Border Layout Manager",
+                  "value:": 1
+                },
+                {
+                  "text": "An object that controls the size and position (that is, the layout) of components inside a Container object.",
+                  "answer1": "Border Layout Manager",
+                  "answer2": "Layout Manager",
+                  "answer3": "Grid Layout Manager",
+                  "answer4": "Flow Layout Manager",
+                  "correct": "Layout Manager",
+                  "value:": 1
+                },
+                {
+                  "text": "It is used to arrange components into equal rows and columns.",
+                  "answer1": "Border Layout Manager",
+                  "answer2": "Layout Manager",
+                  "answer3": "Grid Layout Manager",
+                  "answer4": "Flow Layout Manager",
+                  "correct": "Grid Layout Manager",
+                  "value:": 1
+                },
+                {
+                  "text": "It is the visual experience builder for Java applications.",
+                  "answer1": "GUI",
+                  "answer2": "VUI",
+                  "answer3": "IGU",
+                  "answer4": "GIU",
+                  "correct": "GUI",
+                  "value:": 1
+                },
+                {
+                  "text": "It is used to arrange components in rows across the width of a Container",
+                  "answer1": "Border Layout Manager",
+                  "answer2": "Layout Manager",
+                  "answer3": "Grid Layout Manager",
+                  "answer4": "Flow Layout Manager",
+                  "correct": "Flow Layout Manager",
+                  "value:": 1
+                },
+                {
+                  "text": "It is used when you need to add components into a single row or a single column.",
+                  "answer1": "Grid Layout Manager",
+                  "answer2": "Box Layout Manager",
+                  "answer3": "Grid Bag Manager",
+                  "answer4": "Card Layout Manager",
+                  "correct": "Box Layout Manager",
+                  "value:": 1
+                },
+                {
+                  "text": "It is used when you need to add components that are displayed one at a time.",
+                  "answer1": "Grid Layout Manager",
+                  "answer2": "Box Layout Manager",
+                  "answer3": "Grid Bag Layout Manager",
+                  "answer4": "Card Layout Manager",
+                  "correct": "Card Layout Manager",
+                  "value:": 1
+                },
+                {
+                  "text": "Used when you need to set size,placement, and alignment constraints for every component that you add.",
+                  "answer1": "Grid Layout Manager",
+                  "answer2": "Box Layout Manager",
+                  "answer3": "Grid Bag Layout Manager",
+                  "answer4": "Card Layout Manager",
+                  "correct": "Grid Bag Layout Manager",
+                  "value:": 1
+                },
+                {
+                  "text": "The FlowLayoutclass contains three constants you can use to align Components with a Container:",
+                  "answer1": "FlowLayout.TOP\n   FlowLayout.MIDDLE\n   FlowLayout.BOTTOM\n",
+                  "answer2": "FlowLayout.LEFT\n   FlowLayout.CENTER\n   FlowLayout.RIGHT\n",
+                  "answer3": "FlowLayout.LEFT\n   FlowLayout.MIDDLE\n   FlowLayout.RIGHT\n",
+                  "answer4": "FlowLayout.HIGH\n   FlowLayout.CENTER\n   FlowLayout.LOW\n",
+                  "correct": "FlowLayout.LEFT\n   FlowLayout.CENTER\n   FlowLayout.RIGHT\n",
+                  "value:": 1
+                },
+                {
+                  "text": "________ you used FlowLayout with the content panes of JFrames. With FlowLayout, each Component that you add is placed to the right of previously added components in a row; or, if the current row is filled, the Component is placed to start a new row.",
+                  "answer1": "FlowLayout",
+                  "answer2": "Container",
+                  "answer3": "Grid Layout Manager",
+                  "answer4": "Layout Manager",
+                  "correct": "Container",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-        },
-        {
-          "title": "Base Object-Oriented Programming",
-          "summary": "Inheritance, data binding, polymorphism, and other notions are all part of the paradigm known as object-oriented programming. The design of a program with classes and objects is a paradigm or technique. These are called “classes” which are basically blueprints for the object.",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_17.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "Is a blueprint for the object.",
-              "answer1": "Object",
-              "answer2": "Class",
-              "answer3": " Behaviors",
-              "answer4": "State",
-              "correct": "Class",
-              "value:": 1
-            },
-            {
-              "text": "It is a methodology or paradigm to design a program using classes and objects.",
-              "answer1": "Subject Oriented Programming",
-              "answer2": "Object- Oriented Programming",
-              "answer3": "Subject- Orientation Programmers",
-              "answer4": "Object- Orientation Programmers",
-              "correct": "Object- Oriented Programming",
-              "value:": 1
-            },
-            {
-              "text": "The wideness of the applet on the screen.",
-              "answer1": "Code",
-              "answer2": "Height",
-              "answer3": "Size",
-              "answer4": "Width",
-              "correct": "Width",
-              "value:": 1
-            },
-            {
-              "text": "From the top to the bottom of the applet on the screen.",
-              "answer1": "Code",
-              "answer2": "Height",
-              "answer3": "Size",
-              "answer4": "Width",
-              "correct": "Height",
-              "value:": 1
-            },
-            {
-              "text": "This method puts the color for the object by specific color.",
-              "answer1": "Graphics.setColor()",
-              "answer2": "Graphics.displayColor()",
-              "answer3": "Graphics.fillRect()",
-              "answer4": "Graphics.fillOva()",
-              "correct": "Graphics.setColor()",
-              "value:": 1
-            },
-            {
-              "text": "This method used to fill the color inside the oval by specified color.",
-              "answer1": "Graphics.setColor()",
-              "answer2": "Graphics.displayColor()",
-              "answer3": "Graphics.fillRect()",
-              "answer4": "Graphics.fillOva()",
-              "correct": "Graphics.fillOva()",
-              "value:": 1
-            },
-            {
-              "text": " This method used to fill the color inside the oval by specified color.",
-              "answer1": "Graphics.setColor()",
-              "answer2": "Graphics.displayColor()",
-              "answer3": "Graphics.fillRect()",
-              "answer4": "Graphics.fillRect()",
-              "correct": "Graphics.fillOva()",
-              "value:": 1
-            },
-            {
-              "text": " This method is used to fill the color inside the rectangle by specified color.",
-              "answer1": "Graphics.setColor()",
-              "answer2": "Graphics.displayColor()",
-              "answer3": "Graphics.fillRect()",
-              "answer4": "Graphics.fillOva()",
-              "correct": "Graphics.fillRect())",
-              "value:": 1
-            },
-            {
-              "text": "This method initializes tasks to perform, such as setting up user interface components",
-              "answer1": "start()",
-              "answer2": "destroy()",
-              "answer3": "paint()",
-              "answer4": "init()",
-              "correct": "init()",
-              "value:": 1
-            },
-            {
-              "text": "This method is always called after the init() and start()methods are executed.",
-              "answer1": "start()",
-              "answer2": "destroy()",
-              "answer3": "paint()",
-              "answer4": "init()",
-              "correct": "paint()",
-              "value:": 1
+              "title": "Base Object-Oriented Programming",
+              "summary": "Inheritance, data binding, polymorphism, and other notions are all part of the paradigm known as object-oriented programming. The design of a program with classes and objects is a paradigm or technique. These are called “classes” which are basically blueprints for the object.",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_17.pdf",
+              "questions": [
+                {
+                  "text": "Is a blueprint for the object.",
+                  "answer1": "Object",
+                  "answer2": "Class",
+                  "answer3": " Behaviors",
+                  "answer4": "State",
+                  "correct": "Class",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a methodology or paradigm to design a program using classes and objects.",
+                  "answer1": "Subject Oriented Programming",
+                  "answer2": "Object- Oriented Programming",
+                  "answer3": "Subject- Orientation Programmers",
+                  "answer4": "Object- Orientation Programmers",
+                  "correct": "Object- Oriented Programming",
+                  "value:": 1
+                },
+                {
+                  "text": "The wideness of the applet on the screen.",
+                  "answer1": "Code",
+                  "answer2": "Height",
+                  "answer3": "Size",
+                  "answer4": "Width",
+                  "correct": "Width",
+                  "value:": 1
+                },
+                {
+                  "text": "From the top to the bottom of the applet on the screen.",
+                  "answer1": "Code",
+                  "answer2": "Height",
+                  "answer3": "Size",
+                  "answer4": "Width",
+                  "correct": "Height",
+                  "value:": 1
+                },
+                {
+                  "text": "This method puts the color for the object by specific color.",
+                  "answer1": "Graphics.setColor()",
+                  "answer2": "Graphics.displayColor()",
+                  "answer3": "Graphics.fillRect()",
+                  "answer4": "Graphics.fillOva()",
+                  "correct": "Graphics.setColor()",
+                  "value:": 1
+                },
+                {
+                  "text": "This method used to fill the color inside the oval by specified color.",
+                  "answer1": "Graphics.setColor()",
+                  "answer2": "Graphics.displayColor()",
+                  "answer3": "Graphics.fillRect()",
+                  "answer4": "Graphics.fillOva()",
+                  "correct": "Graphics.fillOva()",
+                  "value:": 1
+                },
+                {
+                  "text": " This method used to fill the color inside the oval by specified color.",
+                  "answer1": "Graphics.setColor()",
+                  "answer2": "Graphics.displayColor()",
+                  "answer3": "Graphics.fillRect()",
+                  "answer4": "Graphics.fillRect()",
+                  "correct": "Graphics.fillOva()",
+                  "value:": 1
+                },
+                {
+                  "text": " This method is used to fill the color inside the rectangle by specified color.",
+                  "answer1": "Graphics.setColor()",
+                  "answer2": "Graphics.displayColor()",
+                  "answer3": "Graphics.fillRect()",
+                  "answer4": "Graphics.fillOva()",
+                  "correct": "Graphics.fillRect())",
+                  "value:": 1
+                },
+                {
+                  "text": "This method initializes tasks to perform, such as setting up user interface components",
+                  "answer1": "start()",
+                  "answer2": "destroy()",
+                  "answer3": "paint()",
+                  "answer4": "init()",
+                  "correct": "init()",
+                  "value:": 1
+                },
+                {
+                  "text": "This method is always called after the init() and start()methods are executed.",
+                  "answer1": "start()",
+                  "answer2": "destroy()",
+                  "answer3": "paint()",
+                  "answer4": "init()",
+                  "correct": "paint()",
+                  "value:": 1
+                }
+              ]
             }
-          ]
-
-        },
-        {
-          "title": "Java Classes",
-          "summary": "Inheritance, Extends, Polymorphism, render(), and Encapsulation are classes and keywords that serve as key features of object-oriented programming. A method, on the other hand, contains statements that carry out tasks and accepts a method parameter’s value. The two types of methods are User-defined methods that let the user make methods based on the requirements, and Standard Library Methods that are built-in Java methods that are ready to be used.\n",
-          "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_18.pdf",
-
-
-          "questions": [
+          ],
+          "lesson": [
             {
-              "text": "It prevents outer classes from accessing and changing fields and methods of a class.",
-              "answer1": "Encapsulation",
-              "answer2": "Polymorphism",
-              "answer3": "extends",
-              "answer4": "Inheritance",
-              "correct":  "Encapsulation",
-              "value:": 1
-            },
-            {
-              "text": "The same entity can perform different operations in different scenarios.",
-              "answer1": "Encapsulation",
-              "answer2": "Polymorphism",
-              "answer3": "extends",
-              "answer4": "Inheritance",
-              "correct": "Polymorphism",
-              "value:": 1
-            },
-            {
-              "text": "One of the key features of OOP that allows us to create a new class from an existing class.",
-              "answer1": "Encapsulation",
-              "answer2": "Polymorphism",
-              "answer3": "extends",
-              "answer4": "Inheritance",
-              "correct": "Inheritance",
-              "value:": 1
-            },
-            {
-              "text": "This keyword is used to perform inheritance in Java.",
-              "answer1": "Encapsulation",
-              "answer2": "Polymorphism",
-              "answer3": "extends",
-              "answer4": "Inheritance",
-              "correct": "extends",
-              "value:": 1
-            },
-            {
-              "text": "What is the main purpose of the render() method?",
-              "answer1": "render the height",
-              "answer2": "render the weight",
-              "answer3": "render the shape",
-              "answer4": "render the color",
-              "correct": "render the shape",
-              "value:": 1
-            },
-            {
-              "text": "We can create our own method based on our requirements.",
-              "answer1": "Standard Library Methods",
-              "answer2": "User-defined Methods",
-              "answer3": "methodName",
-              "answer4": "method body",
-              "correct": "User-defined Methods",
-              "value:": 1
-            },
-            {
-              "text": "It can be accessed without creating objects.",
-              "answer1": "static",
-              "answer2": "modifier",
-              "answer3": "returnType",
-              "answer4": "method",
-              "correct": "static",
-              "value:": 1
-            },
-            {
-              "text": "These are built-in methods in Java that are available to use.",
-              "answer1": "Standard Library Methods",
-              "answer2": "User-defined Methods",
-              "answer3": "methodName",
-              "answer4": "method body",
-              "correct": "Standard Library Methods",
-              "value:": 1
-            },
-            {
-              "text": "It is a program module that contains a series of statements that carry out a task.",
-              "answer1": "static",
-              "answer2": "modifier",
-              "answer3": "returnType",
-              "answer4": "method",
-              "correct": "method",
-              "value:": 1
-            },
-            {
-              "text": "It defines access types whether the method is public, private, and so on. ",
-              "answer1": "methodName",
-              "answer2": "parameter1/parameter2",
-              "answer3": "method body",
-              "answer4": "modifier",
-              "correct": "modifier",
-              "value:": 1
+              "title": "Java Classes",
+              "summary": "Inheritance, Extends, Polymorphism, render(), and Encapsulation are classes and keywords that serve as key features of object-oriented programming. A method, on the other hand, contains statements that carry out tasks and accepts a method parameter’s value. The two types of methods are User-defined methods that let the user make methods based on the requirements, and Standard Library Methods that are built-in Java methods that are ready to be used.\n",
+              "pdf_file":"gs://login-register-firebase-cbb93.appspot.com/module_18.pdf",
+              "questions": [
+                {
+                  "text": "It prevents outer classes from accessing and changing fields and methods of a class.",
+                  "answer1": "Encapsulation",
+                  "answer2": "Polymorphism",
+                  "answer3": "extends",
+                  "answer4": "Inheritance",
+                  "correct":  "Encapsulation",
+                  "value:": 1
+                },
+                {
+                  "text": "The same entity can perform different operations in different scenarios.",
+                  "answer1": "Encapsulation",
+                  "answer2": "Polymorphism",
+                  "answer3": "extends",
+                  "answer4": "Inheritance",
+                  "correct": "Polymorphism",
+                  "value:": 1
+                },
+                {
+                  "text": "One of the key features of OOP that allows us to create a new class from an existing class.",
+                  "answer1": "Encapsulation",
+                  "answer2": "Polymorphism",
+                  "answer3": "extends",
+                  "answer4": "Inheritance",
+                  "correct": "Inheritance",
+                  "value:": 1
+                },
+                {
+                  "text": "This keyword is used to perform inheritance in Java.",
+                  "answer1": "Encapsulation",
+                  "answer2": "Polymorphism",
+                  "answer3": "extends",
+                  "answer4": "Inheritance",
+                  "correct": "extends",
+                  "value:": 1
+                },
+                {
+                  "text": "What is the main purpose of the render() method?",
+                  "answer1": "render the height",
+                  "answer2": "render the weight",
+                  "answer3": "render the shape",
+                  "answer4": "render the color",
+                  "correct": "render the shape",
+                  "value:": 1
+                },
+                {
+                  "text": "We can create our own method based on our requirements.",
+                  "answer1": "Standard Library Methods",
+                  "answer2": "User-defined Methods",
+                  "answer3": "methodName",
+                  "answer4": "method body",
+                  "correct": "User-defined Methods",
+                  "value:": 1
+                },
+                {
+                  "text": "It can be accessed without creating objects.",
+                  "answer1": "static",
+                  "answer2": "modifier",
+                  "answer3": "returnType",
+                  "answer4": "method",
+                  "correct": "static",
+                  "value:": 1
+                },
+                {
+                  "text": "These are built-in methods in Java that are available to use.",
+                  "answer1": "Standard Library Methods",
+                  "answer2": "User-defined Methods",
+                  "answer3": "methodName",
+                  "answer4": "method body",
+                  "correct": "Standard Library Methods",
+                  "value:": 1
+                },
+                {
+                  "text": "It is a program module that contains a series of statements that carry out a task.",
+                  "answer1": "static",
+                  "answer2": "modifier",
+                  "answer3": "returnType",
+                  "answer4": "method",
+                  "correct": "method",
+                  "value:": 1
+                },
+                {
+                  "text": "It defines access types whether the method is public, private, and so on. ",
+                  "answer1": "methodName",
+                  "answer2": "parameter1/parameter2",
+                  "answer3": "method body",
+                  "answer4": "modifier",
+                  "correct": "modifier",
+                  "value:": 1
+                }
+              ]
             }
           ]
         }

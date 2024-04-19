@@ -41,6 +41,12 @@ public class TitleSummary extends AppCompatActivity {
     FirebaseUser user;
     FirebaseAuth auth;
     FirebaseStorage firebaseStorage;
+    ArrayList<String> textList;
+    ArrayList<String> answer1List;
+    ArrayList<String> answer2List;
+    ArrayList<String> answer3List;
+    ArrayList<String> answer4List;
+    ArrayList<String> correctList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +59,8 @@ public class TitleSummary extends AppCompatActivity {
             return insets;
         });
 
+        Button button = findViewById(R.id.logout);
+        TextView btnStartActivity = findViewById(R.id.startActivity);
 
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
@@ -60,14 +68,14 @@ public class TitleSummary extends AppCompatActivity {
         String title = intent.getStringExtra("title");
         String summary = intent.getStringExtra("summary");
         String pdf_file = intent.getStringExtra("pdf_file");
-        String difficulty = intent.getStringExtra("difficulty"); // Retrieve the difficulty here
+        String difficulty = intent.getStringExtra("difficulty");
+
         TextView tvTitle = findViewById(R.id.tv_title);
         TextView tvSummary = findViewById(R.id.tv_summary);
         TextView downloadPDF = findViewById(R.id.downloadPDF);
+
         tvTitle.setText(title);
         tvSummary.setText(summary);
-        Button button = findViewById(R.id.logout);
-        TextView btnStartActivity = findViewById(R.id.startActivity);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             tvSummary.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
@@ -92,44 +100,17 @@ public class TitleSummary extends AppCompatActivity {
         btnStartActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(TitleSummary.this, "lessons.json");
-                    if (jsonObject == null) {
-                        Log.d("elsejson", "Error loading JSON file");
-                        return;
-                    }
-
-                    JSONObject difficultyObject = jsonObject.getJSONObject("difficulty");
-                    JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
-
-                    for (int i = 0; i < lessonArray.length(); i++) {
-                        JSONObject lessonObject = lessonArray.getJSONObject(i);
-                        JSONArray questionsArray = lessonObject.getJSONArray("questions");
-
-                        // Loop through the questions array
-                        for (int j = 0; j < questionsArray.length(); j++) {
-                            JSONObject questionObject = questionsArray.getJSONObject(j);
-                            String text = questionObject.getString("text");
-                            String answer1 = questionObject.getString("answer1");
-                            String answer2 = questionObject.getString("answer2");
-                            String answer3 = questionObject.getString("answer3");
-                            String answer4 = questionObject.getString("answer4");
-                            String correct = questionObject.getString("correct");
-
-                            // Display or use the question data as needed
-                            Log.d("Question", "Question: " + text);
-                            Log.d("Answer1", "Answer1: " + answer1);
-                            Log.d("Answer2", "Answer2: " + answer2);
-                            Log.d("Answer3", "Answer3: " + answer3);
-                            Log.d("Answer4", "Answer4: " + answer4);
-                            Log.d("Correct", "Correct: " + correct);
-                        }
-                    }
-                } catch (JSONException e) {
-                    Log.e("catch", "Error parsing JSON data", e);
-                }
+                Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
+                intent.putStringArrayListExtra("text", textList);
+                intent.putStringArrayListExtra("answer1", answer1List);
+                intent.putStringArrayListExtra("answer2", answer2List);
+                intent.putStringArrayListExtra("answer3", answer3List);
+                intent.putStringArrayListExtra("answer4", answer4List);
+                intent.putStringArrayListExtra("correct", correctList);
+                startActivity(intent);
             }
         });
+
 
         firebaseStorage = FirebaseStorage.getInstance();
         final StorageReference storageRef = firebaseStorage.getReferenceFromUrl(pdf_file);

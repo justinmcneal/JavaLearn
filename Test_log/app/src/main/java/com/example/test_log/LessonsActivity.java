@@ -23,8 +23,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 public class LessonsActivity extends AppCompatActivity {
     private FirebaseAuth auth;
@@ -35,13 +33,12 @@ public class LessonsActivity extends AppCompatActivity {
     private final ArrayList<String> titleArray = new ArrayList<>();
     private final ArrayList<String> summaryArray = new ArrayList<>();
     private final ArrayList<String> pdfArray = new ArrayList<>();
-    private final ArrayList<String> textArray = new ArrayList<>();
-    private final ArrayList<String> answer1Array= new ArrayList<>();
-    private final ArrayList<String> answer2Array= new ArrayList<>();
-    private final ArrayList<String> answer3Array= new ArrayList<>();
-    private final ArrayList<String> answer4Array= new ArrayList<>();
-    private final ArrayList<String> correctArray= new ArrayList<>();
-    private final ArrayList<Integer> valueArray = new ArrayList<>();
+
+    private final ArrayList<String> questionTextArray = new ArrayList<>();
+    private final ArrayList<String> answer1Array = new ArrayList<>();
+    private final ArrayList<String> answer2Array = new ArrayList<>();
+    private final ArrayList<String> answer3Array = new ArrayList<>();
+    private final ArrayList<String> answer4Array = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,11 +83,6 @@ public class LessonsActivity extends AppCompatActivity {
 
 
     public void parseLessonsData(String difficulty) {
-        if (!Objects.equals(difficulty, "easy") && !Objects.equals(difficulty, "medium") && !Objects.equals(difficulty, "hard")) {
-            Log.d("objectjson", "Invalid difficulty level");
-            return;
-        }
-
         try {
             JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json");
             if (jsonObject == null) {
@@ -101,52 +93,44 @@ public class LessonsActivity extends AppCompatActivity {
             JSONObject difficultyObject = jsonObject.getJSONObject("difficulty");
             JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
 
-
             for (int i = 0; i < lessonArray.length(); i++) {
                 JSONObject lessonObject = lessonArray.getJSONObject(i);
-                String title = lessonObject.getString("title");
-                String summary = lessonObject.getString("summary");
-                String pdf_file = lessonObject.getString("pdf_file");
-                titleArray.add(title);
-                summaryArray.add(summary);
-                pdfArray.add(pdf_file);
+                JSONArray lessons = lessonObject.getJSONArray("lesson");
 
-                ArrayList<String> lessonTextArray = new ArrayList<>();
-                ArrayList<String> lessonAnswer1Array = new ArrayList<>();
-                ArrayList<String> lessonAnswer2Array = new ArrayList<>();
-                ArrayList<String> lessonAnswer3Array = new ArrayList<>();
-                ArrayList<String> lessonAnswer4Array = new ArrayList<>();
-                ArrayList<String> lessonCorrectArray = new ArrayList<>();
+                for (int j = 0; j < lessons.length(); j++) {
+                    JSONObject singleLesson = lessons.getJSONObject(j);
+                    String title = singleLesson.getString("title");
+                    String summary = singleLesson.getString("summary");
+                    String pdf_file = singleLesson.getString("pdf_file");
+                    titleArray.add(title);
+                    summaryArray.add(summary);
+                    pdfArray.add(pdf_file);
 
-                JSONArray questionsArray = lessonObject.getJSONArray("questions");
-                for (int j = 0; j < Math.min(questionsArray.length(), 10); j++) {
-                    JSONObject questionObject = questionsArray.getJSONObject(j);
-                    String text = questionObject.getString("text");
-                    String answer1 = questionObject.getString("answer1");
-                    String answer2 = questionObject.getString("answer2");
-                    String answer3 = questionObject.getString("answer3");
-                    String answer4 = questionObject.getString("answer4");
-                    String correct = questionObject.getString("correct");
+                    JSONArray questionsArray = singleLesson.getJSONArray("questions");
 
-                    lessonTextArray.add(text);
-                    lessonAnswer1Array.add(answer1);
-                    lessonAnswer2Array.add(answer2);
-                    lessonAnswer3Array.add(answer3);
-                    lessonAnswer4Array.add(answer4);
-                    lessonCorrectArray.add(correct);
+                    for (int k = 0; k < questionsArray.length(); k++) {
+                        JSONObject questionObject = questionsArray.getJSONObject(k);
+                        String questionText = questionObject.getString("text");
+                        String answer1 = questionObject.getString("answer1");
+                        String answer2 = questionObject.getString("answer2");
+                        String answer3 = questionObject.getString("answer3");
+                        String answer4 = questionObject.getString("answer4");
+
+                        questionTextArray.add(questionText);
+                        answer1Array.add(answer1);
+                        answer2Array.add(answer2);
+                        answer3Array.add(answer3);
+                        answer4Array.add(answer4);
+
+                    }
                 }
-
-                textArray.add(lessonTextArray.toString());
-                answer1Array.add(lessonAnswer1Array.toString());
-                answer2Array.add(lessonAnswer2Array.toString());
-                answer3Array.add(lessonAnswer3Array.toString());
-                answer4Array.add(lessonAnswer4Array.toString());
-                correctArray.add(lessonCorrectArray.toString());
             }
         } catch (JSONException e) {
             Log.e("catch", "Error parsing JSON data", e);
         }
     }
+
+
 
 
     private void setupListView() {
@@ -163,13 +147,11 @@ public class LessonsActivity extends AppCompatActivity {
             intent.putExtra("difficulty", getIntent().getStringExtra("difficulty")); // Retrieve difficulty from the intent
             intent.putExtra("position", position); // Pass the position here
 
-            // pass lists of questions and answers for the selected lesson
-            intent.putStringArrayListExtra("text", textArray);
-            intent.putStringArrayListExtra("answer1", answer1Array);
-            intent.putStringArrayListExtra("answer2", answer2Array);
-            intent.putStringArrayListExtra("answer3", answer3Array);
-            intent.putStringArrayListExtra("answer4", answer4Array);
-            intent.putStringArrayListExtra("correct", correctArray);
+            intent.putStringArrayListExtra("questionTextArray", questionTextArray);
+            intent.putStringArrayListExtra("answer1Array", answer1Array);
+            intent.putStringArrayListExtra("answer2Array", answer2Array);
+            intent.putStringArrayListExtra("answer3Array", answer3Array);
+            intent.putStringArrayListExtra("answer4Array", answer4Array);
 
             Log.d("Position", "Position in LessonsActivity: " + position);
 
@@ -178,6 +160,4 @@ public class LessonsActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
-
 }
