@@ -22,13 +22,13 @@
             android:name=".displayidentification"
             android:exported="false" />
         <activity
-            android:name=".periodicidentification"
+            android:name=".Identification"
             android:exported="false" />
         <activity
-            android:name=".compiler"
+            android:name=".Compiler"
             android:exported="false" />
         <activity
-            android:name=".identification"
+            android:name=".PeriodicBtn"
             android:exported="false" />
         <activity
             android:name=".QuizAssessment"
@@ -55,7 +55,7 @@
             android:name=".logsignpage"
             android:exported="false" />
         <activity
-            android:name=".firstpage"
+            android:name=".FirstPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

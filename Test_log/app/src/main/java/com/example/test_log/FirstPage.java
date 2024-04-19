@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class firstpage extends AppCompatActivity {
+public class FirstPage extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     @Override
@@ -28,7 +28,6 @@ public class firstpage extends AppCompatActivity {
         });
 
         mAuth = FirebaseAuth.getInstance();
-
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -36,18 +35,18 @@ public class firstpage extends AppCompatActivity {
                 FirebaseUser currentUser = mAuth.getCurrentUser();
                 if (currentUser !=null){
                     Toast.makeText(getApplicationContext(), "Welcome Back User!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(firstpage.this, MainActivity.class);
+                    Intent intent = new Intent(FirstPage.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
-                    Intent intent = new Intent(firstpage.this, logsignpage.class);
+                    Intent intent = new Intent(FirstPage.this, logsignpage.class);
                     startActivity(intent);
                     finish();
                 }
             }
         }, 4000);
 
-        MediaPlayer mediaPlayer = MediaPlayer.create(firstpage.this, R.raw.welcometojavalearn);
+        MediaPlayer mediaPlayer = MediaPlayer.create(FirstPage.this, R.raw.welcometojavalearn);
         mediaPlayer.setOnPreparedListener(MediaPlayer::start);
     }
 }

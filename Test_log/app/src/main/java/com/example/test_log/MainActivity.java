@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
                         mediaPlayer.start();
                     }
                 });
-
             }
         });
 
@@ -82,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 String difficulty = "easy";
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
-
                 mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
@@ -91,14 +89,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-
         });
 
         btnMedium.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
-
                 String difficulty = "medium";
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
@@ -118,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
-
                 String difficulty = "hard";
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
@@ -137,11 +132,10 @@ public class MainActivity extends AppCompatActivity {
         btnIdentification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, identification.class);
+                Intent intent = new Intent(MainActivity.this, PeriodicBtn.class);
                 String difficulty = "easy";
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
-
                 mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
@@ -150,17 +144,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-
         });
 
         btnCompiler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, compiler.class);
+                Intent intent = new Intent(MainActivity.this, Compiler.class);
                 String difficulty = "easy";
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
-
                 mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
@@ -169,7 +161,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
             }
-
         });
     }
 }

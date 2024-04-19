@@ -25,19 +25,13 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class signpage extends AppCompatActivity {
-
     private MediaPlayer mediaPlayer;
-
     TextView textView;
-
     TextInputEditText editTextEmail, editTextPassword;
 //    editTextName
     Button buttonSign;
-
     FirebaseAuth mAuth;
-
     ProgressBar progressBar;
-
 //    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
