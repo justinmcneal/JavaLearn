@@ -1,0 +1,355 @@
+{
+  "difficulty": {
+    "easy": [
+      {
+        "question": "The process of creating video games or other types of entertainment software is called___",
+        "correct": "Game Development"
+      },
+      {
+        "question": "They are also involved in maintaining, debugging, and troubleshooting software and systems to keep things running smoothly",
+        "correct": "Programmers"
+      },
+      {
+        "question": " ____ is an object-oriented programming language",
+        "correct": "Java"
+      },
+      {
+        "question": "A Java category that is accustomed to handling communications protocol requests.",
+        "correct": "Servlets"
+      },
+      {
+        "question": "This is often used for aggregation of files and information into one file.",
+        "correct": "Jars"
+      },
+      {
+        "question": "Is used to end a Java  statement",
+        "correct": "Semicolon"
+      },
+      {
+        "question": "A software used by a developer to easily code in a certain language.",
+        "correct": "Integrated Development Environment"
+      },
+      {
+        "question": "is a method in Java that prints a message to the standard output (typically the console) and appends a newline character.",
+        "correct": "System.out.print()"
+      },
+      {
+        "question": "A folder in a directory where we can put all our related codes in the same directory.",
+        "correct": "Packages"
+      },
+      {
+        "question": "The eight primitive data types are called _________ because they are simple and uncomplicated.",
+        "correct": "primitive"
+      },
+      {
+        "question": "Variable names must start with a _____ and cannot be any reserved keyword.",
+        "correct": "letter"
+      },
+      {
+        "question": "Variable names conventionally begin with _______________ to distinguish them from class names.",
+        "correct": "lowercase letters"
+      },
+      {
+        "question": "The ____ sign is the assignment operator.",
+        "correct": "Equal sign"
+      },
+      {
+        "question": "Primitive types also serve as the building blocks for more complex data types, called _______",
+        "correct": "reference types"
+      },
+      {
+        "question": "They are programming blocks that can change the path we take through those instructions.",
+        "correct": "Control Structures"
+      },
+      {
+        "question": "In programming, we use these to run a block of code among more than one alternative.",
+        "correct": "Control Structures"
+      },
+      {
+        "question": "This statement executes a certain section of code if the test expression is evaluated to true.",
+        "correct": "if statement"
+      },
+      {
+        "question": " Statements inside the body of the else block are executed if the test expression is evaluated to ___.",
+        "correct": "False"
+      },
+      {
+        "question": "Statements in which an if structure is contained inside another if structure.",
+        "correct": "nested if statement"
+      },
+      {
+        "question": "This is used to run a block of code for a certain number of times while the condition is met.",
+        "correct": "for loop"
+      },
+      {
+        "question": "This is similar to the ‘while loop.’ However, it is executed once before the test expression is checked.",
+        "correct": "do while loop"
+      },
+      {
+        "question": "If the condition of a loop is always true, the loop runs for how many times?",
+        "correct": "Infinite"
+      },
+      {
+        "question": "This updates the value of the initialExpression.",
+        "correct": "updateExpression"
+      },
+      {
+        "question": "This initializes variables and executes only once.",
+        "correct": "initialExpression"
+      },
+      {
+        "question": "This is a collection of multiple values in a single variable with similar data type.",
+        "correct": "Array"
+      },
+      {
+        "question": "The index in an array always starts at ____.",
+        "correct": "0"
+      },
+      {
+        "question": "These are individual values in an array.",
+        "correct": "Elements"
+      },
+      {
+        "question": "These are primitive data types like int, char, double, byte, etc. or Java objects.",
+        "correct": "dataType"
+      },
+      {
+        "question": "This is used to terminate from the loop immediately.",
+        "correct": "break"
+      },
+      {
+        "question": "This method is used to compare two integer values treating them as unsigned.",
+        "correct": "compareUnsigned method"
+      },
+      {
+        "question": "This is a built-in package that contains various utility classes and interfaces and provides basic functionality for commonly occurring use cases.",
+        "correct": "util package"
+      },
+      {
+        "question": "This gives methods that are static to create and access Java arrays dynamically.",
+        "correct": "Arrays class"
+      },
+      {
+        "question": "It is the syntax for the asList method.",
+        "correct": "int Arr [] = {}"
+      },
+      {
+        "question": "It is used to return the fixed-size list that mentioned Arrays back.",
+        "correct": "method"
+      },
+      {
+        "question": "This method checks if the number and the argument passed through the method is not null and equal to the number.",
+        "correct": "equals"
+      },
+      {
+        "question": "The ________ () method returns the length of a String.",
+        "correct": "length"
+      }
+    ],
+    "medium": [
+      {
+        "question": "This provides built-in support for data structures, necessary for programs such as arrays, maps, sets, stacks, linked lists, and queues.",
+        "correct": "Java API"
+      },
+      {
+        "question": "This class can be used whenever a linked list data structure is needed and consists of a data element known as a node.",
+        "correct": "Linked list"
+      },
+      {
+        "question": "Another term for this is the map or dictionary data structure and provides with O(1) functionality for getting a value back",
+        "correct": "hash table"
+      },
+      {
+        "question": "This a thread-safe extension of the Queue interface can be used to implement producer-consumer patterns in Java.",
+        "correct": "BlockingQueue"
+      },
+      {
+        "question": "This special data structure doesn't allow duplicates.and is used to store unique elements.",
+        "correct": "set"
+      },
+      {
+        "question": "This class is imported to display the current time (hour, minute, second, and nanoseconds)",
+        "correct": "java.time.LocalTime class"
+      },
+      {
+        "question": "This class is imported to display the current date and time.",
+        "correct": "java.time.LocalDateTime class"
+      },
+      {
+        "question": "This method is for searching patterns in a string. It returns an object that has information about the search performed.",
+        "correct": "matcher() method"
+      },
+      {
+        "question": "This method returns true if the  pattern was found in the string, and false if otherwise.",
+        "correct": "find() method"
+      },
+      {
+        "question": "It is an API used to define a pattern for searching or manipulating strings such as passwords and email validation.",
+        "correct": "Java Regex"
+      },
+      {
+        "question": "This character class means it is a word character.",
+        "correct": "w"
+      },
+      {
+        "question": "This character class means it is a non digit.",
+        "correct": "D"
+      },
+      {
+        "question": "This character class means it is a non-whitespace character",
+        "correct": "S"
+      },
+      {
+        "question": "This character class means it is any character.",
+        "correct": "-"
+      },
+      {
+        "question": "This character class means it is a digit.",
+        "correct": "d"
+      },
+      {
+        "question": "This is an unexpected event during program execution that can be handled by the program. When this occurs, it creates an object.",
+        "correct": "exception"
+      },
+      {
+        "question": "This exception happens due to an error in programming. They are not checked at compile-time but in run-time.",
+        "correct": "RuntimeException"
+      },
+      {
+        "question": "This is also known as a checked exception and is checked by the compiler at the compile-time. The programmer is prompted to handle these exceptions.",
+        "correct": "IOException"
+      },
+      {
+        "question": "This catches the exception and statements inside this block are executed. ",
+        "correct": "catch block"
+      },
+      {
+        "question": "This block is always executed even if there is an exception or not.",
+        "correct": "finally block"
+      },
+      {
+        "question": "It is a visual experience builder for Java applications. It has components such as buttons, windows, labels, and more.",
+        "correct": "JAVA GUI"
+      },
+      {
+        "question": "It is a GUI toolkit that provides a set of widgets and packages for making GUI components.",
+        "correct": "JAVA SWING"
+      },
+      {
+        "question": "It is a display area for a short text string or an image, or both. It does not react to input events.",
+        "correct": "JLabel Class"
+      },
+      {
+        "question": "This is used to create a button with a label. It is a component the user can click with a mouse to make a selection.",
+        "correct": "JButton Class"
+      },
+      {
+        "question": "This component is where a user can type a single line of text data.",
+        "correct": "JTextField Class"
+      },
+      {
+        "question": "Menus are lists of user options; they are commonly added features in GUI programs. These are commonly added features and are lists of user options.",
+        "correct": "Menus"
+      },
+      {
+        "question": "It is the implementation of a menu bar and is a horizontal list of JMenus.",
+        "correct": "JMenuBar"
+      },
+      {
+        "question": "This is a tool that controls the event and decides what should happen if an event occurs.",
+        "correct": "Event Handling"
+      },
+      {
+        "question": "This is used to make objects appear with a check box beside them where items can be selected or not.",
+        "correct": "JCheckBoxMenuItem"
+      },
+      {
+        "question": "This is used to make objects appear with a round radio button next to them.",
+        "correct": "JRadioButtonMenuItem"
+      }
+    ],
+    "hard": [
+      {
+        "question": "This is a program that is called within another application—often a Web browser",
+        "correct": ""
+      },
+      {
+        "question": "It is an object that controls the layout of components inside a Container object.",
+        "correct": ""
+      },
+      {
+        "question": "This class is utilized to arrange components in rows across the width of a Container",
+        "correct": ""
+      },
+      {
+        "question": "It is a methodology or paradigm to design a program using classes and objects.",
+        "correct": ""
+      },
+      {
+        "question": "This key feature of OOP allows us to create a new class from an existing class.",
+        "correct": ""
+      },
+      {
+        "question": "What is the main purpose of the render method?",
+        "correct": ""
+      },
+      {
+        "question": "It is a method that is always called after the init() and start()methods execute. ",
+        "correct": ""
+      },
+      {
+        "question": "It is used to suspend the threads which are not required when the applet is in the background or is not visible on the screen.",
+        "correct": ""
+      },
+      {
+        "question": "When you use this, the components fill the screen in five regions: north, south, east, west, and center.",
+        "correct": ""
+      },
+      {
+        "question": "It is any entity that has a state and behavior. It is called an instance of a class.",
+        "correct": ""
+      },
+      {
+        "question": "It prevents outer classes from accessing and changing fields and methods of a class.",
+        "correct": ""
+      },
+      {
+        "question": "It is a program module that contains a series of statements that carry out a task.",
+        "correct": ""
+      },
+      {
+        "question": "This type of method signifies that we can create our own method based on our requirements.",
+        "correct": ""
+      },
+      {
+        "question": "These are built-in methods in Java that are available to use.",
+        "correct": ""
+      },
+      {
+        "question": "It defines access types whether the method is public, private, and so on. ",
+        "correct": ""
+      },
+      {
+        "question": "It includes the programming statements that are used to perform some tasks.",
+        "correct": ""
+      },
+      {
+        "question": "It is used to arrange components into equal rows and columns.",
+        "correct": ""
+      },
+      {
+        "question": "This method sets the color for the object by specific color.",
+        "correct": ""
+      },
+      {
+        "question": "This method is used to fill the color inside the oval by specified color",
+        "correct": ""
+      },
+      {
+        "question": "This is used to arrange components into equal rows and columns. ",
+        "correct": ""
+      }
+    ]
+  }
+  }
+  

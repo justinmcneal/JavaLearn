@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         CardView btnEasy = findViewById(R.id.easy_cv);
         CardView btnMedium = findViewById(R.id.medium_cv);
         CardView btnHard = findViewById(R.id.hard_cv);
+        CardView btnIdentification = findViewById(R.id.identificationAssessment);
+        CardView btnCompiler = findViewById(R.id.compiler);
 
         btnEasy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -130,47 +132,46 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+
+        btnIdentification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, identification.class);
+                String difficulty = "easy";
+                intent.putExtra("difficulty", difficulty);
+                startActivity(intent);
+
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
+            }
+
+        });
+
+        btnCompiler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, compiler.class);
+                String difficulty = "easy";
+                intent.putExtra("difficulty", difficulty);
+                startActivity(intent);
+
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
+            }
+
+        });
     }
 }
 
 
-
-
-
-//        String difficulty = intent.getStringExtra("difficulty");
-
-//        if (Objects.equals(difficulty, "easy")) {
-//            JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json");
-//
-//            if (jsonObject != null) {
-//                try {
-//                    JSONObject easyObject = jsonObject.getJSONObject("difficulty");
-//                    JSONArray lessonEasy = easyObject.getJSONArray("easy");
-//
-//                    for (int i = 0; i <= lessonEasy.length(); i++) {
-//                        JSONObject accessTitle = new JSONObject(String.valueOf((lessonEasy.get(i))));
-//
-//                        JSONArray questionEasy = accessTitle.getJSONArray("questions");
-//
-//                        for (int j = 0; j <= questionEasy.length(); j++) {
-//                            JSONObject question = questionEasy.getJSONObject(j);
-//                            String questionText = question.getString("text");
-//                            String answer1 = question.getString("answer1");
-//                            String answer2 = question.getString("answer2");
-//                            String answer3 = question.getString("answer3");
-//                            String answer4 = question.getString("answer4");
-//                            String correctAnswer = question.getString("correct");
-//                            int value = question.getInt("value");
-//                        }
-//                    }
-//
-//                } catch (JSONException e) {
-//                    Log.d("catch", "error on catch");
-//                    e.printStackTrace();
-//                }
-//            } else {
-//                Log.d("elsejson", "error on json else");
-//            }
-//        } else {
-//            Log.d("objectjson", "error on json object");
-//        }

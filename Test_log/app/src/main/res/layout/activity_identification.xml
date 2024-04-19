@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="horizontal"
+    tools:context=".LessonsActivity">
 
     <TextView
         android:id="@+id/user_details"
@@ -55,12 +56,132 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/easy_cv"
+        android:id="@+id/periodic_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/easy" />
+
+            <TextView
+                android:id="@+id/title_card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Periodic 1"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/lesson_card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lessons: 8"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/progress_card1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/title_card1" />
+
+            <TextView
+                android:id="@+id/progress_card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progress: 99.9999999"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                android:layout_marginBottom="10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/periodic_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/periodic_one">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/easy" />
+
+            <TextView
+                android:id="@+id/title_card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Periodic 2"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/lesson_card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lessons: 8"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/progress_card2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/title_card2" />
+
+            <TextView
+                android:id="@+id/progress_card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progress: 99.9999999"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                android:layout_marginBottom="10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/periodic_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/periodic_two">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -80,7 +201,7 @@
                 android:id="@+id/title_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Introduction To Java"
+                android:text="Periodic 3"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -113,211 +234,5 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/medium_cv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/easy_cv">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="130dp"
-                android:layout_height="100dp"
-                android:foregroundGravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/medium" />
-
-            <TextView
-                android:id="@+id/title_card2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Java Structures"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="10dp"/>
-
-            <TextView
-                android:id="@+id/lesson_card2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lessons: 8"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/progress_card2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/title_card2" />
-
-            <TextView
-                android:id="@+id/progress_card2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Progress: 99.9999999"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                android:layout_marginBottom="10dp"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/hard_cv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/medium_cv">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="130dp"
-                android:layout_height="100dp"
-                android:foregroundGravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/hard" />
-
-            <TextView
-                android:id="@+id/title_card3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Graphical User Interface"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="10dp"/>
-
-            <TextView
-                android:id="@+id/lesson_card3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lessons: 8"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/progress_card3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toBottomOf="@+id/title_card3" />
-
-            <TextView
-                android:id="@+id/progress_card3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Progress: 99.9999999"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                android:layout_marginBottom="10dp"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/identificationAssessment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/hard_cv">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="130dp"
-                android:layout_height="100dp"
-                android:foregroundGravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/hard" />
-
-            <TextView
-                android:id="@+id/title_card4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Identification"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView5"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/compiler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/identificationAssessment">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="130dp"
-                android:layout_height="100dp"
-                android:foregroundGravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/hard" />
-
-            <TextView
-                android:id="@+id/title_card5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Compiler"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView6"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
 

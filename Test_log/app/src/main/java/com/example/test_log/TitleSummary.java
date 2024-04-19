@@ -3,9 +3,6 @@ package com.example.test_log;
 import static android.os.Environment.getExternalStoragePublicDirectory;
 
 import android.content.Intent;
-import android.graphics.text.LineBreaker;
-import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -29,24 +26,23 @@ import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class TitleSummary extends AppCompatActivity {
-    private MediaPlayer mediaPlayer;
+    private FirebaseAuth auth;
+    private Button button;
+    private int currentQuestionIndex = 0;
+    private TextView question;
+    private TextView choiceA, choiceB, choiceC, choiceD;
+    private ArrayList<String> questionTextArray;
+    private ArrayList<String> answer1Array;
+    private ArrayList<String> answer2Array;
+    private ArrayList<String> answer3Array;
+    private ArrayList<String> answer4Array;
+    private ArrayList<String> correctList;
     FirebaseUser user;
-    FirebaseAuth auth;
-    FirebaseStorage firebaseStorage;
-    ArrayList<String> textList;
-    ArrayList<String> answer1List;
-    ArrayList<String> answer2List;
-    ArrayList<String> answer3List;
-    ArrayList<String> answer4List;
-    ArrayList<String> correctList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +55,9 @@ public class TitleSummary extends AppCompatActivity {
             return insets;
         });
 
-        Button button = findViewById(R.id.logout);
-        TextView btnStartActivity = findViewById(R.id.startActivity);
-
-        auth = FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance(); // Initialize auth here
         user = auth.getCurrentUser();
+        button = findViewById(R.id.logout);
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
         String summary = intent.getStringExtra("summary");
@@ -73,46 +67,36 @@ public class TitleSummary extends AppCompatActivity {
         TextView tvTitle = findViewById(R.id.tv_title);
         TextView tvSummary = findViewById(R.id.tv_summary);
         TextView downloadPDF = findViewById(R.id.downloadPDF);
+        TextView btnStartActivity = findViewById(R.id.startActivity);
 
         tvTitle.setText(title);
         tvSummary.setText(summary);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            tvSummary.setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
-        }
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(getApplicationContext(), logpage.class);
-                startActivity(intent);
-
-                mediaPlayer = MediaPlayer.create(TitleSummary.this, R.raw.logout);
-                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mp) {
-                        mediaPlayer.start();
-                    }
-                });
-            }
+        button.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            Intent logoutIntent = new Intent(getApplicationContext(), logpage.class);
+            startActivity(logoutIntent);
         });
 
-        btnStartActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(TitleSummary.this, QuizAssessment.class);
-                intent.putStringArrayListExtra("text", textList);
-                intent.putStringArrayListExtra("answer1", answer1List);
-                intent.putStringArrayListExtra("answer2", answer2List);
-                intent.putStringArrayListExtra("answer3", answer3List);
-                intent.putStringArrayListExtra("answer4", answer4List);
-                intent.putStringArrayListExtra("correct", correctList);
-                startActivity(intent);
-            }
+        questionTextArray = intent.getStringArrayListExtra("questionTextArray");
+        answer1Array = intent.getStringArrayListExtra("answer1Array");
+        answer2Array = intent.getStringArrayListExtra("answer2Array");
+        answer3Array = intent.getStringArrayListExtra("answer3Array");
+        answer4Array = intent.getStringArrayListExtra("answer4Array");
+        correctList = intent.getStringArrayListExtra("correct");
+
+        btnStartActivity.setOnClickListener(v -> {
+            Intent quizIntent = new Intent(TitleSummary.this, QuizAssessment.class);
+            quizIntent.putStringArrayListExtra("text", questionTextArray);
+            quizIntent.putStringArrayListExtra("answer1", answer1Array);
+            quizIntent.putStringArrayListExtra("answer2", answer2Array);
+            quizIntent.putStringArrayListExtra("answer3", answer3Array);
+            quizIntent.putStringArrayListExtra("answer4", answer4Array);
+            quizIntent.putStringArrayListExtra("correct", correctList);
+            startActivity(quizIntent);
         });
 
-
-        firebaseStorage = FirebaseStorage.getInstance();
+        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         final StorageReference storageRef = firebaseStorage.getReferenceFromUrl(pdf_file);
 
         downloadPDF.setOnClickListener(new View.OnClickListener() {
@@ -143,6 +127,5 @@ public class TitleSummary extends AppCompatActivity {
             }
         });
     }
-
-
 }
+

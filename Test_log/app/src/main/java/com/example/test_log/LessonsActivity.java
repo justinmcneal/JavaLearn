@@ -95,43 +95,34 @@ public class LessonsActivity extends AppCompatActivity {
 
             for (int i = 0; i < lessonArray.length(); i++) {
                 JSONObject lessonObject = lessonArray.getJSONObject(i);
-                JSONArray lessons = lessonObject.getJSONArray("lesson");
+                String title = lessonObject.getString("title");
+                String summary = lessonObject.getString("summary");
+                String pdf_file = lessonObject.getString("pdf_file");
+                titleArray.add(title);
+                summaryArray.add(summary);
+                pdfArray.add(pdf_file);
 
-                for (int j = 0; j < lessons.length(); j++) {
-                    JSONObject singleLesson = lessons.getJSONObject(j);
-                    String title = singleLesson.getString("title");
-                    String summary = singleLesson.getString("summary");
-                    String pdf_file = singleLesson.getString("pdf_file");
-                    titleArray.add(title);
-                    summaryArray.add(summary);
-                    pdfArray.add(pdf_file);
+                JSONArray questionsArray = lessonObject.getJSONArray("questions");
 
-                    JSONArray questionsArray = singleLesson.getJSONArray("questions");
+                for (int j = 0; j < questionsArray.length(); j++) {
+                    JSONObject questionObject = questionsArray.getJSONObject(j);
+                    String questionText = questionObject.getString("text");
+                    String answer1 = questionObject.getString("answer1");
+                    String answer2 = questionObject.getString("answer2");
+                    String answer3 = questionObject.getString("answer3");
+                    String answer4 = questionObject.getString("answer4");
 
-                    for (int k = 0; k < questionsArray.length(); k++) {
-                        JSONObject questionObject = questionsArray.getJSONObject(k);
-                        String questionText = questionObject.getString("text");
-                        String answer1 = questionObject.getString("answer1");
-                        String answer2 = questionObject.getString("answer2");
-                        String answer3 = questionObject.getString("answer3");
-                        String answer4 = questionObject.getString("answer4");
-
-                        questionTextArray.add(questionText);
-                        answer1Array.add(answer1);
-                        answer2Array.add(answer2);
-                        answer3Array.add(answer3);
-                        answer4Array.add(answer4);
-
-                    }
+                    questionTextArray.add(questionText);
+                    answer1Array.add(answer1);
+                    answer2Array.add(answer2);
+                    answer3Array.add(answer3);
+                    answer4Array.add(answer4);
                 }
             }
         } catch (JSONException e) {
             Log.e("catch", "Error parsing JSON data", e);
         }
     }
-
-
-
 
     private void setupListView() {
         user = auth.getCurrentUser();
