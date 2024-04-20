@@ -128,7 +128,9 @@ public class LessonsActivity extends AppCompatActivity {
         user = auth.getCurrentUser();
         ListView listView = findViewById(R.id.listView);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
+
         listView.setAdapter(adapter);
+
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(LessonsActivity.this, TitleSummary.class);

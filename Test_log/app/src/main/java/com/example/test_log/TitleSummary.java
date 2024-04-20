@@ -62,8 +62,8 @@ public class TitleSummary extends AppCompatActivity {
         String title = intent.getStringExtra("title");
         String summary = intent.getStringExtra("summary");
         String pdf_file = intent.getStringExtra("pdf_file");
-        String difficulty = intent.getStringExtra("difficulty");
-
+        String difficulty = getIntent().getStringExtra("difficulty");
+        
         TextView tvTitle = findViewById(R.id.tv_title);
         TextView tvSummary = findViewById(R.id.tv_summary);
         TextView downloadPDF = findViewById(R.id.downloadPDF);
@@ -71,6 +71,7 @@ public class TitleSummary extends AppCompatActivity {
 
         tvTitle.setText(title);
         tvSummary.setText(summary);
+        
 
         button.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
@@ -78,21 +79,9 @@ public class TitleSummary extends AppCompatActivity {
             startActivity(logoutIntent);
         });
 
-        questionTextArray = intent.getStringArrayListExtra("questionTextArray");
-        answer1Array = intent.getStringArrayListExtra("answer1Array");
-        answer2Array = intent.getStringArrayListExtra("answer2Array");
-        answer3Array = intent.getStringArrayListExtra("answer3Array");
-        answer4Array = intent.getStringArrayListExtra("answer4Array");
-        correctList = intent.getStringArrayListExtra("correct");
-
         btnStartActivity.setOnClickListener(v -> {
             Intent quizIntent = new Intent(TitleSummary.this, QuizAssessment.class);
-            quizIntent.putStringArrayListExtra("text", questionTextArray);
-            quizIntent.putStringArrayListExtra("answer1", answer1Array);
-            quizIntent.putStringArrayListExtra("answer2", answer2Array);
-            quizIntent.putStringArrayListExtra("answer3", answer3Array);
-            quizIntent.putStringArrayListExtra("answer4", answer4Array);
-            quizIntent.putStringArrayListExtra("correct", correctList);
+            Intent intent1 = quizIntent.putExtra(difficulty);
             startActivity(quizIntent);
         });
 
