@@ -15,6 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class QuizAssessment extends AppCompatActivity {
@@ -45,12 +49,7 @@ public class QuizAssessment extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
         Intent intent = getIntent();
-        textList = intent.getStringArrayListExtra("text");
-        answer1List = intent.getStringArrayListExtra("answer1");
-        answer2List = intent.getStringArrayListExtra("answer2");
-        answer3List = intent.getStringArrayListExtra("answer3");
-        answer4List = intent.getStringArrayListExtra("answer4");
-        correctList = intent.getStringArrayListExtra("correct");
+        String questionsJsonString = intent.getStringExtra("questions");
 
         // Initialize views
         question = findViewById(R.id.question);
@@ -59,10 +58,6 @@ public class QuizAssessment extends AppCompatActivity {
         choiceC = findViewById(R.id.choiceC);
         choiceD = findViewById(R.id.choiceD);
 
-        // Display the first question
-        displayQuestion();
-
-        // Button click listener for logout
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +66,44 @@ public class QuizAssessment extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        try {
+            JSONArray questionsArray = new JSONArray(questionsJsonString);
+            // Initialize ArrayLists to store question data
+            textList = new ArrayList<>();
+            answer1List = new ArrayList<>();
+            answer2List = new ArrayList<>();
+            answer3List = new ArrayList<>();
+            answer4List = new ArrayList<>();
+            correctList = new ArrayList<>();
+
+            // Loop through the questions array and extract data
+            for (int i = 0; i < questionsArray.length(); i++) {
+                JSONObject questionObject = questionsArray.getJSONObject(i);
+                // Extract question text
+                String text = questionObject.getString("text");
+                textList.add(text);
+                // Extract answer options
+                String answer1 = questionObject.getString("answer1");
+                String answer2 = questionObject.getString("answer2");
+                String answer3 = questionObject.getString("answer3");
+                String answer4 = questionObject.getString("answer4");
+                answer1List.add(answer1);
+                answer2List.add(answer2);
+                answer3List.add(answer3);
+                answer4List.add(answer4);
+                // Extract correct answer
+                String correct = questionObject.getString("correct");
+                correctList.add(correct);
+            }
+
+            // Display the first question
+            displayQuestion();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Toast.makeText(this, "Error parsing JSON", Toast.LENGTH_SHORT).show();
+        }
 
         // Click listeners for choices
         choiceA.setOnClickListener(new View.OnClickListener() {
@@ -132,3 +165,4 @@ public class QuizAssessment extends AppCompatActivity {
         }
     }
 }
+

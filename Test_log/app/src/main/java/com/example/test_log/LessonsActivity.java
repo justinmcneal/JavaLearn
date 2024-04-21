@@ -34,12 +34,6 @@ public class LessonsActivity extends AppCompatActivity {
     private final ArrayList<String> summaryArray = new ArrayList<>();
     private final ArrayList<String> pdfArray = new ArrayList<>();
 
-    private final ArrayList<String> questionTextArray = new ArrayList<>();
-    private final ArrayList<String> answer1Array = new ArrayList<>();
-    private final ArrayList<String> answer2Array = new ArrayList<>();
-    private final ArrayList<String> answer3Array = new ArrayList<>();
-    private final ArrayList<String> answer4Array = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,7 +75,6 @@ public class LessonsActivity extends AppCompatActivity {
         });
     }
 
-
     public void parseLessonsData(String difficulty) {
         try {
             JSONObject jsonObject = JSONReader.loadJSONObjectFromAsset(this, "lessons.json");
@@ -101,23 +94,6 @@ public class LessonsActivity extends AppCompatActivity {
                 titleArray.add(title);
                 summaryArray.add(summary);
                 pdfArray.add(pdf_file);
-
-                JSONArray questionsArray = lessonObject.getJSONArray("questions");
-
-                for (int j = 0; j < questionsArray.length(); j++) {
-                    JSONObject questionObject = questionsArray.getJSONObject(j);
-                    String questionText = questionObject.getString("text");
-                    String answer1 = questionObject.getString("answer1");
-                    String answer2 = questionObject.getString("answer2");
-                    String answer3 = questionObject.getString("answer3");
-                    String answer4 = questionObject.getString("answer4");
-
-                    questionTextArray.add(questionText);
-                    answer1Array.add(answer1);
-                    answer2Array.add(answer2);
-                    answer3Array.add(answer3);
-                    answer4Array.add(answer4);
-                }
             }
         } catch (JSONException e) {
             Log.e("catch", "Error parsing JSON data", e);
@@ -130,21 +106,13 @@ public class LessonsActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, titleArray);
 
         listView.setAdapter(adapter);
-
-
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(LessonsActivity.this, TitleSummary.class);
             intent.putExtra("title", titleArray.get(position));
             intent.putExtra("summary", summaryArray.get(position));
             intent.putExtra("pdf_file", pdfArray.get(position));
             intent.putExtra("difficulty", getIntent().getStringExtra("difficulty")); // Retrieve difficulty from the intent
-            intent.putExtra("position", position); // Pass the position here
-
-            intent.putStringArrayListExtra("questionTextArray", questionTextArray);
-            intent.putStringArrayListExtra("answer1Array", answer1Array);
-            intent.putStringArrayListExtra("answer2Array", answer2Array);
-            intent.putStringArrayListExtra("answer3Array", answer3Array);
-            intent.putStringArrayListExtra("answer4Array", answer4Array);
+            intent.putExtra("position", position);
 
             Log.d("Position", "Position in LessonsActivity: " + position);
 

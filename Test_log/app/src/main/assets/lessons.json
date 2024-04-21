@@ -13,7 +13,7 @@
             "answer3": "Mobile App Development",
             "answer4": "Video Games Development",
             "correct": "Game Development",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "They are also involved in maintaining, debugging, and troubleshooting software and systems to keep things running smoothly.",
@@ -22,7 +22,7 @@
             "answer3": "Developer",
             "answer4": "Programmers",
             "correct": "Developer",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is an object-oriented programming language.",
@@ -31,7 +31,7 @@
             "answer3": "How To Make Lumpia",
             "answer4": "Java",
             "correct": "Java",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "A Java category that’s accustomed to handling communications protocol requests.",
@@ -40,7 +40,7 @@
             "answer3": "UI",
             "answer4": "Studio Emulator",
             "correct": "Servlets",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This is often used for aggregation of files and information into one file.",
@@ -49,7 +49,7 @@
             "answer3": "Servlets",
             "answer4": "Java SE",
             "correct": "Jars",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Meaning of “WORA”",
@@ -58,7 +58,7 @@
             "answer3": "Write Oriented, Run Anywhere",
             "answer4": "Write Oriented , Read Advance",
             "correct": "Write Once, Run Anywhere",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "What does JDK means?",
@@ -67,7 +67,7 @@
             "answer3": "Java Developers Kit",
             "answer4": "Java Development Kit",
             "correct": "Java Development Kit",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It translates the instructions into something the machine can understand.",
@@ -76,7 +76,7 @@
             "answer3": "Compiler",
             "answer4": "Interpreter",
             "correct": "Interpreter",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "A set of instructions specifically designed for a particular type of machine and operating system.",
@@ -85,7 +85,7 @@
             "answer3": "Compiler",
             "answer4": "Interpreter",
             "correct": "Compiler",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Java is both a compiled language as well as an interpreted language.",
@@ -94,7 +94,7 @@
             "answer3": "Neither true nor False",
             "answer4": "Can’t say",
             "correct": "true",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -110,7 +110,7 @@
             "answer3": "Semicolon",
             "answer4": "Bracket",
             "correct": "Semicolon",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "A software used by a developer to easily code in certain language.",
@@ -119,7 +119,7 @@
             "answer3": "Internet Developers Environment",
             "answer4": "Integrated Developers Environment",
             "correct": "Integrated Development Environment",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a method in Java that prints a message to the standard output (typically the console) and appends a newline character.",
@@ -128,7 +128,7 @@
             "answer3": "System.out.print()",
             "answer4": "System.out.display()",
             "correct": "System.out.print()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "A folder in a directory where we can put all our related codes in the same directory.",
@@ -137,7 +137,7 @@
             "answer3": "JDK",
             "answer4": "IDE",
             "correct": "Packages",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Class name should start in lower case.",
@@ -146,7 +146,7 @@
             "answer3": "Neither true nor false",
             "answer4": "Can't say",
             "correct": "False",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a keyword and is used to specify that a method doesn’t return anything. If main method is not void, we will get an error.",
@@ -155,7 +155,7 @@
             "answer3": "Void",
             "answer4": "Public",
             "correct": "Void",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This means that any other class can access a public field or method.",
@@ -164,7 +164,7 @@
             "answer3": "Void",
             "answer4": "Public",
             "correct": "Public",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "A class that cannot be instantiated.",
@@ -173,7 +173,7 @@
             "answer3": "Void",
             "answer4": "Public",
             "correct": "Static",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is the identifier that the  JVM looks for as the starting point of the java program.",
@@ -182,7 +182,7 @@
             "answer3": "Main",
             "answer4": "IDE",
             "correct": "Main",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "What is Java’s main() method called?",
@@ -191,7 +191,7 @@
             "answer3": "public static void main(String[] args)",
             "answer4": "public void main String() args",
             "correct": "public static void main String() args;",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -207,7 +207,7 @@
             "answer3": "Modern",
             "answer4": "Boolean",
             "correct": "Primitive",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Variable names must start with a _____ and cannot be any reserved keyword.",
@@ -216,7 +216,7 @@
             "answer3": "Letter",
             "answer4": "Emoji",
             "correct": "Letter",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Variable names conventionally begin with _______________ to distinguish them from class names.",
@@ -225,7 +225,7 @@
             "answer3": "Uppercase Letters",
             "answer4": "Lowercase Letters",
             "correct": "Lowercase Letters",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The ____ sign is the assignment operator.",
@@ -234,7 +234,7 @@
             "answer3": "greater than",
             "answer4": "less than",
             "correct": "equal",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Primitive types also serve as the building blocks for more complex data types, called _______.",
@@ -243,7 +243,7 @@
             "answer3": "Boolean",
             "answer4": "String",
             "correct": "Reference Types",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "When you perform integer division, whether the two operators used in the arithmetic expression are integer constants or integer variables, the result is an ________. ",
@@ -252,7 +252,7 @@
             "answer3": "Integer",
             "answer4": "Decimal",
             "correct": "Integer",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "A floating-point number contains _______ positions.",
@@ -261,7 +261,7 @@
             "answer3": "String",
             "answer4": "Value",
             "correct": "Decimal",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "A ____________ can hold floating-point values of up to six or seven significant digits of accuracy.",
@@ -270,7 +270,7 @@
             "answer3": "Float Data Types",
             "answer4": "Reference Types",
             "correct": "Float Data Types",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Java supports two floating-point data type. The first one is?",
@@ -279,7 +279,7 @@
             "answer3": "Float",
             "answer4": "UpFloat",
             "correct": "Float",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "If the the other floating-point data type is “float” what is the other data type?",
@@ -288,7 +288,7 @@
             "answer3": "Single",
             "answer4": "Mama mo",
             "correct": "Double",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -304,7 +304,7 @@
             "answer3": "if statement",
             "answer4": "else statement",
             "correct": "Control Structures",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " In programming, we use the _________  to run a block of code among more than one alternative.",
@@ -313,7 +313,7 @@
             "answer3": "Logical Operators",
             "answer4": "Relational Operators",
             "correct": "Control Structures",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This statement executes a certain section of code if the test expression is evaluated to true.",
@@ -322,7 +322,7 @@
             "answer3": "true",
             "answer4": "false",
             "correct": "if statement",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Statements inside the body of the ‘else’ block are executed if the test expression is evaluated to ___.",
@@ -331,7 +331,7 @@
             "answer3": "true",
             "answer4": "false",
             "correct": "false",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Statements in which an if structure is contained inside another if structure are commonly called ???",
@@ -340,7 +340,7 @@
             "answer3": "Nested loop statement",
             "answer4": "Nested else if statement",
             "correct": "Nested if statement",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "In a Java if statement, a semicolon follows the Boolean expression.",
@@ -349,7 +349,7 @@
             "answer3": "Neither",
             "answer4": "Can’t say",
             "correct": "False",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Indentation can be used to cause statements following an if statement to depend on the evaluation of the Boolean expression.",
@@ -358,7 +358,7 @@
             "answer3": "Neither",
             "answer4": "Can’t say",
             "correct": "False",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Statements in which an if structure is contained inside another if structure are commonly called nested if statements.",
@@ -367,7 +367,7 @@
             "answer3": "Neither",
             "answer4": "Can’t say",
             "correct": "True",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "if condition evaluates to true, statements are executed.",
@@ -376,7 +376,7 @@
             "answer3": "Neither",
             "answer4": "Can’t say",
             "correct": "True",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "if condition evaluates to false, statements are skipped.",
@@ -385,7 +385,7 @@
             "answer3": "Neither",
             "answer4": "Can’t say",
             "correct": "True",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -401,7 +401,7 @@
             "answer3": "while loop",
             "answer4": "for loop",
             "correct": "for loop",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This initializes variables and executes only once.",
@@ -410,7 +410,7 @@
             "answer3": "while loop",
             "answer4": "for loop",
             "correct": "initialExpression",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This is used to run a specific code until a certain condition is met.",
@@ -419,7 +419,7 @@
             "answer3": "while loop",
             "answer4": "for loop",
             "correct": "updateExpression",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The condition is evaluated here.",
@@ -428,7 +428,7 @@
             "answer3": "while loop",
             "answer4": "do…while loop",
             "correct": "do…while loop",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This is similar to the ‘while loop.’ However, it is executed once before the test expression is checked.",
@@ -437,7 +437,7 @@
             "answer3": "while loop",
             "answer4": "do…while loop",
             "correct": "updateExpression",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The correct order of ‘for loop’",
@@ -446,7 +446,7 @@
             "answer3": "for (initialExpression; testExpression; updateExpression)",
             "answer4": "for (testExpression; updateExpression; initialExpression)",
             "correct": "for (initialExpression; testExpression; updateExpression)",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This updates the value of the initialExpression.",
@@ -455,7 +455,7 @@
             "answer3": "testExpression",
             "answer4": "do…while loop",
             "correct": "updateExpression",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is the syntax for while loop.",
@@ -464,7 +464,7 @@
             "answer3": "while (testExpression)",
             "answer4": " while (updatedExpression)",
             "correct": "while (testExpression)",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "If the condition of a loop is always true, the loop runs for how many times?",
@@ -473,7 +473,7 @@
             "answer3": "A hundred",
             "answer4": "Infinite",
             "correct": "Infinite",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " If the textExpression evaluates to _____, the code inside the while loop is executed.",
@@ -482,7 +482,7 @@
             "answer3": "False",
             "answer4": "True",
             "correct": "True",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -498,7 +498,7 @@
             "answer3": "Data Types",
             "answer4": "Array Names",
             "correct": "Elements",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "These are primitive data types like int, char, double, byte, etc. or Java objects.",
@@ -507,7 +507,7 @@
             "answer3": "Data Types",
             "answer4": "Array Names",
             "correct": "Data Types",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is used as an identifier in creating arrays.",
@@ -516,7 +516,7 @@
             "answer3": "Data Types",
             "answer4": "Array Names",
             "correct": "Array Names",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This is a collection of multiple values in a single variable with similar data types",
@@ -525,7 +525,7 @@
             "answer3": "Double",
             "answer4": "Elements",
             "correct": "Array",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The index in an array always starts at ____.",
@@ -534,7 +534,7 @@
             "answer3": "1",
             "answer4": "0",
             "correct": "0",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is the syntax for creating an array.",
@@ -543,7 +543,7 @@
             "answer3": "dataType arrayName []",
             "answer4": "Array[index]",
             "correct": "dataType arrayName []",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is the syntax for accessing an element of an array.",
@@ -552,7 +552,7 @@
             "answer3": "dataType arrayName []",
             "answer4": "Array[index]",
             "correct": "Array[index]",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This is used to terminate from the loop immediately.",
@@ -561,7 +561,7 @@
             "answer3": "Iterating arrays",
             "answer4": "Break",
             "correct": "Break",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is an array of arrays.",
@@ -570,7 +570,7 @@
             "answer3": "Iterating arrays",
             "answer4": "Break",
             "correct": "Multidimensional array",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This reads every element of the array and does something with it.",
@@ -579,7 +579,7 @@
             "answer3": "Iterating arrays",
             "answer4": "Break",
             "correct": "Iterating arrays",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -595,7 +595,7 @@
             "answer3": "Language Package",
             "answer4": "Net Package",
             "correct": "Util Package",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method is used to compare two integer values treating them as unsigned.",
@@ -604,7 +604,7 @@
             "answer3": "compareUnsigned method",
             "answer4": "static boolean deepEquals method",
             "correct": "compareUnsigned method",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This copies the mentioned array,pads it with a default value, so that copy has got the mentioned length.",
@@ -613,7 +613,7 @@
             "answer3": "compareUnsigned method",
             "answer4": "static boolean deepEquals method",
             "correct": "copyOf method",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This is used to search for a mentioned element in the array.",
@@ -622,7 +622,7 @@
             "answer3": "compareUnsigned method",
             "answer4": "static boolean deepEquals method",
             "correct": "static int binarySearch method",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This gives methods that are static to create and access Java arrays dynamically.",
@@ -631,7 +631,7 @@
             "answer3": "Arrays class",
             "answer4": "Static class",
             "correct": "Arrays class",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is used to return the fixed-size list that mentioned Arrays back.",
@@ -640,7 +640,7 @@
             "answer3": "compareUnsigned method",
             "answer4": "static boolean deepEquals method",
             "correct": "asList method",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This would return true in case the two mentioned arrays are deeply equal to the other array or not.",
@@ -649,7 +649,7 @@
             "answer3": "compareUnsigned method",
             "answer4": "static boolean deepEquals method",
             "correct": "static boolean deepEquals method",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is the syntax for the asList method.",
@@ -658,7 +658,7 @@
             "answer3": "int Arr {} = {}",
             "answer4": "int Arr [] = {}",
             "correct": "int Arr [] = {}",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The syntax for the copyOf method.",
@@ -667,7 +667,7 @@
             "answer3": "Arrays.copyOf (original array, new length)",
             "answer4": "CopyOf(original array, new length)",
             "correct": "Arrays.copyOf (original array, new length)",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The syntax for the static boolean deepEquals method.",
@@ -676,7 +676,7 @@
             "answer3": "Arrays.deepEquals(Object [] m1, Object [] m2)",
             "answer4": "arrays.deepEqual (Object [] m1, Object [] m2)",
             "correct": "Arrays.deepEquals(Object [] m1, Object [] m2)",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -692,7 +692,7 @@
             "answer3": "equals()",
             "answer4": "compareTo",
             "correct": "compareTo",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method checks if the number and the argument passed through the method is not null and equal to the number.",
@@ -701,7 +701,7 @@
             "answer3": "valueOf",
             "answer4": "toString",
             "correct": "equals",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " This method returns the number object which is relevant. Simply put, this method converts the argument passed through it to an Integer object.",
@@ -710,7 +710,7 @@
             "answer3": "valueOf",
             "answer4": "toString",
             "correct": "valueOf",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method is used for converting a numeric datatype to a string. This helps in returning the value of an object.",
@@ -719,7 +719,7 @@
             "answer3": "valueOf",
             "answer4": "toString",
             "correct": "toString",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is an example of a wrapper class which converts a primitive data type to an object of the class.",
@@ -728,7 +728,7 @@
             "answer3": "class type",
             "answer4": "Arrays class",
             "correct": "Arrays class",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The ________ () method returns the length of a String.",
@@ -737,7 +737,7 @@
             "answer3": "height",
             "answer4": "weight",
             "correct": "length",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The ___________ () method returns the larger of two values.",
@@ -746,7 +746,7 @@
             "answer3": "Math.low",
             "answer4": "Math.high",
             "correct": "Math.max",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " The method _________ () returns the absolute value of a number. ",
@@ -755,7 +755,7 @@
             "answer3": "Math.low",
             "answer4": "Math.high",
             "correct": "Math.absh",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This  method determines whether a specific character occurs within a String.",
@@ -764,7 +764,7 @@
             "answer3": "indexOf()",
             "answer4": "class java.lang.Math",
             "correct": "indexOf()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It contains constants and methods that you can use to perform common mathematical functions.",
@@ -773,7 +773,7 @@
             "answer3": "indexOf()",
             "answer4": "class java.lang.Math",
             "correct": "class java.lang.Math",
-            "value:": 1
+            "value": 1
           }
         ]
       }
@@ -791,7 +791,7 @@
             "answer3": "set",
             "answer4": "linked list",
             "correct": "hash table",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is another basic data structure in programming.",
@@ -800,7 +800,7 @@
             "answer3": "set",
             "answer4": "linked list",
             "correct": "linked list",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It provides built-in support for common data structures, essential for writing programs like an array, linked list, map, set, stack, and queue.",
@@ -809,7 +809,7 @@
             "answer3": "set",
             "answer4": "linked list",
             "correct": "Java API",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a good data structure to store unique elements.",
@@ -818,7 +818,7 @@
             "answer3": "set",
             "answer4": "linked list",
             "correct": "set",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a thread-safe extension of the Queue interface and can be used to implement producer-consumer patterns in Java.",
@@ -827,7 +827,7 @@
             "answer3": "BlockingQueue",
             "answer4": " MultiQueue",
             "correct": "BlockingQueue",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a building block of programs.",
@@ -836,7 +836,7 @@
             "answer3": "Data Structure",
             "answer4": "Data",
             "correct": "Data Structure",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "“Data Structure + Algorithms= ____________",
@@ -845,7 +845,7 @@
             "answer3": "Program",
             "answer4": "linked list",
             "correct": "Program",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "You can also implement Queue by using ____________.",
@@ -854,7 +854,7 @@
             "answer3": "set",
             "answer4": "variable",
             "correct": "array",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " This class can be used whenever a linked list data structure is needed.",
@@ -863,7 +863,7 @@
             "answer3": "java.util. LinkedList",
             "answer4": "java.util.Stack",
             "correct": "java.util. LinkedList",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This class extends the legacy Vector class for storing elements.",
@@ -872,7 +872,7 @@
             "answer3": "java.util. LinkedList",
             "answer4": "java.util.Stack",
             "correct": "java.util.Stack",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -888,7 +888,7 @@
             "answer3": "java.time.LocalDateTime",
             "answer4": "lSystem.out.println",
             "correct": "java.time.LocalDate",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This class is to display the current time.",
@@ -897,7 +897,7 @@
             "answer3": "java.time.LocalDateTime",
             "answer4": "lSystem.out.println",
             "correct": "java.time.LocalTime",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This class is to display the current date and time.",
@@ -906,7 +906,7 @@
             "answer3": "java.time.LocalDateTime",
             "answer4": "lSystem.out.println",
             "correct": "java.time.LocalDateTime",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is an API to define a pattern for searching or manipulating strings",
@@ -915,7 +915,7 @@
             "answer3": "Java application",
             "answer4": "Java Regex",
             "correct": "Java Regex",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a thread-safe extension of the Queue interface and can be used to implement producer-consumer patterns in Java.",
@@ -924,7 +924,7 @@
             "answer3": "BlockingQueue",
             "answer4": " MultiQueue",
             "correct": "BlockingQueue",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The first parameter indicates which ________ is being searched for and the second parameter has a flag to indicate that the search should be case-insensitive.",
@@ -933,7 +933,7 @@
             "answer3": "meter",
             "answer4": "number",
             "correct": "pattern",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is method used to search for the pattern in a string.",
@@ -942,7 +942,7 @@
             "answer3": "pattern()",
             "answer4": "find()",
             "correct": "matcher()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a method returns true if the pattern was found in the string and false if it was not found.",
@@ -951,7 +951,7 @@
             "answer3": "pattern()",
             "answer4": "find()",
             "correct": "find()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " TThe second parameter is ________ . ",
@@ -960,7 +960,7 @@
             "answer3": "mandatory",
             "answer4": "required",
             "correct": "optional",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " Java does not have a built-in Date class, but we can import the java.time package to work with the date and time API.",
@@ -969,7 +969,7 @@
             "answer3": "LocalDateTime",
             "answer4": "Local Date and Time",
             "correct": "Java Date and Time",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -985,7 +985,7 @@
             "answer3": "Reconstruct Expressions",
             "answer4": "Registered Expression",
             "correct": "Regular Expressions",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Any numeric digit from 0 to 9",
@@ -994,7 +994,7 @@
             "answer3": "S",
             "answer4": "D",
             "correct": "\\d",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Any letter, numeric digit, or the underscore character (Think of matching 'word' characters.)",
@@ -1003,7 +1003,7 @@
             "answer3": "*//",
             "answer4": "int",
             "correct": "\\w",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Any character that is not a space, tab, or newline.",
@@ -1012,7 +1012,7 @@
             "answer3": "\\S",
             "answer4": "S",
             "correct": "\\S",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "What is \\D ?",
@@ -1021,7 +1021,7 @@
             "answer3": "Any space, tab, or newline character. (Think of this as matching 'space' characters)",
             "answer4": "A digit: [0-9]",
             "correct": "Any character that is not a numeric digit from 0 to 9.",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Any character that is not a letter, numeric digit, or the underscore character.",
@@ -1030,7 +1030,7 @@
             "answer3": "*",
             "answer4": " \\W",
             "correct": " \\W",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The java.util.regex package contains regular expressions.",
@@ -1039,7 +1039,7 @@
             "answer3": "Neither True or False",
             "answer4": "Can't Say",
             "correct": "False",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Regex (short for Regular Expressions) is a Java API for defining String patterns that can be used to scan, manipulate, and modify set of characters",
@@ -1048,7 +1048,7 @@
             "answer3": "Neither True or False",
             "answer4": "Can't Say",
             "correct": "True",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Regex is commonly used to describe the constraints in several areas of strings, including email passwords and validation.",
@@ -1057,7 +1057,7 @@
             "answer3": "Neither True or False",
             "answer4": "Can't Say",
             "correct": "True",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " Java does not have a built-in Date class, but we can import the java.time package to work with the date and time API.",
@@ -1066,7 +1066,7 @@
             "answer3": "LocalDateTime",
             "answer4": "Local Date and Time",
             "correct": "Java Date and Time",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -1082,7 +1082,7 @@
             "answer3": "throws keyword block",
             "answer4": "finally block",
             "correct": "exceptions",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is used to explicitly throw a single exception.",
@@ -1091,7 +1091,7 @@
             "answer3": "throws keyword block",
             "answer4": "finally block",
             "correct": "throws keyword block",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is always executed no matter whether there is an exception or not.",
@@ -1100,7 +1100,7 @@
             "answer3": "throws keyword block",
             "answer4": "finally block",
             "correct": "finally block",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This catches the exception,  and statements inside the catch block are executed.",
@@ -1109,7 +1109,7 @@
             "answer3": "catch block",
             "answer4": "exception block",
             "correct": "catch block",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "These happen due to a programming error and exceptions are not checked at compile-time but run-time.",
@@ -1118,7 +1118,7 @@
             "answer3": "JavaExceptions",
             "answer4": "Exception Handling",
             "correct": "RuntimeException",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "They are checked by the compiler at the compile-time and the programmer is prompted to handle these exceptions.",
@@ -1127,7 +1127,7 @@
             "answer3": "JavaExceptions",
             "answer4": "Exception Handling",
             "correct": "IOException",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "What is the meaning of JVM?",
@@ -1136,7 +1136,7 @@
             "answer3": "Java Versus Machine",
             "answer4": "Java Vertical Machine",
             "correct": "Java Virtual Machine",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "These represent irrecoverable conditions such as JVM.",
@@ -1145,7 +1145,7 @@
             "answer3": "throws  keyword block",
             "answer4": "finally block",
             "correct": "errors",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "What are the 2 types of Java Exception Types? ",
@@ -1154,7 +1154,7 @@
             "answer3": "RuntimeException and IOException",
             "answer4": "User-defined exceptions and Non-predefined exceptions",
             "correct": "optional",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This block is used to handle exceptions in Java.",
@@ -1163,7 +1163,7 @@
             "answer3": "throws keyword block",
             "answer4": "try…catch block",
             "correct": "Java Date and Time",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -1179,7 +1179,7 @@
             "answer3": "Graphical User Internet",
             "answer4": "Graphical User Indemand",
             "correct": "Graphical User Interface",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " It is used for placing text in a container.",
@@ -1188,7 +1188,7 @@
             "answer3": "JTextField Class",
             "answer4": "JButton Class",
             "correct": " JLabel Class",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " It is a component into which a user can type a single line of text data.",
@@ -1197,7 +1197,7 @@
             "answer3": "JTextField Class",
             "answer4": "JButton Class",
             "correct": "JLabel Class",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a component the user can click with a mouse to make a selection.",
@@ -1206,7 +1206,7 @@
             "answer3": "JTextField Class",
             "answer4": "JButton Class",
             "correct": "JButton Class",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is an easy-to-use visual experience builder for Java applications.",
@@ -1215,7 +1215,7 @@
             "answer3": "Java Swing",
             "answer4": "Java API",
             "correct": "GUI in Java",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It provides a rich set of widgets and packages to make sophisticated GUI components for Java applications.",
@@ -1224,7 +1224,7 @@
             "answer3": "Java Swing",
             "answer4": "Java API",
             "correct": "Java Swing",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " It can be constructed as you do other objects using class name, identifier, and assignment operator.",
@@ -1233,7 +1233,7 @@
             "answer3": "JComponent",
             "answer4": " JTitle ",
             "correct": "JFrame",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "All the components in swing like JButton, JComboBox, JList, JLabel are inherited from this class which can be added to the container classes.",
@@ -1242,7 +1242,7 @@
             "answer3": "JComponent",
             "answer4": " JTitle ",
             "correct": "JComponent",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "They are the windows like frames and dialog boxes.",
@@ -1251,7 +1251,7 @@
             "answer3": "list",
             "answer4": "label",
             "correct": "containers",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a method used to attach the new Label component to your Frame.",
@@ -1260,7 +1260,7 @@
             "answer3": "add()",
             "answer4": "get()",
             "correct": "add()",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -1276,7 +1276,7 @@
             "answer3": "JCheckBoxMenuItem",
             "answer4": "JCheckBoxMenuEvent",
             "correct": "JCheckBoxMenuItem",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Clicking a component results in a(n) ____.",
@@ -1285,7 +1285,7 @@
             "answer3": "MouseEvent",
             "answer4": "WindowEvent",
             "correct": "MouseEvent",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Clicking an item in a list box results in a(n) ____",
@@ -1294,7 +1294,7 @@
             "answer3": "MouseEvent",
             "answer4": "WindowEvent",
             "correct": "ItemEvent",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Each JMenu can contain options, called JMenuItems, or can contain submenus that are ____.",
@@ -1303,7 +1303,7 @@
             "answer3": "JSubMenus",
             "answer4": "JMenus",
             "correct": "JMenus",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is placed at the top of a container and contains user options.",
@@ -1312,7 +1312,7 @@
             "answer3": "content pane",
             "answer4": "menu bar",
             "correct": "menu bar",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The JMenus are added to the JMenuBar using this method.",
@@ -1321,7 +1321,7 @@
             "answer3": "addNewMenu()",
             "answer4": "add()",
             "correct": "addNewMenu()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The focusGained(FocusEvent) handler is defined in this interface.",
@@ -1330,7 +1330,7 @@
             "answer3": "AdjustmentListener",
             "answer4": "ComponentListener",
             "correct": "FocusListener",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The parent class for all event objects is named ____, which descends from the Object class.",
@@ -1339,7 +1339,7 @@
             "answer3": "JParentEvent",
             "answer4": "AWTEvent",
             "correct": "EventObject",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Which of the following is NOT a method of the KeyListener interface?",
@@ -1348,7 +1348,7 @@
             "answer3": "keyClicked()",
             "answer4": "keyReleased()",
             "correct": "keyClicked()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The parent class for all event objects is named EventObject, which descends from the Object class. EventObject is the parent of AWTEvent, which in turn is the parent of specific event classes such as ActionEvent and ComponentEvent.",
@@ -1357,7 +1357,7 @@
             "answer3": "JMenus",
             "answer4": "AWT Event",
             "correct": "Event Handling",
-            "value:": 1
+            "value": 1
           }
         ]
       }
@@ -1375,7 +1375,7 @@
             "answer3": "Javac",
             "answer4": "Java Button",
             "correct": "Applet",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a Swing class from which you can inherit to create your own applet. ",
@@ -1384,7 +1384,7 @@
             "answer3": "Javac",
             "answer4": "Java Button",
             "correct": "Japplet",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The wideness of the applet on the screen.",
@@ -1393,7 +1393,7 @@
             "answer3": "Size",
             "answer4": "Width",
             "correct": "Width",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "From the top to the bottom of the applet on the screen.",
@@ -1402,7 +1402,7 @@
             "answer3": "Size",
             "answer4": "Width",
             "correct": "Height",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method puts the color for the object by specific color.",
@@ -1411,7 +1411,7 @@
             "answer3": "Graphics.fillRect()",
             "answer4": "Graphics.fillOva()",
             "correct": "Graphics.setColor()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method used to fill the color inside the oval by specified color.",
@@ -1420,7 +1420,7 @@
             "answer3": "Graphics.fillRect()",
             "answer4": "Graphics.fillOva()",
             "correct": "Graphics.fillOva()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " This method used to fill the color inside the oval by specified color.",
@@ -1429,7 +1429,7 @@
             "answer3": "Graphics.fillRect()",
             "answer4": "Graphics.fillRect()",
             "correct": "Graphics.fillOva()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " This method is used to fill the color inside the rectangle by specified color.",
@@ -1438,7 +1438,7 @@
             "answer3": "Graphics.fillRect()",
             "answer4": "Graphics.fillOva()",
             "correct": "Graphics.fillRect())",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method initializes tasks to perform, such as setting up user interface components",
@@ -1447,7 +1447,7 @@
             "answer3": "paint()",
             "answer4": "init()",
             "correct": "init()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method is always called after the init() and start()methods are executed.",
@@ -1456,7 +1456,7 @@
             "answer3": "paint()",
             "answer4": "init()",
             "correct": "paint()",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -1472,7 +1472,7 @@
             "answer3": "Grid Layout Manager",
             "answer4": "Flow Layout Manager",
             "correct": "Border Layout Manager",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "An object that controls the size and position (that is, the layout) of components inside a Container object.",
@@ -1481,7 +1481,7 @@
             "answer3": "Grid Layout Manager",
             "answer4": "Flow Layout Manager",
             "correct": "Layout Manager",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is used to arrange components into equal rows and columns.",
@@ -1490,7 +1490,7 @@
             "answer3": "Grid Layout Manager",
             "answer4": "Flow Layout Manager",
             "correct": "Grid Layout Manager",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is the visual experience builder for Java applications.",
@@ -1499,7 +1499,7 @@
             "answer3": "IGU",
             "answer4": "GIU",
             "correct": "GUI",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is used to arrange components in rows across the width of a Container",
@@ -1508,7 +1508,7 @@
             "answer3": "Grid Layout Manager",
             "answer4": "Flow Layout Manager",
             "correct": "Flow Layout Manager",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is used when you need to add components into a single row or a single column.",
@@ -1517,7 +1517,7 @@
             "answer3": "Grid Bag Manager",
             "answer4": "Card Layout Manager",
             "correct": "Box Layout Manager",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is used when you need to add components that are displayed one at a time.",
@@ -1526,7 +1526,7 @@
             "answer3": "Grid Bag Layout Manager",
             "answer4": "Card Layout Manager",
             "correct": "Card Layout Manager",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "Used when you need to set size,placement, and alignment constraints for every component that you add.",
@@ -1535,7 +1535,7 @@
             "answer3": "Grid Bag Layout Manager",
             "answer4": "Card Layout Manager",
             "correct": "Grid Bag Layout Manager",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The FlowLayoutclass contains three constants you can use to align Components with a Container:",
@@ -1544,7 +1544,7 @@
             "answer3": "FlowLayout.LEFT\n   FlowLayout.MIDDLE\n   FlowLayout.RIGHT\n",
             "answer4": "FlowLayout.HIGH\n   FlowLayout.CENTER\n   FlowLayout.LOW\n",
             "correct": "FlowLayout.LEFT\n   FlowLayout.CENTER\n   FlowLayout.RIGHT\n",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "________ you used FlowLayout with the content panes of JFrames. With FlowLayout, each Component that you add is placed to the right of previously added components in a row; or, if the current row is filled, the Component is placed to start a new row.",
@@ -1553,7 +1553,7 @@
             "answer3": "Grid Layout Manager",
             "answer4": "Layout Manager",
             "correct": "Container",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -1569,7 +1569,7 @@
             "answer3": " Behaviors",
             "answer4": "State",
             "correct": "Class",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a methodology or paradigm to design a program using classes and objects.",
@@ -1578,7 +1578,7 @@
             "answer3": "Subject- Orientation Programmers",
             "answer4": "Object- Orientation Programmers",
             "correct": "Object- Oriented Programming",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The wideness of the applet on the screen.",
@@ -1587,7 +1587,7 @@
             "answer3": "Size",
             "answer4": "Width",
             "correct": "Width",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "From the top to the bottom of the applet on the screen.",
@@ -1596,7 +1596,7 @@
             "answer3": "Size",
             "answer4": "Width",
             "correct": "Height",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method puts the color for the object by specific color.",
@@ -1605,7 +1605,7 @@
             "answer3": "Graphics.fillRect()",
             "answer4": "Graphics.fillOva()",
             "correct": "Graphics.setColor()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method used to fill the color inside the oval by specified color.",
@@ -1614,7 +1614,7 @@
             "answer3": "Graphics.fillRect()",
             "answer4": "Graphics.fillOva()",
             "correct": "Graphics.fillOva()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " This method used to fill the color inside the oval by specified color.",
@@ -1623,7 +1623,7 @@
             "answer3": "Graphics.fillRect()",
             "answer4": "Graphics.fillRect()",
             "correct": "Graphics.fillOva()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": " This method is used to fill the color inside the rectangle by specified color.",
@@ -1632,7 +1632,7 @@
             "answer3": "Graphics.fillRect()",
             "answer4": "Graphics.fillOva()",
             "correct": "Graphics.fillRect())",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method initializes tasks to perform, such as setting up user interface components",
@@ -1641,7 +1641,7 @@
             "answer3": "paint()",
             "answer4": "init()",
             "correct": "init()",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This method is always called after the init() and start()methods are executed.",
@@ -1650,7 +1650,7 @@
             "answer3": "paint()",
             "answer4": "init()",
             "correct": "paint()",
-            "value:": 1
+            "value": 1
           }
         ]
       },
@@ -1666,7 +1666,7 @@
             "answer3": "extends",
             "answer4": "Inheritance",
             "correct": "Encapsulation",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "The same entity can perform different operations in different scenarios.",
@@ -1675,7 +1675,7 @@
             "answer3": "extends",
             "answer4": "Inheritance",
             "correct": "Polymorphism",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "One of the key features of OOP that allows us to create a new class from an existing class.",
@@ -1684,7 +1684,7 @@
             "answer3": "extends",
             "answer4": "Inheritance",
             "correct": "Inheritance",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "This keyword is used to perform inheritance in Java.",
@@ -1693,7 +1693,7 @@
             "answer3": "extends",
             "answer4": "Inheritance",
             "correct": "extends",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "What is the main purpose of the render() method?",
@@ -1702,7 +1702,7 @@
             "answer3": "render the shape",
             "answer4": "render the color",
             "correct": "render the shape",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "We can create our own method based on our requirements.",
@@ -1711,7 +1711,7 @@
             "answer3": "methodName",
             "answer4": "method body",
             "correct": "User-defined Methods",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It can be accessed without creating objects.",
@@ -1720,7 +1720,7 @@
             "answer3": "returnType",
             "answer4": "method",
             "correct": "static",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "These are built-in methods in Java that are available to use.",
@@ -1729,7 +1729,7 @@
             "answer3": "methodName",
             "answer4": "method body",
             "correct": "Standard Library Methods",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It is a program module that contains a series of statements that carry out a task.",
@@ -1738,7 +1738,7 @@
             "answer3": "returnType",
             "answer4": "method",
             "correct": "method",
-            "value:": 1
+            "value": 1
           },
           {
             "text": "It defines access types whether the method is public, private, and so on. ",
@@ -1747,7 +1747,7 @@
             "answer3": "method body",
             "answer4": "modifier",
             "correct": "modifier",
-            "value:": 1
+            "value": 1
           }
         ]
       }

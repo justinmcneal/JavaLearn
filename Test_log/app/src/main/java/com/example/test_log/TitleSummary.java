@@ -26,6 +26,10 @@ import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.net.URL;
 import java.util.ArrayList;
@@ -33,15 +37,6 @@ import java.util.ArrayList;
 public class TitleSummary extends AppCompatActivity {
     private FirebaseAuth auth;
     private Button button;
-    private int currentQuestionIndex = 0;
-    private TextView question;
-    private TextView choiceA, choiceB, choiceC, choiceD;
-    private ArrayList<String> questionTextArray;
-    private ArrayList<String> answer1Array;
-    private ArrayList<String> answer2Array;
-    private ArrayList<String> answer3Array;
-    private ArrayList<String> answer4Array;
-    private ArrayList<String> correctList;
     FirebaseUser user;
 
     @Override
@@ -58,12 +53,12 @@ public class TitleSummary extends AppCompatActivity {
         auth = FirebaseAuth.getInstance(); // Initialize auth here
         user = auth.getCurrentUser();
         button = findViewById(R.id.logout);
+
         Intent intent = getIntent();
         String title = intent.getStringExtra("title");
         String summary = intent.getStringExtra("summary");
         String pdf_file = intent.getStringExtra("pdf_file");
-        String difficulty = getIntent().getStringExtra("difficulty");
-        
+
         TextView tvTitle = findViewById(R.id.tv_title);
         TextView tvSummary = findViewById(R.id.tv_summary);
         TextView downloadPDF = findViewById(R.id.downloadPDF);
@@ -71,18 +66,37 @@ public class TitleSummary extends AppCompatActivity {
 
         tvTitle.setText(title);
         tvSummary.setText(summary);
-        
+
+        btnStartActivity.setOnClickListener(v -> {
+            try {
+                JSONObject lessonObject = JSONReader.loadJSONObjectFromAsset(TitleSummary.this, "lessons.json");
+                String difficulty = getIntent().getStringExtra("difficulty");
+                int position = getIntent().getIntExtra("position", -1); // Get the position
+
+                JSONObject difficultyObject = lessonObject.getJSONObject("difficulty");
+                JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
+
+                // Check if the position is valid
+                if (position >= 0 && position < lessonArray.length()) {
+                    JSONObject lesson = lessonArray.getJSONObject(position);
+                    JSONArray questionsArray = lesson.getJSONArray("questions");
+
+                    Intent intent1 = new Intent(TitleSummary.this, QuizAssessment.class);
+                    intent1.putExtra("questions", questionsArray.toString());
+                    startActivity(intent1);
+                } else {
+                    Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Toast.makeText(TitleSummary.this, "Error loading questions", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         button.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
             Intent logoutIntent = new Intent(getApplicationContext(), logpage.class);
             startActivity(logoutIntent);
-        });
-
-        btnStartActivity.setOnClickListener(v -> {
-            Intent quizIntent = new Intent(TitleSummary.this, QuizAssessment.class);
-            Intent intent1 = quizIntent.putExtra(difficulty);
-            startActivity(quizIntent);
         });
 
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
