@@ -26,6 +26,8 @@ public class QuizAssessment extends AppCompatActivity {
     FirebaseAuth auth;
     Button button;
     private int currentQuestionIndex = 0;
+    private int score = 0; // Variable to store the user's score
+
     TextView question;
     TextView choiceA, choiceB, choiceC, choiceD;
     ArrayList<String> textList;
@@ -45,7 +47,6 @@ public class QuizAssessment extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
         Intent intent = getIntent();
@@ -144,7 +145,8 @@ public class QuizAssessment extends AppCompatActivity {
             choiceC.setText(answer3List.get(currentQuestionIndex));
             choiceD.setText(answer4List.get(currentQuestionIndex));
         } else {
-            Toast.makeText(this, "Invalid question index", Toast.LENGTH_SHORT).show();
+            // Quiz finished, display score
+            Toast.makeText(this, "Quiz finished. Your score: " + score + "/" + textList.size(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -154,6 +156,7 @@ public class QuizAssessment extends AppCompatActivity {
             String correctAnswer = correctList.get(currentQuestionIndex);
             if (selectedAnswer.equals(correctAnswer)) {
                 Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
+                score++; // Increment the score for correct answer
             } else {
                 Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show();
             }
@@ -161,8 +164,8 @@ public class QuizAssessment extends AppCompatActivity {
             currentQuestionIndex++;
             displayQuestion();
         } else {
-            Toast.makeText(this, "Invalid answer list or index", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Thank You!", Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 }
-
