@@ -32,11 +32,11 @@ public class Compiler extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        webView = findViewById(R.id.webview);
-
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-
-        webView.loadUrl("file:///android_asset/codemirror.html");
+//        webView = findViewById(R.id.webview);
+//
+//        WebSettings webSettings = webView.getSettings();
+//        webSettings.setJavaScriptEnabled(true);
+//
+//        webView.loadUrl("file:///android_asset/codemirror.html");
     }
 }

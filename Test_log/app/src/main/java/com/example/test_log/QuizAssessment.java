@@ -181,30 +181,28 @@ public class QuizAssessment extends AppCompatActivity {
         FirebaseUser currentUser = auth.getCurrentUser();
 
         if (currentUser != null) {
-            // Get the user's email
+            String userUid = currentUser.getUid();
             String userEmail = currentUser.getEmail();
 
-            // Create a new document to store the quiz score
             Map<String, Object> quizScoreData = new HashMap<>();
-            quizScoreData.put("userEmail", userEmail); // Store the user's email
+            quizScoreData.put("userUid", userUid);
+            quizScoreData.put("userEmail", userEmail);
             quizScoreData.put("score", score);
-            quizScoreData.put("timestamp", System.currentTimeMillis()); // Add a timestamp for sorting
+            quizScoreData.put("timestamp", System.currentTimeMillis());
 
             // Add the quiz score document to the Firestore collection "QuizScores"
             db.collection("QuizScores")
                     .add(quizScoreData)
                     .addOnSuccessListener(documentReference -> {
-                        // Quiz score stored successfully
                         Toast.makeText(this, "Quiz score stored in Firestore", Toast.LENGTH_SHORT).show();
                     })
                     .addOnFailureListener(e -> {
-                        // Failed to store quiz score
                         Toast.makeText(this, "Error storing quiz score in Firestore", Toast.LENGTH_SHORT).show();
                     });
         } else {
-            // User is not logged in, handle this case as needed
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Error: User not logged in", Toast.LENGTH_SHORT).show();
         }
     }
+
 
 }

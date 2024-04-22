@@ -66,7 +66,6 @@ public class logpage extends AppCompatActivity {
             String password = editTextPassword.getText().toString();
             progressBar.setVisibility(View.VISIBLE);
 
-
             if (TextUtils.isEmpty(email)) {
                 Toast.makeText(logpage.this, "Enter Email", Toast.LENGTH_SHORT).show();
                 progressBar.setVisibility(View.GONE);
