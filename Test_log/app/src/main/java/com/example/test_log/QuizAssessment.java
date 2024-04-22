@@ -190,7 +190,6 @@ public class QuizAssessment extends AppCompatActivity {
             quizScoreData.put("score", score);
             quizScoreData.put("timestamp", System.currentTimeMillis());
 
-            // Add the quiz score document to the Firestore collection "QuizScores"
             db.collection("QuizScores")
                     .add(quizScoreData)
                     .addOnSuccessListener(documentReference -> {

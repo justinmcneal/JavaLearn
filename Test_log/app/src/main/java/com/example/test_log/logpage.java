@@ -61,66 +61,68 @@ public class logpage extends AppCompatActivity {
             }
         });
 
-        buttonLogin.setOnClickListener(v -> {
-            String email = editTextEmail.getText().toString();
-            String password = editTextPassword.getText().toString();
-            progressBar.setVisibility(View.VISIBLE);
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = editTextEmail.getText().toString();
+                String password = editTextPassword.getText().toString();
+                progressBar.setVisibility(View.VISIBLE);
 
-            if (TextUtils.isEmpty(email)) {
-                Toast.makeText(logpage.this, "Enter Email", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
-                mediaPlayer = MediaPlayer.create(this, R.raw.error);
-                mediaPlayer.setOnPreparedListener(MediaPlayer::start);
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(logpage.this, "Enter Email", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(MediaPlayer::start);
 
-            } else if (!email.endsWith("@gmail.com")) {
-                Toast.makeText(logpage.this, "Invalid email address", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
-                mediaPlayer = MediaPlayer.create(this, R.raw.error);
-                mediaPlayer.setOnPreparedListener(MediaPlayer::start);
+                } else if (!email.endsWith("@gmail.com")) {
+                    Toast.makeText(logpage.this, "Invalid email address", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(MediaPlayer::start);
 
-            } else if (TextUtils.isEmpty(password)) {
-                Toast.makeText(logpage.this, "Enter password", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.GONE);
-                mediaPlayer = MediaPlayer.create(this, R.raw.error);
-                mediaPlayer.setOnPreparedListener(MediaPlayer::start);
-            }
+                } else if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(logpage.this, "Enter password", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(MediaPlayer::start);
+                }
 
-            try {
-                mAuth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                progressBar.setVisibility(View.GONE);
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), "Sign In Successful", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.mismongsigninout);
-                                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                                        @Override
-                                        public void onPrepared(MediaPlayer mp) {
-                                            mediaPlayer.start();
-                                        }
-                                    });
-                                    startActivity(intent);
-                                    finish();
+                try {
+                    mAuth.signInWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    progressBar.setVisibility(View.GONE);
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "Sign In Successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        mediaPlayer = MediaPlayer.create(logpage.this, R.raw.mismongsigninout);
+                                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                            @Override
+                                            public void onPrepared(MediaPlayer mp) {
+                                                mediaPlayer.start();
+                                            }
+                                        });
+                                        startActivity(intent);
+                                        finish();
 
-                                } else {
-                                    Toast.makeText(logpage.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
-                                    mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
-                                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                                        @Override
-                                        public void onPrepared(MediaPlayer mp) {
-                                            mediaPlayer.start();
-                                        }
-                                    });
+                                    } else {
+                                        Toast.makeText(logpage.this, "Authentication failed.",
+                                                Toast.LENGTH_SHORT).show();
+                                        mediaPlayer = MediaPlayer.create(logpage.this, R.raw.error);
+                                        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                            @Override
+                                            public void onPrepared(MediaPlayer mp) {
+                                                mediaPlayer.start();
+                                            }
+                                        });
+                                    }
                                 }
-                            }
-                        });
-            } catch (Exception e) {
-                Log.d("dddd", e.toString());
+                            });
+                } catch (Exception e) {
+                    Log.d("dddd", e.toString());
+                }
             }
-
         });
     }
 }

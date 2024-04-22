@@ -31,13 +31,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
-import java.net.URL;
-import java.util.ArrayList;
 
 public class TitleSummary extends AppCompatActivity {
+    FirebaseUser user;
     private FirebaseAuth auth;
     private Button button;
-    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,36 +65,42 @@ public class TitleSummary extends AppCompatActivity {
         tvTitle.setText(title);
         tvSummary.setText(summary);
 
-        btnStartActivity.setOnClickListener(v -> {
-            try {
-                JSONObject lessonObject = JSONReader.loadJSONObjectFromAsset(TitleSummary.this, "lessons.json");
-                String difficulty = getIntent().getStringExtra("difficulty");
-                int position = getIntent().getIntExtra("position", -1); // Get the position
+        btnStartActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    JSONObject lessonObject = JSONReader.loadJSONObjectFromAsset(TitleSummary.this, "lessons.json");
+                    String difficulty = getIntent().getStringExtra("difficulty");
+                    int position = getIntent().getIntExtra("position", -1); // Get the position
 
-                JSONObject difficultyObject = lessonObject.getJSONObject("difficulty");
-                JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
+                    JSONObject difficultyObject = lessonObject.getJSONObject("difficulty");
+                    JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
 
-                // Check if the position is valid
-                if (position >= 0 && position < lessonArray.length()) {
-                    JSONObject lesson = lessonArray.getJSONObject(position);
-                    JSONArray questionsArray = lesson.getJSONArray("questions");
+                    // Check if the position is valid
+                    if (position >= 0 && position < lessonArray.length()) {
+                        JSONObject lesson = lessonArray.getJSONObject(position);
+                        JSONArray questionsArray = lesson.getJSONArray("questions");
 
-                    Intent intent1 = new Intent(TitleSummary.this, QuizAssessment.class);
-                    intent1.putExtra("questions", questionsArray.toString());
-                    startActivity(intent1);
-                } else {
-                    Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();
+                        Intent intent1 = new Intent(TitleSummary.this, QuizAssessment.class);
+                        intent1.putExtra("questions", questionsArray.toString());
+                        startActivity(intent1);
+                    } else {
+                        Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(TitleSummary.this, "Error loading questions", Toast.LENGTH_SHORT).show();
                 }
-            } catch (JSONException e) {
-                e.printStackTrace();
-                Toast.makeText(TitleSummary.this, "Error loading questions", Toast.LENGTH_SHORT).show();
             }
         });
 
-        button.setOnClickListener(v -> {
-            FirebaseAuth.getInstance().signOut();
-            Intent logoutIntent = new Intent(getApplicationContext(), logpage.class);
-            startActivity(logoutIntent);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent logoutIntent = new Intent(getApplicationContext(), logpage.class);
+                startActivity(logoutIntent);
+            }
         });
 
         FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
@@ -105,9 +109,9 @@ public class TitleSummary extends AppCompatActivity {
         downloadPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(user != null){
+                if (user != null) {
                     String filename = title + ".pdf";
-                    File localFile =new File(getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),filename);
+                    File localFile = new File(getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), filename);
                     storageRef.getFile(localFile)
                             .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
                                 @Override

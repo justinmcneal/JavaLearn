@@ -25,14 +25,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class LessonsActivity extends AppCompatActivity {
-    private FirebaseAuth auth;
-    private Button button;
-    private FirebaseUser user;
-    TextView textView;
-    private MediaPlayer mediaPlayer;
     private final ArrayList<String> titleArray = new ArrayList<>();
     private final ArrayList<String> summaryArray = new ArrayList<>();
     private final ArrayList<String> pdfArray = new ArrayList<>();
+    TextView textView;
+    private FirebaseAuth auth;
+    private Button button;
+    private FirebaseUser user;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class LessonsActivity extends AppCompatActivity {
         textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
 
-        if(user == null){
+        if (user == null) {
             Intent intent = new Intent(getApplicationContext(), logpage.class);
             startActivity(intent);
             finish();

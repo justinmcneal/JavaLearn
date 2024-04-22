@@ -19,11 +19,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private MediaPlayer mediaPlayer;
     FirebaseAuth auth;
     Button button;
     TextView textView;
     FirebaseUser user;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
 
-        if(user == null){
+        if (user == null) {
             Intent intent = new Intent(getApplicationContext(), logpage.class);
             startActivity(intent);
             finish();
