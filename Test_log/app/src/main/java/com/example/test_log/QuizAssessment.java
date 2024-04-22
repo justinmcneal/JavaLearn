@@ -14,12 +14,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class QuizAssessment extends AppCompatActivity {
 
@@ -37,6 +41,8 @@ public class QuizAssessment extends AppCompatActivity {
     ArrayList<String> answer4List;
     ArrayList<String> correctList;
 
+    private FirebaseFirestore db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +57,8 @@ public class QuizAssessment extends AppCompatActivity {
         button = findViewById(R.id.logout);
         Intent intent = getIntent();
         String questionsJsonString = intent.getStringExtra("questions");
+
+        db = FirebaseFirestore.getInstance();
 
         // Initialize views
         question = findViewById(R.id.question);
@@ -147,6 +155,8 @@ public class QuizAssessment extends AppCompatActivity {
         } else {
             // Quiz finished, display score
             Toast.makeText(this, "Quiz finished. Your score: " + score + "/" + textList.size(), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Thank You!", Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 
@@ -163,9 +173,38 @@ public class QuizAssessment extends AppCompatActivity {
             // Move to the next question
             currentQuestionIndex++;
             displayQuestion();
-        } else {
-            Toast.makeText(this, "Thank You!", Toast.LENGTH_SHORT).show();
-            finish();
         }
     }
+
+    private void storeQuizScoreInFirestore() {
+        // Get the currently logged-in user
+        FirebaseUser currentUser = auth.getCurrentUser();
+
+        if (currentUser != null) {
+            // Get the user's email
+            String userEmail = currentUser.getEmail();
+
+            // Create a new document to store the quiz score
+            Map<String, Object> quizScoreData = new HashMap<>();
+            quizScoreData.put("userEmail", userEmail); // Store the user's email
+            quizScoreData.put("score", score);
+            quizScoreData.put("timestamp", System.currentTimeMillis()); // Add a timestamp for sorting
+
+            // Add the quiz score document to the Firestore collection "QuizScores"
+            db.collection("QuizScores")
+                    .add(quizScoreData)
+                    .addOnSuccessListener(documentReference -> {
+                        // Quiz score stored successfully
+                        Toast.makeText(this, "Quiz score stored in Firestore", Toast.LENGTH_SHORT).show();
+                    })
+                    .addOnFailureListener(e -> {
+                        // Failed to store quiz score
+                        Toast.makeText(this, "Error storing quiz score in Firestore", Toast.LENGTH_SHORT).show();
+                    });
+        } else {
+            // User is not logged in, handle this case as needed
+            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }

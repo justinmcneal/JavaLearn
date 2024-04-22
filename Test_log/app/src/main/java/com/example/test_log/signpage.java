@@ -3,6 +3,7 @@ package com.example.test_log;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -22,17 +23,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class signpage extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     TextView textView;
-    TextInputEditText editTextEmail, editTextPassword;
-//    editTextName
+    TextInputEditText editTextEmail, editTextPassword, editTextName;
     Button buttonSign;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
-//    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class signpage extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
-//      editTextName = findViewById(R.id.fullname);
+      editTextName = findViewById(R.id.fullname);
         buttonSign = findViewById(R.id.btn_signup);
         textView = findViewById(R.id.othersignin);
 
@@ -65,9 +66,22 @@ public class signpage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
-                String email, password;
+                String email, password, fullname;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
+                fullname = String.valueOf(editTextName.getText());
+
+                if (TextUtils.isEmpty(fullname)){
+                    Toast.makeText(signpage.this, "Enter Name", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    mediaPlayer = MediaPlayer.create(signpage.this, R.raw.error);
+                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mp) {
+                            mediaPlayer.start();
+                        }
+                    });
+                }
 
                 if (TextUtils.isEmpty(email)){
                     Toast.makeText(signpage.this,"Enter Email", Toast.LENGTH_SHORT).show();
@@ -108,7 +122,7 @@ public class signpage extends AppCompatActivity {
                     return;
                 }
 
-                mAuth.createUserWithEmailAndPassword(email,password)
+                mAuth.createUserWithEmailAndPassword(email,password, fullname)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
