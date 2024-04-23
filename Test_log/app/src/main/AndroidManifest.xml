@@ -18,9 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Test_log"
         tools:targetApi="31">
-        <activity
-            android:name=".displayidentification"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".displayidentification"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".Identification"
             android:exported="false" />

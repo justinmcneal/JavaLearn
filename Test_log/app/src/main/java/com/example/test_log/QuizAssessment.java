@@ -15,7 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,7 +42,9 @@ public class QuizAssessment extends AppCompatActivity {
     ArrayList<String> answer4List;
     ArrayList<String> correctList;
 
-    private FirebaseFirestore db;
+    private String title;
+
+    private DatabaseReference dbRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +60,9 @@ public class QuizAssessment extends AppCompatActivity {
         button = findViewById(R.id.logout);
         Intent intent = getIntent();
         String questionsJsonString = intent.getStringExtra("questions");
+        title = intent.getStringExtra("title"); // Assign the value here
 
-        db = FirebaseFirestore.getInstance();
+        dbRef = FirebaseDatabase.getInstance().getReference().child("QuizScores");
 
         // Initialize views
         question = findViewById(R.id.question);
@@ -156,6 +160,7 @@ public class QuizAssessment extends AppCompatActivity {
             // Quiz finished, display score
             Toast.makeText(this, "Quiz finished. Your score: " + score + "/" + textList.size(), Toast.LENGTH_LONG).show();
             Toast.makeText(this, "Thank You!", Toast.LENGTH_SHORT).show();
+            storeQuizScoreInDatabase(); // Call method to store the score in the database
             finish();
         }
     }
@@ -176,7 +181,7 @@ public class QuizAssessment extends AppCompatActivity {
         }
     }
 
-    private void storeQuizScoreInFirestore() {
+    private void storeQuizScoreInDatabase() {
         // Get the currently logged-in user
         FirebaseUser currentUser = auth.getCurrentUser();
 
@@ -184,24 +189,26 @@ public class QuizAssessment extends AppCompatActivity {
             String userUid = currentUser.getUid();
             String userEmail = currentUser.getEmail();
 
+            // Create a new entry under the user's UID in the database
+            DatabaseReference userScoreRef = dbRef.child(userUid).push();
+
+            // Store the quiz score data
             Map<String, Object> quizScoreData = new HashMap<>();
-            quizScoreData.put("userUid", userUid);
             quizScoreData.put("userEmail", userEmail);
             quizScoreData.put("score", score);
+            quizScoreData.put("title", title);
             quizScoreData.put("timestamp", System.currentTimeMillis());
 
-            db.collection("QuizScores")
-                    .add(quizScoreData)
-                    .addOnSuccessListener(documentReference -> {
-                        Toast.makeText(this, "Quiz score stored in Firestore", Toast.LENGTH_SHORT).show();
+            // Set the value in the database
+            userScoreRef.setValue(quizScoreData)
+                    .addOnSuccessListener(aVoid -> {
+                        Toast.makeText(this, "Quiz score stored in Realtime Database", Toast.LENGTH_SHORT).show();
                     })
                     .addOnFailureListener(e -> {
-                        Toast.makeText(this, "Error storing quiz score in Firestore", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Error storing quiz score in Realtime Database", Toast.LENGTH_SHORT).show();
                     });
         } else {
             Toast.makeText(this, "Error: User not logged in", Toast.LENGTH_SHORT).show();
         }
     }
-
-
 }
