@@ -44,6 +44,7 @@ public class logsignpage extends AppCompatActivity {
         });
 
         Button logpage = findViewById(R.id.signinfirst);
+
         logpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +55,7 @@ public class logsignpage extends AppCompatActivity {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
                         mediaPlayer.start();
+
                     }
                 });
             }

@@ -56,33 +56,45 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_fullname"
-        android:layout_width="match_parent"
+    <CheckBox
+        android:layout_marginTop="10dp"
+        android:id="@+id/show_password_checkbox"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/edt_email"
-        android:layout_marginHorizontal="14dp"
-        android:layout_marginTop="18dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/fullname"
-            android:hint="@string/full_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_alignParentEnd="true"
+        android:text="Show Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password"
+        android:layout_marginLeft="14dp"/>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/edt_fullname"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/edt_email"-->
+<!--        android:layout_marginHorizontal="14dp"-->
+<!--        android:layout_marginTop="18dp">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/fullname"-->
+<!--            android:hint="@string/full_name"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/edt_fullname"
         android:layout_marginHorizontal="14dp"
-        android:layout_marginTop="18dp">
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
-            android:hint="@string/password"
-            android:inputType="textPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar

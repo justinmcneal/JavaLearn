@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -66,12 +67,20 @@ public class LessonsActivity extends AppCompatActivity {
     private void setupLogoutButton() {
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
-        button.setOnClickListener(v -> {
-            auth.signOut();
-            Intent intent = new Intent(this, logpage.class);
-            startActivity(intent);
-            mediaPlayer = MediaPlayer.create(this, R.raw.logout);
-            mediaPlayer.setOnPreparedListener(MediaPlayer::start);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                Intent intent = new Intent(LessonsActivity.this, logsignpage.class);
+                startActivity(intent);
+                mediaPlayer = MediaPlayer.create(LessonsActivity.this, R.raw.logout);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
+            }
         });
     }
 
@@ -108,6 +117,7 @@ public class LessonsActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(LessonsActivity.this, TitleSummary.class);
+
             intent.putExtra("title", titleArray.get(position));
             intent.putExtra("summary", summaryArray.get(position));
             intent.putExtra("pdf_file", pdfArray.get(position));

@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
-
                         mediaPlayer.start();
                     }
                 });
@@ -72,13 +71,12 @@ public class MainActivity extends AppCompatActivity {
         CardView btnMedium = findViewById(R.id.medium_cv);
         CardView btnHard = findViewById(R.id.hard_cv);
         CardView btnIdentification = findViewById(R.id.identificationAssessment);
-        CardView btnCompiler = findViewById(R.id.compiler);
 
         btnEasy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LessonsActivity.class);
-                String difficulty = "easy";
+                String difficulty = "easy"; //hindi pa to JSON kumbaga ito ung icacall mo as JSON later on
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
                 mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
@@ -98,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
                 String difficulty = "medium";
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);
-
                 mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
                 mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
@@ -133,23 +130,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, PeriodicBtn.class);
-                String difficulty = "easy";
-                intent.putExtra("difficulty", difficulty);
-                startActivity(intent);
-                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.easymediumhard);
-                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                    @Override
-                    public void onPrepared(MediaPlayer mp) {
-                        mediaPlayer.start();
-                    }
-                });
-            }
-        });
-
-        btnCompiler.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Compiler.class);
                 String difficulty = "easy";
                 intent.putExtra("difficulty", difficulty);
                 startActivity(intent);

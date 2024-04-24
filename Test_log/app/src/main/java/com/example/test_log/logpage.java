@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,6 +36,8 @@ public class logpage extends AppCompatActivity {
     ProgressBar progressBar;
     private MediaPlayer mediaPlayer;
 
+    private CheckBox checkBox;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +56,8 @@ public class logpage extends AppCompatActivity {
         editTextPassword = findViewById(R.id.password);
         buttonLogin = findViewById(R.id.btn_signin);
         textView = findViewById(R.id.othersignup);
+        checkBox = findViewById(R.id.show_password_checkbox);
+
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +128,17 @@ public class logpage extends AppCompatActivity {
                             });
                 } catch (Exception e) {
                     Log.d("dddd", e.toString());
+                }
+            }
+        });
+
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    editTextPassword.setTransformationMethod(null);
+                } else {
+                    editTextPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 }
             }
         });

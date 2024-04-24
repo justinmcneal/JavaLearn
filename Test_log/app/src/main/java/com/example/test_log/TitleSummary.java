@@ -48,7 +48,7 @@ public class TitleSummary extends AppCompatActivity {
             return insets;
         });
 
-        auth = FirebaseAuth.getInstance(); // Initialize auth here
+        auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
         button = findViewById(R.id.logout);
 
@@ -71,7 +71,7 @@ public class TitleSummary extends AppCompatActivity {
                 try {
                     JSONObject lessonObject = JSONReader.loadJSONObjectFromAsset(TitleSummary.this, "lessons.json");
                     String difficulty = getIntent().getStringExtra("difficulty");
-                    int position = getIntent().getIntExtra("position", -1); // Get the position
+                    int position = getIntent().getIntExtra("position", -1);
 
                     JSONObject difficultyObject = lessonObject.getJSONObject("difficulty");
                     JSONArray lessonArray = difficultyObject.getJSONArray(difficulty);
@@ -83,6 +83,7 @@ public class TitleSummary extends AppCompatActivity {
 
                         Intent intent1 = new Intent(TitleSummary.this, QuizAssessment.class);
                         intent1.putExtra("questions", questionsArray.toString());
+                        intent1.putExtra("title", title); // Pass the title here
                         startActivity(intent1);
                     } else {
                         Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();

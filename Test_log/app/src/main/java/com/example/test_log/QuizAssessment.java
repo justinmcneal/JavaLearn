@@ -64,7 +64,6 @@ public class QuizAssessment extends AppCompatActivity {
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("QuizScores");
 
-        // Initialize views
         question = findViewById(R.id.question);
         choiceA = findViewById(R.id.choiceA);
         choiceB = findViewById(R.id.choiceB);
@@ -90,7 +89,6 @@ public class QuizAssessment extends AppCompatActivity {
             answer4List = new ArrayList<>();
             correctList = new ArrayList<>();
 
-            // Loop through the questions array and extract data
             for (int i = 0; i < questionsArray.length(); i++) {
                 JSONObject questionObject = questionsArray.getJSONObject(i);
                 // Extract question text
@@ -105,7 +103,7 @@ public class QuizAssessment extends AppCompatActivity {
                 answer2List.add(answer2);
                 answer3List.add(answer3);
                 answer4List.add(answer4);
-                // Extract correct answer
+
                 String correct = questionObject.getString("correct");
                 correctList.add(correct);
             }
@@ -118,7 +116,6 @@ public class QuizAssessment extends AppCompatActivity {
             Toast.makeText(this, "Error parsing JSON", Toast.LENGTH_SHORT).show();
         }
 
-        // Click listeners for choices
         choiceA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,8 +156,7 @@ public class QuizAssessment extends AppCompatActivity {
         } else {
             // Quiz finished, display score
             Toast.makeText(this, "Quiz finished. Your score: " + score + "/" + textList.size(), Toast.LENGTH_LONG).show();
-            Toast.makeText(this, "Thank You!", Toast.LENGTH_SHORT).show();
-            storeQuizScoreInDatabase(title); // Call method to store the score in the database
+            storeQuizScoreInDatabase(title);
             finish();
         }
     }

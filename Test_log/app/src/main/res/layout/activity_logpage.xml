@@ -72,6 +72,17 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <CheckBox
+        android:id="@+id/show_password_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Show Password"
+        app:layout_constraintBottom_toTopOf="@+id/btn_signin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password"
+        android:layout_marginLeft="14dp"/>
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:visibility="gone"
