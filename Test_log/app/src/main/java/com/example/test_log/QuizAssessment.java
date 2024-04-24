@@ -145,7 +145,6 @@ public class QuizAssessment extends AppCompatActivity {
         });
     }
 
-    // Method to display the current question
     private void displayQuestion() {
         if (textList != null && currentQuestionIndex >= 0 && currentQuestionIndex < textList.size()) {
             question.setText(textList.get(currentQuestionIndex));
@@ -156,12 +155,11 @@ public class QuizAssessment extends AppCompatActivity {
         } else {
             // Quiz finished, display score
             Toast.makeText(this, "Quiz finished. Your score: " + score + "/" + textList.size(), Toast.LENGTH_LONG).show();
-            storeQuizScoreInDatabase(title);
+            storeQuizScoreInDatabase();
             finish();
         }
     }
 
-    // Method to check the user's answer
     private void checkAnswer(String selectedAnswer) {
         if (correctList != null && currentQuestionIndex >= 0 && currentQuestionIndex < correctList.size()) {
             String correctAnswer = correctList.get(currentQuestionIndex);
@@ -171,14 +169,12 @@ public class QuizAssessment extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Incorrect!", Toast.LENGTH_SHORT).show();
             }
-            // Move to the next question
             currentQuestionIndex++;
             displayQuestion();
         }
     }
 
-    private void storeQuizScoreInDatabase(String title) {
-        // Get the currently logged-in user
+    private void storeQuizScoreInDatabase() {
         FirebaseUser currentUser = auth.getCurrentUser();
 
         if (currentUser != null) {

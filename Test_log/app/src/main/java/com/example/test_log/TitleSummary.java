@@ -83,7 +83,7 @@ public class TitleSummary extends AppCompatActivity {
 
                         Intent intent1 = new Intent(TitleSummary.this, QuizAssessment.class);
                         intent1.putExtra("questions", questionsArray.toString());
-                        intent1.putExtra("title", title); // Pass the title here
+                        intent1.putExtra("title", title);
                         startActivity(intent1);
                     } else {
                         Toast.makeText(TitleSummary.this, "Invalid position", Toast.LENGTH_SHORT).show();

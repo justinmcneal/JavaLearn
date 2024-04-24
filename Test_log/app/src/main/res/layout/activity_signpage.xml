@@ -111,7 +111,7 @@
         android:id="@+id/btn_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rectangle_btn"
+        android:backgroundTint="#000080"
         android:text="@string/sign_up"
         app:layout_constraintBottom_toTopOf="@+id/othersignin"
         app:layout_constraintEnd_toEndOf="parent"

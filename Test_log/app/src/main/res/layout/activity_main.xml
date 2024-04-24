@@ -11,7 +11,7 @@
         android:id="@+id/user_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello fucker"
+        android:text="Hello"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintVertical_bias="0.975"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,6 +48,7 @@
             android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#000080"
             android:layout_marginLeft="66dp"
             android:layout_marginTop="30dp"
             android:text="@string/log_out" />
@@ -63,7 +64,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -95,21 +95,10 @@
                 android:layout_height="wrap_content"
                 android:text="Lessons: 8"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/progress_card"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toBottomOf="@+id/title_card" />
 
-            <TextView
-                android:id="@+id/progress_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Progress: 99.9999999"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-                android:layout_marginBottom="10dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -155,21 +144,10 @@
                 android:layout_height="wrap_content"
                 android:text="Lessons: 8"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/progress_card2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
                 app:layout_constraintTop_toBottomOf="@+id/title_card2" />
 
-            <TextView
-                android:id="@+id/progress_card2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Progress: 99.9999999"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                android:layout_marginBottom="10dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -215,21 +193,10 @@
                 android:layout_height="wrap_content"
                 android:text="Lessons: 8"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/progress_card3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toBottomOf="@+id/title_card3" />
 
-            <TextView
-                android:id="@+id/progress_card3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Progress: 99.9999999"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                android:layout_marginBottom="10dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -255,7 +222,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/hard" />
+                app:srcCompat="@drawable/identification" />
 
             <TextView
                 android:id="@+id/title_card4"
@@ -264,10 +231,20 @@
                 android:text="Identification"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lesson_card4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Periods: 3"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/title_card4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

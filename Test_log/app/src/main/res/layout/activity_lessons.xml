@@ -12,7 +12,7 @@
         android:id="@+id/user_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello fucker"
+        android:text="Hello"
         app:layout_constraintHorizontal_bias=".5"
         app:layout_constraintVertical_bias="0.975"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,6 +49,7 @@
             android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#000080"
             android:layout_marginLeft="66dp"
             android:layout_marginTop="30dp"
             android:text="@string/log_out" />

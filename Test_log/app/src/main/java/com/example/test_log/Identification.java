@@ -39,6 +39,8 @@ public class Identification extends AppCompatActivity {
     private final ArrayList<String> answerArray = new ArrayList<>();
     private int currentQuestionIndex = 0;
     private DatabaseReference dbRef;
+    private String assessmentId; // Unique ID for each assessment attempt
+    private int totalScore = 0; // Total score for the assessment
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +73,8 @@ public class Identification extends AppCompatActivity {
             textView.setText(user.getEmail());
         }
 
-        dbRef = FirebaseDatabase.getInstance().getReference().child("UserAnswers");
+        dbRef = FirebaseDatabase.getInstance().getReference().child("IdentificationScores");
+        assessmentId = generateAssessmentId(); // Generate a unique assessment ID
     }
 
     private void setupLogoutButton() {
@@ -124,12 +127,10 @@ public class Identification extends AppCompatActivity {
 
         if (userAnswer.equalsIgnoreCase(correctAnswer)) {
             Toast.makeText(this, "Correct answer!", Toast.LENGTH_SHORT).show();
+            totalScore++; // Increment total score for correct answer
         } else {
             Toast.makeText(this, "Incorrect answer.", Toast.LENGTH_SHORT).show();
         }
-
-        String examName = "PeriodicExam" + (currentQuestionIndex + 1); // Create the exam name
-        saveUserAnswerToDatabase(examName, userAnswer, correctAnswer, questionArray.get(currentQuestionIndex));
 
         currentQuestionIndex++;
 
@@ -139,35 +140,42 @@ public class Identification extends AppCompatActivity {
             answerEditText.getText().clear();
         } else {
             Toast.makeText(this, "You have answered all questions.", Toast.LENGTH_SHORT).show();
+            String examName = "Assessment_" + assessmentId; // Use assessmentId for the assessment location
+            saveUserScoreToDatabase(examName, totalScore, getIntent().getStringExtra("difficulty"));
             finish(); // Finish the activity when there are no more questions left
         }
     }
 
+    private String generateAssessmentId() {
+        // Generate a unique assessment ID based on timestamp or any other criteria
+        // For simplicity, here we are using current timestamp
+        return String.valueOf(System.currentTimeMillis());
+    }
 
-    private void saveUserAnswerToDatabase(String examName, String userAnswer, String correctAnswer, String question) {
+    private void saveUserScoreToDatabase(String examName, int totalScore, String difficultyLevel) {
         FirebaseUser currentUser = auth.getCurrentUser();
 
         if (currentUser != null) {
             String userUid = currentUser.getUid();
-            DatabaseReference userAnswersRef = dbRef.child(userUid).child(examName); // Append examName here
+            DatabaseReference userScoresRef = dbRef.child(userUid).child(examName);
 
-            // Create a new entry under the user's UID in the database
-            DatabaseReference userAnswerRef = userAnswersRef.push();
+            // Create a new entry under the assessment location in the database
+            DatabaseReference userScoreRef = userScoresRef.push();
 
-            // Store the user answer data
-            Map<String, Object> userAnswerData = new HashMap<>();
-            userAnswerData.put("question", question);
-            userAnswerData.put("userAnswer", userAnswer);
-            userAnswerData.put("correctAnswer", correctAnswer);
-            userAnswerData.put("timestamp", ServerValue.TIMESTAMP);
+            // Store the user score data including difficulty level
+            Map<String, Object> userScoreData = new HashMap<>();
+            userScoreData.put("totalScore", totalScore);
+            userScoreData.put("difficultyLevel", difficultyLevel); // Add difficulty level
+            userScoreData.put("timestamp", ServerValue.TIMESTAMP);
+            userScoreData.put("userEmail", currentUser.getEmail());
 
             // Set the value in the database
-            userAnswerRef.setValue(userAnswerData)
+            userScoreRef.setValue(userScoreData)
                     .addOnSuccessListener(aVoid -> {
-                        Log.d("Firebase", "User answer stored in Realtime Database");
+                        Log.d("Firebase", "User score stored in Realtime Database");
                     })
                     .addOnFailureListener(e -> {
-                        Log.e("Firebase", "Error storing user answer in Realtime Database", e);
+                        Log.e("Firebase", "Error storing user score in Realtime Database", e);
                     });
         } else {
             Log.e("Firebase", "Error: User not logged in");

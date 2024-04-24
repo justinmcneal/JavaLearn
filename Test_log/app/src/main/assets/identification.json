@@ -271,83 +271,83 @@
     "hard": [
       {
         "question": "This is a program that is called within another application—often a Web browser",
-        "correct": ""
+        "correct": "Applet"
       },
       {
         "question": "It is an object that controls the layout of components inside a Container object.",
-        "correct": ""
+        "correct": "layout manager"
       },
       {
         "question": "This class is utilized to arrange components in rows across the width of a Container",
-        "correct": ""
+        "correct": "FlowLayout Manager"
       },
       {
         "question": "It is a methodology or paradigm to design a program using classes and objects.",
-        "correct": ""
+        "correct": "Object-Oriented Programming"
       },
       {
         "question": "This key feature of OOP allows us to create a new class from an existing class.",
-        "correct": ""
+        "correct": "Inheritance"
       },
       {
         "question": "What is the main purpose of the render method?",
-        "correct": ""
+        "correct": "render the shape"
       },
       {
         "question": "It is a method that is always called after the init() and start()methods execute. ",
-        "correct": ""
+        "correct": "paint()"
       },
       {
         "question": "It is used to suspend the threads which are not required when the applet is in the background or is not visible on the screen.",
-        "correct": ""
+        "correct": "stop()"
       },
       {
         "question": "When you use this, the components fill the screen in five regions: north, south, east, west, and center.",
-        "correct": ""
+        "correct": "BorderLayout Manager"
       },
       {
         "question": "It is any entity that has a state and behavior. It is called an instance of a class.",
-        "correct": ""
+        "correct": "object"
       },
       {
         "question": "It prevents outer classes from accessing and changing fields and methods of a class.",
-        "correct": ""
+        "correct": "Encapsulation"
       },
       {
         "question": "It is a program module that contains a series of statements that carry out a task.",
-        "correct": ""
+        "correct": "method"
       },
       {
         "question": "This type of method signifies that we can create our own method based on our requirements.",
-        "correct": ""
+        "correct": "User-defined Methods"
       },
       {
         "question": "These are built-in methods in Java that are available to use.",
-        "correct": ""
+        "correct": "Standard Library Methods"
       },
       {
         "question": "It defines access types whether the method is public, private, and so on. ",
-        "correct": ""
+        "correct": "modifier"
       },
       {
         "question": "It includes the programming statements that are used to perform some tasks.",
-        "correct": ""
+        "correct": "method body"
       },
       {
         "question": "It is used to arrange components into equal rows and columns.",
-        "correct": ""
+        "correct": "GridLayout Manager"
       },
       {
         "question": "This method sets the color for the object by specific color.",
-        "correct": ""
+        "correct": "Graphics.setColor()"
       },
       {
         "question": "This method is used to fill the color inside the oval by specified color",
-        "correct": ""
+        "correct": "Graphics.fillOval()"
       },
       {
         "question": "This is used to arrange components into equal rows and columns. ",
-        "correct": ""
+        "correct": "GridLayout Manager"
       }
     ]
   }

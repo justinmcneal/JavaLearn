@@ -36,30 +36,22 @@
             android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#000080"
             android:layout_marginLeft="66dp"
             android:layout_marginTop="30dp"
             android:text="@string/log_out" />
 
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_weight="1"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:background="@color/lightblue"
+        android:background="@color/white"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar2">
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
 
         <TextView
@@ -76,10 +68,12 @@
 
 
     <Button
+        android:layout_marginTop="10dp"
         android:id="@+id/choiceA"
         android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
         android:layout_height="55dp"
-        android:background="@drawable/round_corner"
+        android:backgroundTint="#000080"
         android:gravity="center"
         android:text="Choice A"
         android:textColor="@color/white"
@@ -91,9 +85,10 @@
     <Button
         android:id="@+id/choiceB"
         android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
         android:layout_height="55dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/round_corner"
+        android:backgroundTint="#000080"
         android:gravity="center"
         android:text="Choice B"
         android:textColor="@color/white"
@@ -105,9 +100,10 @@
     <Button
         android:id="@+id/choiceC"
         android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
         android:layout_height="55dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/round_corner"
+        android:backgroundTint="#000080"
         android:gravity="center"
         android:text="Choice C"
         android:textColor="@color/white"
@@ -118,9 +114,10 @@
     <Button
         android:id="@+id/choiceD"
         android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
         android:layout_height="55dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/round_corner"
+        android:backgroundTint="#000080"
         android:gravity="center"
         android:text="Choice D"
         android:textColor="@color/white"
