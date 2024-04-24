@@ -17,12 +17,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Identification extends AppCompatActivity {
     private FirebaseAuth auth;
@@ -33,6 +38,7 @@ public class Identification extends AppCompatActivity {
     private final ArrayList<String> questionArray = new ArrayList<>();
     private final ArrayList<String> answerArray = new ArrayList<>();
     private int currentQuestionIndex = 0;
+    private DatabaseReference dbRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +70,8 @@ public class Identification extends AppCompatActivity {
         } else {
             textView.setText(user.getEmail());
         }
+
+        dbRef = FirebaseDatabase.getInstance().getReference().child("UserAnswers");
     }
 
     private void setupLogoutButton() {
@@ -120,6 +128,9 @@ public class Identification extends AppCompatActivity {
             Toast.makeText(this, "Incorrect answer.", Toast.LENGTH_SHORT).show();
         }
 
+        String examName = "PeriodicExam" + (currentQuestionIndex + 1); // Create the exam name
+        saveUserAnswerToDatabase(examName, userAnswer, correctAnswer, questionArray.get(currentQuestionIndex));
+
         currentQuestionIndex++;
 
         if (currentQuestionIndex < questionArray.size()) {
@@ -128,6 +139,38 @@ public class Identification extends AppCompatActivity {
             answerEditText.getText().clear();
         } else {
             Toast.makeText(this, "You have answered all questions.", Toast.LENGTH_SHORT).show();
+            finish(); // Finish the activity when there are no more questions left
+        }
+    }
+
+
+    private void saveUserAnswerToDatabase(String examName, String userAnswer, String correctAnswer, String question) {
+        FirebaseUser currentUser = auth.getCurrentUser();
+
+        if (currentUser != null) {
+            String userUid = currentUser.getUid();
+            DatabaseReference userAnswersRef = dbRef.child(userUid).child(examName); // Append examName here
+
+            // Create a new entry under the user's UID in the database
+            DatabaseReference userAnswerRef = userAnswersRef.push();
+
+            // Store the user answer data
+            Map<String, Object> userAnswerData = new HashMap<>();
+            userAnswerData.put("question", question);
+            userAnswerData.put("userAnswer", userAnswer);
+            userAnswerData.put("correctAnswer", correctAnswer);
+            userAnswerData.put("timestamp", ServerValue.TIMESTAMP);
+
+            // Set the value in the database
+            userAnswerRef.setValue(userAnswerData)
+                    .addOnSuccessListener(aVoid -> {
+                        Log.d("Firebase", "User answer stored in Realtime Database");
+                    })
+                    .addOnFailureListener(e -> {
+                        Log.e("Firebase", "Error storing user answer in Realtime Database", e);
+                    });
+        } else {
+            Log.e("Firebase", "Error: User not logged in");
         }
     }
 }

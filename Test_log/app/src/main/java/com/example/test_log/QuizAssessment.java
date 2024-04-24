@@ -160,7 +160,7 @@ public class QuizAssessment extends AppCompatActivity {
             // Quiz finished, display score
             Toast.makeText(this, "Quiz finished. Your score: " + score + "/" + textList.size(), Toast.LENGTH_LONG).show();
             Toast.makeText(this, "Thank You!", Toast.LENGTH_SHORT).show();
-            storeQuizScoreInDatabase(); // Call method to store the score in the database
+            storeQuizScoreInDatabase(title); // Call method to store the score in the database
             finish();
         }
     }
@@ -181,7 +181,7 @@ public class QuizAssessment extends AppCompatActivity {
         }
     }
 
-    private void storeQuizScoreInDatabase() {
+    private void storeQuizScoreInDatabase(String title) {
         // Get the currently logged-in user
         FirebaseUser currentUser = auth.getCurrentUser();
 
