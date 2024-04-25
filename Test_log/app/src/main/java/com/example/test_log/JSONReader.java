@@ -1,8 +1,6 @@
 package com.example.test_log;
 
 import android.content.Context;
-import android.content.res.AssetManager;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;

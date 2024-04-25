@@ -30,7 +30,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class signpage extends AppCompatActivity {
     TextView textView;
-    TextInputEditText editTextEmail, editTextPassword, editTextName;
+    TextInputEditText editTextEmail, editTextPassword;
     Button buttonSign;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
@@ -58,7 +58,7 @@ public class signpage extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(signpage.this, logpage.class); // Change to logpage.class
+                Intent intent = new Intent(signpage.this, MainActivity.class); // Change to logpage.class
                 startActivity(intent);
                 finish();
             }
@@ -72,19 +72,18 @@ public class signpage extends AppCompatActivity {
                 String email, password, fullname;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
-                fullname = String.valueOf(editTextName.getText());
 
-                if (TextUtils.isEmpty(fullname)) {
-                    Toast.makeText(signpage.this, "Enter Name", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.GONE);
-                    mediaPlayer = MediaPlayer.create(signpage.this, R.raw.error);
-                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                        @Override
-                        public void onPrepared(MediaPlayer mp) {
-                            mediaPlayer.start();
-                        }
-                    });
-                }
+//                if (TextUtils.isEmpty(fullname)) {
+//                    Toast.makeText(signpage.this, "Enter Name", Toast.LENGTH_SHORT).show();
+//                    progressBar.setVisibility(View.GONE);
+//                    mediaPlayer = MediaPlayer.create(signpage.this, R.raw.error);
+//                    mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//                        @Override
+//                        public void onPrepared(MediaPlayer mp) {
+//                            mediaPlayer.start();
+//                        }
+//                    });
+//                }
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(signpage.this, "Enter Email", Toast.LENGTH_SHORT).show();

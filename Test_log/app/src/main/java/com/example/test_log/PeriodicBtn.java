@@ -20,7 +20,6 @@ public class PeriodicBtn extends AppCompatActivity {
     private FirebaseAuth auth;
     TextView textView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

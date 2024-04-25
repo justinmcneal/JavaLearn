@@ -24,9 +24,9 @@
         <activity
             android:name=".Identification"
             android:exported="false" />
-        <activity
-            android:name=".Compiler"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".Compiler"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".PeriodicBtn"
             android:exported="false" />
@@ -36,9 +36,9 @@
         <activity
             android:name=".TitleSummary"
             android:exported="false" />
-        <activity
-            android:name=".ListView"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".ListView"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".LessonsActivity"
             android:exported="false" />

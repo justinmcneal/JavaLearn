@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -39,8 +41,8 @@ public class Identification extends AppCompatActivity {
     private final ArrayList<String> answerArray = new ArrayList<>();
     private int currentQuestionIndex = 0;
     private DatabaseReference dbRef;
-    private String assessmentId; // Unique ID for each assessment attempt
-    private int totalScore = 0; // Total score for the assessment
+    private String assessmentId; // basta mag random ID for each attempt
+    private int totalScore = 0; // total score
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +62,12 @@ public class Identification extends AppCompatActivity {
         user = auth.getCurrentUser();
 
         Button submitButton = findViewById(R.id.submit_btn);
-        submitButton.setOnClickListener(v -> submitAnswer());
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                submitAnswer();
+            }
+        });
 
         String difficulty = getIntent().getStringExtra("difficulty");
         loadQuestions(difficulty);
@@ -74,20 +81,27 @@ public class Identification extends AppCompatActivity {
         }
 
         dbRef = FirebaseDatabase.getInstance().getReference().child("IdentificationScores");
-        assessmentId = generateAssessmentId(); // Generate a unique assessment ID
+        assessmentId = generateAssessmentId();
     }
 
     private void setupLogoutButton() {
         auth = FirebaseAuth.getInstance();
         button = findViewById(R.id.logout);
-        button.setOnClickListener(v -> {
-            auth.signOut();
-            Intent intent = new Intent(this, logpage.class);
-            startActivity(intent);
-            mediaPlayer = MediaPlayer.create(this, R.raw.logout);
-            mediaPlayer.setOnPreparedListener(MediaPlayer::start);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auth.signOut();
+                Intent intent = new Intent(Identification.this, logpage.class);
+                startActivity(intent);
+                mediaPlayer = MediaPlayer.create(Identification.this, R.raw.logout);
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
+            }
         });
-
     }
 
     private void loadQuestions(String difficulty) {
@@ -127,7 +141,7 @@ public class Identification extends AppCompatActivity {
 
         if (userAnswer.equalsIgnoreCase(correctAnswer)) {
             Toast.makeText(this, "Correct answer!", Toast.LENGTH_SHORT).show();
-            totalScore++; // Increment total score for correct answer
+            totalScore++;
         } else {
             Toast.makeText(this, "Incorrect answer.", Toast.LENGTH_SHORT).show();
         }
@@ -142,13 +156,12 @@ public class Identification extends AppCompatActivity {
             Toast.makeText(this, "You have answered all questions.", Toast.LENGTH_SHORT).show();
             String examName = "Assessment_" + assessmentId; // Use assessmentId for the assessment location
             saveUserScoreToDatabase(examName, totalScore, getIntent().getStringExtra("difficulty"));
-            finish(); // Finish the activity when there are no more questions left
+            finish();
         }
     }
 
+    @NonNull
     private String generateAssessmentId() {
-        // Generate a unique assessment ID based on timestamp or any other criteria
-        // For simplicity, here we are using current timestamp
         return String.valueOf(System.currentTimeMillis());
     }
 
@@ -158,11 +171,8 @@ public class Identification extends AppCompatActivity {
         if (currentUser != null) {
             String userUid = currentUser.getUid();
             DatabaseReference userScoresRef = dbRef.child(userUid).child(examName);
-
-            // Create a new entry under the assessment location in the database
             DatabaseReference userScoreRef = userScoresRef.push();
 
-            // Store the user score data including difficulty level
             Map<String, Object> userScoreData = new HashMap<>();
             userScoreData.put("totalScore", totalScore);
             userScoreData.put("difficultyLevel", difficultyLevel); // Add difficulty level
@@ -170,7 +180,8 @@ public class Identification extends AppCompatActivity {
             userScoreData.put("userEmail", currentUser.getEmail());
 
             // Set the value in the database
-            userScoreRef.setValue(userScoreData)
+            userScoreRef.setValue(userScoreData) //indicates that it does not return any spwific value
+                    // just a convention for a parameter name that doesn't have any significant meaning beyond indicating that it represents the absence of a return value.
                     .addOnSuccessListener(aVoid -> {
                         Log.d("Firebase", "User score stored in Realtime Database");
                     })

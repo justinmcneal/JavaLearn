@@ -58,7 +58,6 @@ public class logpage extends AppCompatActivity {
         textView = findViewById(R.id.othersignup);
         checkBox = findViewById(R.id.show_password_checkbox);
 
-
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
